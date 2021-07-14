@@ -1,0 +1,22 @@
+.banner {
+    padding: 20px;
+}
+
+.banner img {
+    width: 10%;
+    padding: 0 30px;
+}
+
+.banner a {
+    padding: 10px 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.banner a:hover {
+    
+    background-color: red;
+}
