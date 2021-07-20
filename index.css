@@ -12,22 +12,36 @@ body {
 }
 
 div.box {
-    width: 30%;
+    /* width: 30%;
     height: 75%;
     background-color: #242424;
     position: relative;
     text-align: center;
     margin: auto;
-    top: 15%;
+    top: 15%; */
+
+    width: -moz-available;
+    width: -webkit-fill-available;
+    height: 100%;
+    background-color: #242424;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    /* top: 15%; */
+    /* max-height: 90%; */
+    max-height: 800px;
+    max-width: 500px;
 }
 
 img.back {
-    position: relative;
+    /* position: relative;
     float: left;
     max-width: 7%;
     max-height: 7%;
     top: 5%;
-    left: 5%;
+    left: 5%; */
+
+    width: 7%;
 }
 
 img.back:hover {
@@ -35,35 +49,45 @@ img.back:hover {
 }
 
 img.lock {
-    position: relative;
+    /* position: relative;
     max-width: 15%;
     max-height: 15%;
     left: -5%;
-    top: 10%;
+    top: 10%; */
+    
+    width: 15%;
+    padding: 2rem;
 }
 
 .forgetPassword1 {
-    position: relative;
+    /* position: relative;
     font-size: 30px;
     font-weight: 700;
     color: #FFFFFF;
-    top:15%;
+    top:15%; */
+
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
 }
 
 .input-container {
-    position: relative;
-    top: 25%;
+    /* position: relative;
+    top: 25%; */
 }
 
 #email, #email2 {
-    position: relative;
+    /* position: relative;
     top: 30%;
     width: 50%;
     height: 100%;
     border-radius: 10px;
     background-color: #363636;
     border: none;
-    padding: 10px;
+    padding: 10px; */
+
+    height: 100%;
+    border: none;
 }
 
 #email::placeholder, #email2::placeholder {
@@ -81,7 +105,7 @@ img.lock {
     border-radius: 45px;
     width: 45%;
     height: 7%;
-    position: relative;
+    /* position: relative; */
     top: 40%;
     border: none;
     color: white;
