@@ -26,25 +26,37 @@
             <div class="carousel-item">
                 <a href="#">
                     <img src="../images/carousel/JLC.jpg" />
-                    
+                    <div class="caption-box fade-right">
+                        <h1>Junior Leadership Camp</h1>
+                        <p>Lorem Ipsum</p>
+                    </div>
                 </a>
             </div>
             <div class="carousel-item">
                 <a href="#">
                     <img src="../images/carousel/Odyssey Night.JPG" />
-                    
+                    <div class="caption-box fade-right">
+                        <h1>Junior Leadership Camp</h1>
+                        <p>Lorem Ipsum</p>
+                    </div>
                 </a>
             </div>
             <div class="carousel-item">
                 <a href="#">
                     <img src="../images/carousel/Orientation Week.JPG" />
-                    
+                    <div class="caption-box fade-right">
+                        <h1>Junior Leadership Camp</h1>
+                        <p>Lorem Ipsum</p>
+                    </div>
                 </a>
             </div>
             <div class="carousel-item">
                 <a href="#">
                     <img src="../images/carousel/Team Building.png" />
-                    
+                    <div class="caption-box fade-right">
+                        <h1>Junior Leadership Camp</h1>
+                        <p>Lorem Ipsum</p>
+                    </div>
                 </a>
             </div>
 
