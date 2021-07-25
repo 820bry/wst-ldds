@@ -219,4 +219,56 @@ div.fade-right {
     color: white;
 }
 
+/*Event Start*/
+div.event_info_top{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 200px;
+    height: 40px;
+    background-color: #0070ff;
+}
+
+div.event_info_btm{
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 200px;
+    height: 80px;
+    background-color: aquamarine;
+}
+
+div.event_list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    opacity: 0.4;
+}
+
+.event_info_top>span{
+    top: 20px;
+    left: 3px;
+    position: relative;
+}
+
+.option{
+    cursor: pointer;
+    width: 20px;
+    left: 93px;
+    top: 3px;
+    position: relative;
+}
+
+.event_delete{
+    background-color: grey;
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 25px;
+}
+
 /* Footer End */
+

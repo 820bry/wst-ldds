@@ -12,6 +12,7 @@
     <script src="carousel.js" type="text/javascript"></script>
     <title>Events | LDDS</title>
 </head>
+
 <body>
     <div class="banner">
         <img src="../images/ldds-logo.png" alt="logo" />
@@ -22,7 +23,53 @@
     </div>
 
     <div class="content">
-        
+        <h3>Event</h3>
+    </div>
+
+    <div class="event_list">
+        <div class="event">
+            <div class="event_info_top">
+                <span>Event Name</span>
+                <img src="../images/option.png" alt="logo" class="option" />
+            </div>
+            <div class="event_info_btm">
+                <span>Details</span>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event_info_top">
+                <span>Event Name</span>
+                <img src="../images/option.png" alt="logo" class="option" />
+            </div>
+            <div class="event_info_btm">
+                <span>Details</span>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event_info_top">
+                <span>Event Name</span>
+                <img src="../images/option.png" alt="logo" class="option" />
+            </div>
+            <div class="event_info_btm">
+                <span>Details</span>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event_info_top">
+                <span>Event Name</span>
+                <img src="../images/option.png" alt="logo" class="option" />
+            </div>
+            <div class="event_info_btm">
+                <span>Details</span>
+            </div>
+        </div>
+    </div> 
+
+    <div class="event_delete">
+        <span>Are you sure want to delete?</span>
     </div>
 
     <div class="footer">
