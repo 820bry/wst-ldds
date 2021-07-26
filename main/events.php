@@ -69,7 +69,9 @@
     </div> 
 
     <div class="event_delete">
-        <span>Are you sure want to delete?</span>
+        <p>Are you sure want to delete?</p>
+        <img class="cross" src="../images/cross.png" alt="logo">
+        <img class="tick" src="../images/tick.png" alt="logo">
     </div>
 
     <div class="footer">

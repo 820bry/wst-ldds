@@ -259,10 +259,12 @@ div.event_list{
 }
 
 .event_delete{
-    background-color: grey;
-    width: 300px;
-    height: 150px;
-    text-align: center;
+    background-color: darkgrey;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
@@ -270,5 +272,21 @@ div.event_list{
     border-radius: 25px;
 }
 
+.event_delete>p{
+    font-size: large;
+    font-family: cursive;
+    margin: auto;
+}
+
+.tick{
+    width: 40px;
+    height: 40px;
+    position
+}
+
+.cross{
+    width: 40px;
+    height: 40px;
+}
 /* Footer End */
 
