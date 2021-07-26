@@ -24,54 +24,56 @@
 
     <div class="content">
         <h3>Event</h3>
-    </div>
 
-    <div class="event_list">
-        <div class="event">
-            <div class="event_info_top">
-                <span>Event Name</span>
-                <img src="../images/option.png" alt="logo" class="option" />
+        
+
+        <div class="event_list">
+            <div class="event">
+                <div class="event_info_top">
+                    <span>Event Name</span>
+                    <img src="../images/option.png" alt="logo" class="option" />
+                </div>
+                <div class="event_info_btm">
+                    <span>Details</span>
+                </div>
             </div>
-            <div class="event_info_btm">
-                <span>Details</span>
+
+            <div class="event">
+                <div class="event_info_top">
+                    <span>Event Name</span>
+                    <img src="../images/option.png" alt="logo" class="option" />
+                </div>
+                <div class="event_info_btm">
+                    <span>Details</span>
+                </div>
             </div>
+
+            <div class="event">
+                <div class="event_info_top">
+                    <span>Event Name</span>
+                    <img src="../images/option.png" alt="logo" class="option" />
+                </div>
+                <div class="event_info_btm">
+                    <span>Details</span>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event_info_top">
+                    <span>Event Name</span>
+                    <img src="../images/option.png" alt="logo" class="option" />
+                </div>
+                <div class="event_info_btm">
+                    <span>Details</span>
+                </div>
+            </div>
+        </div> 
+
+        <div class="event_delete">
+            <p>Are you sure want to delete?</p>
+            <img class="cross" src="../images/cross.png" alt="logo">
+            <img class="tick" src="../images/tick.png" alt="logo">
         </div>
-
-        <div class="event">
-            <div class="event_info_top">
-                <span>Event Name</span>
-                <img src="../images/option.png" alt="logo" class="option" />
-            </div>
-            <div class="event_info_btm">
-                <span>Details</span>
-            </div>
-        </div>
-
-        <div class="event">
-            <div class="event_info_top">
-                <span>Event Name</span>
-                <img src="../images/option.png" alt="logo" class="option" />
-            </div>
-            <div class="event_info_btm">
-                <span>Details</span>
-            </div>
-        </div>
-
-        <div class="event">
-            <div class="event_info_top">
-                <span>Event Name</span>
-                <img src="../images/option.png" alt="logo" class="option" />
-            </div>
-            <div class="event_info_btm">
-                <span>Details</span>
-            </div>
-        </div>
-    </div> 
-
-    <div class="event_delete">
-        <p>Are you sure want to delete?</p>
-        <img class="cross" src="../images/cross.png" alt="logo">
-        <img class="tick" src="../images/tick.png" alt="logo">
     </div>
 
     <div class="footer">

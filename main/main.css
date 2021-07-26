@@ -212,39 +212,37 @@ div.fade-right {
 
 /* Committee End */
 
-/* Footer Start */
+/* Event Start */
 
-.footer {
-    text-align: center;
-    color: white;
-}
-
-/*Event Start*/
-div.event_info_top{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    width: 200px;
-    height: 40px;
-    background-color: #0070ff;
-}
-
-div.event_info_btm{
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    width: 200px;
-    height: 80px;
-    background-color: aquamarine;
-}
-
-div.event_list{
+.event_list{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 3rem;
     justify-content: center;
-    opacity: 0.4;
 }
 
-.event_info_top>span{
+.event {
+    width: 400px;
+}
+
+.event_info_top{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /* width: 200px; */
+    height: 50px;
+    background-color: #05326b
+    ;
+}
+
+.event_info_btm{
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* width: 200px; */
+    height: 180px;
+    background-color: #386b5a;
+}
+
+.event_info_top span{
     top: 20px;
     left: 3px;
     position: relative;
@@ -281,12 +279,21 @@ div.event_list{
 .tick{
     width: 40px;
     height: 40px;
-    position
+    /* position */
 }
 
 .cross{
     width: 40px;
     height: 40px;
 }
-/* Footer End */
 
+/* Event End */
+
+/* Footer Start */
+
+.footer {
+    text-align: center;
+    color: white;
+}
+
+/* Footer End */
