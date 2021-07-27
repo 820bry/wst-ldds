@@ -13,7 +13,17 @@
     <title>Events | LDDS</title>
 </head>
 
+
 <body>
+
+    <div class="event_delete">
+            <div class="event_delete_window">
+                <p>Are you sure want to delete?</p>
+                <img class="cross" src="../images/cross.png" alt="logo">
+                <img class="tick" src="../images/tick.png" alt="logo">
+            </div>
+    </div>
+
     <div class="banner">
         <img src="../images/ldds-logo.png" alt="logo" />
         <a href="home.php">Home</a>
@@ -21,6 +31,8 @@
         <a href="committee.php">Committee</a>
         <a href="https://youtu.be/dQw4w9WgXcQ">About Us</a>
     </div>
+
+
 
     <div class="content">
         <h3>Event</h3>
@@ -69,11 +81,7 @@
             </div>
         </div> 
 
-        <div class="event_delete">
-            <p>Are you sure want to delete?</p>
-            <img class="cross" src="../images/cross.png" alt="logo">
-            <img class="tick" src="../images/tick.png" alt="logo">
-        </div>
+
     </div>
 
     <div class="footer">
