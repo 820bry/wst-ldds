@@ -259,23 +259,34 @@ div.fade-right {
 .event_delete{
     background-color: rgba(0,0,0,0.5);
     text-align: center;
-    padding-top: 17.5%;
     width: 100%;
     height: 100%;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
 .event_delete_window{
-    top: 50%;
+    position: absolute;
+    top: calc((100% - 25%) /2); 
+    left: calc((100% - 35%) /2);
     background-color: darkgray;
-    margin: auto;
     width: 35%;
+    height: 25%;
     border-radius: 25px;
-    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event_delete_text {
+    position: absolute; /*Set to center ignoring the button's margin*/
+}
+
+.event_delete_button {
+    margin-top: auto; /*Set to bottom*/
+    margin-left: auto; /*Set to right*/
+    margin-right: 1%; /*distance from right*/
 }
 
 .event_delete>p{

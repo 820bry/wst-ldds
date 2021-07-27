@@ -18,9 +18,13 @@
 
     <div class="event_delete">
             <div class="event_delete_window">
-                <p>Are you sure want to delete?</p>
-                <img class="cross" src="../images/cross.png" alt="logo">
-                <img class="tick" src="../images/tick.png" alt="logo">
+                <div class="event_delete_text">
+                    <p>Are you sure want to delete?</p>
+                </div>
+                <div class="event_delete_button">
+                    <img class="cross" src="../images/cross.png" alt="logo">
+                    <img class="tick" src="../images/tick.png" alt="logo">
+                </div>
             </div>
     </div>
 
