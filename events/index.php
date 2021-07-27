@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main/main.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <script src="./main/carousel.js" type="text/javascript"></script>
-    <script src="./main/events.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="../style/main.css">
+    <script src="../scripts/carousel.js" type="text/javascript"></script>
+    <script src="../scripts/events.js" type="text/javascript"></script>
     <title>Events | LDDS</title>
 </head>
 
@@ -23,18 +25,18 @@
                 <p>Are you sure want to delete?</p>
             </div>
             <div class="event_delete_button">
-                <img class="cross" src="./images/cross.png" alt="logo">
-                <img class="tick" src="./images/tick.png" alt="logo">
+                <img class="cross" src="../style/images/cross.png" alt="logo">
+                <img class="tick" src="../style/images/tick.png" alt="logo">
             </div>
         </div>
     </div>
 
     <div class="banner">
-        <img src="./images/ldds-logo.png" alt="logo" />
-        <a href="./home">Home</a>
-        <a href="./events">Events</a>
-        <a href="./committee">Committee</a>
-        <a href="https://youtu.be/dQw4w9WgXcQ">About Us</a>
+        <img src="../style/images/ldds-logo.png" alt="logo" />
+        <a href="../">Home</a>
+        <a href="../events/">Events</a>
+        <a href="../committee/">Committee</a>
+        <a href="../about-us/">About Us</a>
     </div>
 
 
@@ -48,7 +50,7 @@
             <div class="event">
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="./images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" />
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
@@ -58,7 +60,7 @@
             <div class="event">
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="./images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" />
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
@@ -68,7 +70,7 @@
             <div class="event">
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="./images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" />
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
@@ -78,7 +80,7 @@
             <div class="event">
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="./images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" />
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
