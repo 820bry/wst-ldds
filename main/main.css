@@ -263,6 +263,7 @@ div.fade-right {
     height: 100%;
     position: fixed;
     z-index: 1;
+    display: none; /*Hidden during window onload*/
 }
 
 .event_delete_window{
