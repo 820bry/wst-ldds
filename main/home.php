@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="banner">
-        <img src="./main/ldds-logo.png" alt="logo" />
+        <img src="./images/ldds-logo.png" alt="logo" />
         <a href="./home">Home</a>
         <a href="./events">Events</a>
         <a href="./committee">Committee</a>
