@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="carousel.js" type="text/javascript"></script>
+    <script src="events.js" type="text/javascript"></script>
     <title>Events | LDDS</title>
 </head>
 
 
 <body>
 
-    <div class="event_delete">
+    <div class="event_delete" id="event_delete">
             <div class="event_delete_window">
                 <div class="event_delete_text">
                     <p>Are you sure want to delete?</p>
