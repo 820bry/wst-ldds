@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^home?$ main/home.php
+RewriteRule ^events?$ main/events.php
+RewriteRule ^committee?$ main/committee.php
