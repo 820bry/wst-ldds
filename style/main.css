@@ -262,8 +262,8 @@ div.fade-right {
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 1;
-    display: none; /*Hidden during window onload*/
+    z-index: 50;
+    visibility: hidden;
 }
 
 .event_delete_window{
@@ -278,6 +278,7 @@ div.fade-right {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 51;
 }
 
 .event_delete_text {
@@ -320,6 +321,7 @@ div.fade-right {
     justify-content: center;
     gap: 0.3rem;
     font-family: sans-serif;
+    visibility: hidden;
 }
 
 /* Event End */

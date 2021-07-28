@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="../style/main.css">
     <script src="../scripts/carousel.js" type="text/javascript"></script>
@@ -20,13 +21,13 @@
 <body>
 
     <div class="event_delete" id="event_delete">
-        <div class="event_delete_window">
+        <div class="event_delete_window" id="event_delete_window">
             <div class="event_delete_text">
                 <p>Are you sure want to delete?</p>
             </div>
             <div class="event_delete_button">
-                <img class="cross" src="../style/images/cross.png" alt="logo">
-                <img class="tick" src="../style/images/tick.png" alt="logo">
+                <img class="cross" src="../style/images/cross.png" alt="logo" onclick="unloadConfirmationBox()">
+                <img class="tick" src="../style/images/tick.png" alt="logo" onclick="unloadConfirmationBox()">
             </div>
         </div>
     </div>
@@ -48,13 +49,13 @@
 
         <div class="event_list">
             <div class="event">
-                <div class="edit">
+                <div class="edit" id="event_option_box">
                     <div>Edit</div>
                     <div>Delete</div>
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
@@ -69,7 +70,7 @@
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
@@ -83,7 +84,7 @@
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
@@ -97,7 +98,7 @@
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
@@ -111,7 +112,7 @@
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
@@ -125,7 +126,7 @@
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
+                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
                 </div>
                 <div class="event_info_btm">
                     <span>Details</span>
