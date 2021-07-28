@@ -1,4 +1,4 @@
-# Deny access to .htaccess
+# Deny access to .htaccess itself
 <Files .htaccess>
 Order allow,deny
 Deny from all
