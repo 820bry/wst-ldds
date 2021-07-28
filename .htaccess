@@ -1,5 +1,20 @@
-RewriteEngine On
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
 
-RewriteRule ^home?$ main/home.php
-RewriteRule ^events?$ main/events.php
-RewriteRule ^committee?$ main/committee.php
+RewriteEngine On
+RewriteBase /wst-ldds/
+
+#ErrorDocument 404 /wst-ldds/404/
+RewriteRule ^home?$ index.php [L]
+RewriteRule ^event?$ events [L]
+
+# Disable directory browsing 
+Options -Indexes
+
+ErrorDocument 403 /wst-ldds/error/
+RewriteCond %{REQUEST_FILENAME} !-f  
+RewriteCond %{REQUEST_FILENAME} !-d  
+RewriteRule .* error [L] 
