@@ -41,59 +41,7 @@
 
 
 
-    <div class="content">
-        <h3>Event</h3>
 
-        
-
-        <div class="event_list">
-            <div class="event">
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
-                </div>
-            </div>
-
-            <div class="event">
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
-                </div>
-            </div>
-
-            <div class="event">
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
-                </div>
-            </div>
-
-            <div class="event">
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" />
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
-                </div>
-            </div>
-        </div> 
-
-
-    </div>
-
-    <div class="footer">
-        <p>Copyright (C) Literature, Dance & Drama Society</p>
-    </div>
 
 </body>
 

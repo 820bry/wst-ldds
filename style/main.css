@@ -222,7 +222,7 @@ div.fade-right {
 }
 
 .event {
-    width: 400px;
+    min-width: 400px;
 }
 
 .event_info_top{
@@ -291,7 +291,6 @@ div.fade-right {
 }
 
 .event_delete>p{
-
     padding: 75px 0;
 }
 
@@ -304,6 +303,23 @@ div.fade-right {
 .cross{
     width: 40px;
     height: 40px;
+}
+
+.edit{
+    background-color: #0070ff;
+    width: 100px;
+    height: 60px;
+    margin-left: 280px;
+    margin-top: 25px;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+    font-family: sans-serif;
 }
 
 /* Event End */
