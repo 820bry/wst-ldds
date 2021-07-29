@@ -7,12 +7,16 @@ Deny from all
 RewriteEngine On
 RewriteBase /wst-ldds/
 
+#RewriteRule ^([^.?]+)$ %{REQUEST_URI}/index.php [L]
+
 RewriteRule ^home?$ index.php [L]
 RewriteRule ^event?$ events [L]
 
 # Disable directory browsing 
 Options -Indexes
 
+#Redirect to error page
+DirectoryIndex index.php index.html error/index.php
 ErrorDocument 403 /wst-ldds/error/
 RewriteCond %{REQUEST_FILENAME} !-f  
 RewriteCond %{REQUEST_FILENAME} !-d  

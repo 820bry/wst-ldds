@@ -3,6 +3,7 @@
 
 <head>
 <link rel="stylesheet" href="signstyle.css">
+<script src="/wst-ldds/scripts/auth-login.js"></script>
 <meta charset="UTF-8">
 
 <title>LDDS Login</title>
@@ -11,12 +12,12 @@
 <body class = "logbody">
 <div class = "logincontainer">
 <h1 id = "label">Login to Your Account</h1>
-    <div class = "user-details">
+    <div class = "user-details" id="user-details">
         <div class = "inputbox">
-            <input type = "text" placeholder="Email / Student ID" class = "email_id" name = "email_id" required><br>
+            <input type = "text" placeholder="Email / Student ID" class = "email_id" id="email_id" name = "email_id" required><br>
         </div> 
         <div class = inputbox>
-            <input type="password" placeholder="Password" class = "password" name = "password" required><br>
+            <input type="password" placeholder="Password" class = "password" id="password" name = "password" required><br>
         </div>
     </div>
         <div class = "remember">
