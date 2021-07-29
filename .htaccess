@@ -7,7 +7,6 @@ Deny from all
 RewriteEngine On
 RewriteBase /wst-ldds/
 
-#ErrorDocument 404 /wst-ldds/404/
 RewriteRule ^home?$ index.php [L]
 RewriteRule ^event?$ events [L]
 
