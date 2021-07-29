@@ -9,9 +9,10 @@
 {
     background-color: #171717;
     width: 50%;
-    align-items: flex-start;
+    align-content: center;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     
 }
 
@@ -24,8 +25,8 @@
 {
     display: flex;
     flex-wrap: wrap;
-    align-self: flex-start;
-    justify-self: flex-start;
+    align-content: center;
+    justify-content: center;
     height: 97vh;
     width: 100vw;
     background: #000000;
@@ -47,18 +48,27 @@
 {
     font-family: "Roboto";
     color: rgb(255, 255, 255);
-    margin: 100px;
+    margin: 100px 50px;
+}
+
+.logincontainer .user-details
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-around;
+    justify-content: center;
+}
+
+.logincontainer .user-details .inputbox
+{
+    margin: 10px;
 }
 
 .logincontainer .user-details .inputbox input
 {
-    display: flex;
-    flex-wrap: wrap;
     /* Behind username */
-    margin-left: 95px;
     width: 325px;
     height: 42px;
-    align-self: center;
     background: #242424;
     border-radius: 20px;
     border: #000000;
@@ -80,10 +90,19 @@
     color:rgba(255, 255, 255, 0.651);
 }
 
-.logincontainer .button input
+.logincontainer .button
 {
-    margin-top: 65px;
-    margin-left: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 540px;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.logincontainer .button button
+{
     max-width: 350px;
     width: 100%;
     height: 50px;
@@ -97,7 +116,7 @@
 }
 
 
-.logincontainer .button input:hover
+.logincontainer .button button:hover
 {
     background: linear-gradient(125deg, #fdb4ae, #e28cff);
     color: #ee8f00;
@@ -107,8 +126,9 @@
 
 .remember
 {
-    margin-top: 25px;
-    margin-left: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     color:rgba(255, 255, 255, 0.466);
 }
 
@@ -119,9 +139,13 @@
 
 .logincontainer .signup
 {
+    display: flex;
+    justify-content: flex-start;
     font-family: "Roboto";
-    margin-left: 130px;
     color: rgba(255, 255, 255, 0.466);
+    margin-left: 78px;
+    height: 30px;
+    width: 429px;
 }
 
 .logincontainer .signup a
@@ -140,19 +164,14 @@
 #fgtpwd
 {
     display: flex;
-    align-content: center;
+    align-items: flex-end;
     justify-content: flex-end;
-    padding-top: 20px;
-    padding-right: 120px;
-    flex-wrap: wrap;
-    position: relative;
+    width: 225px;
+    height: 60px;
 }
 
 #fgtpwd a
 {
-position: absolute;
-width: 198px;
-height: 30px;
 color: gray;
 font-family: Roboto;
 font-style: normal;
@@ -168,18 +187,17 @@ text-decoration: none;
 .logincontainer .logo
 {
     display: flex;
-    flex-wrap: wrap;
-    padding-top: 20px;
+    margin-top: 15px;
     align-content: center;
     justify-content: flex-end;
-    height: 60px;
+    height: 80px;
+    width: 600px;
 }
 
 .logincontainer .logo img
 {
     width: 90px;
-    height: 50px;
-    position: static;
+    height: 59px;
     padding-right: 20px;
 }
 
