@@ -1,0 +1,349 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("LDDS-wfont/roboto-medium-webfont.woff") format("woff");
+    font-family: "Roboto Light";
+    src: url("LDDS-wfont/roboto-light-webfont.woff") format("woff");
+}
+
+.logbody
+{
+    background-color: #171717;
+    width: 50%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.logbody span
+{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.logincontainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    justify-self: flex-start;
+    height: 97vh;
+    width: 100vw;
+    background: #000000;
+    padding-left: 120px;
+    border-radius: 20px;
+}
+
+.logincontainer .signup > a
+{
+    color: red;
+}
+
+.logincontainer .signup > a:hover
+{
+    color:#ff1fff;
+}
+
+.logincontainer #label 
+{
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    margin: 100px;
+}
+
+.logincontainer .user-details .inputbox input
+{
+    display: flex;
+    flex-wrap: wrap;
+    /* Behind username */
+    margin-left: 95px;
+    width: 325px;
+    height: 42px;
+    align-self: center;
+    background: #242424;
+    border-radius: 20px;
+    border: #000000;
+    padding: 6px;
+    padding-left: 25px;
+    color: white;
+    font-size: medium;
+}
+
+.logincontainer .inputbox input:focus
+{
+    outline: none;
+}
+
+::placeholder
+{
+    font-family: "Roboto Light";
+    font-size: 16px;
+    color:rgba(255, 255, 255, 0.651);
+}
+
+.logincontainer .button input
+{
+    margin-top: 65px;
+    margin-left: 95px;
+    max-width: 350px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(125deg, #f26e66, #d15fe3);
+    border-radius: 20px;
+    font-size: 139%;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #ff9c09;
+    border: #000000;
+}
+
+
+.logincontainer .button input:hover
+{
+    background: linear-gradient(125deg, #fdb4ae, #e28cff);
+    color: #ee8f00;
+    cursor: pointer;
+}
+
+
+.remember
+{
+    margin-top: 25px;
+    margin-left: 100px;
+    color:rgba(255, 255, 255, 0.466);
+}
+
+.remember label
+{
+    cursor: pointer;
+}
+
+.logincontainer .signup
+{
+    font-family: "Roboto";
+    margin-left: 130px;
+    color: rgba(255, 255, 255, 0.466);
+}
+
+.logincontainer .signup a
+{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.logincontainer .user-details
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#fgtpwd
+{
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-right: 120px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#fgtpwd a
+{
+position: absolute;
+width: 198px;
+height: 30px;
+color: gray;
+font-family: Roboto;
+font-style: normal;
+line-height: 26px;
+text-decoration: none;
+}
+
+#fgtpwd a:hover
+{
+    color: rgb(185, 185, 185);
+}
+
+.logincontainer .logo
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    align-content: center;
+    justify-content: flex-end;
+    height: 60px;
+}
+
+.logincontainer .logo img
+{
+    width: 90px;
+    height: 50px;
+    position: static;
+    padding-right: 20px;
+}
+
+.signbody
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100vw;
+    max-height: 90vh;
+}
+
+.signcontainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #242424;
+    align-items: center;
+    width: 50rem;
+    position: relative;
+    margin-top: 2rem;
+    border-radius: 40px;
+}
+
+.back
+{
+    width: 4%;
+    position: absolute;
+    left: 26px;
+    top: 20px;
+}
+
+.signcontainer .logo
+{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 8rem;
+    max-width: 100%;
+}
+
+.signcontainer .logo > img
+{
+    width: 8rem;
+    max-width: 100%;
+}
+
+.signcontainer .title
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 20rem;
+}
+
+.signcontainer .title #label
+{
+    font-family: "Roboto Light";
+    background-image: linear-gradient(180deg, white, rgb(51, 51, 51));
+    background-size: 100%;
+    font-size: 2.5rem;
+    font-stretch: ultra-expanded;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 20px;
+}
+
+.signcontainer .user-details .inputbox1
+{
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+.signcontainer .user-details .inputbox1 input
+{
+    width: 300px;
+
+}
+
+.signcontainer .user-details .inputbox input
+{
+    height: 50px;
+    background: #343434;
+    border-radius: 20px;
+    border: #000000;
+    padding: 3px;
+    padding-left: 20px;
+    color: white;
+    font-size: medium;
+    margin-left: 20px;
+}
+
+.signcontainer .user-details .inputbox2 input
+{
+    margin-top: 20px;
+    width: 650px;
+}
+
+.signcontainer .user-details .inputbox3 input
+{
+    margin-top: 20px;
+    width: 650px;
+}
+
+.signcontainer .user-details .inputbox4 input
+{
+    margin-top: 20px;
+    width: 650px;
+}
+
+.signcontainer input:focus
+{
+    outline: none;
+}
+
+.signcontainer .signupAccount .button
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.signcontainer .signupAccount .button input
+{
+    margin-left: 20px;
+    padding: 5px;
+    max-width: 350px;
+    width: 90%;
+    background: linear-gradient(90deg, #5EFF6E 6.25%, #89ECE6 50.52%, #D737FF 100%);
+    border-radius: 50px;
+    font-size: 1.50rem;
+    font-family: "Roboto Light";
+    font-weight: bold;
+    color: #6B8EE8;
+}
+
+.signcontainer .button input:hover
+{
+    cursor:pointer;
+}
+
+.signcontainer .login
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: "Roboto";
+    color: rgba(255, 255, 255, 0.466);;
+}
+
+.signcontainer .login a
+{
+    color: #6100ff;
+    text-decoration: none;
+}
+
+.signcontainer .login a:hover
+{
+    text-decoration: underline;
+}
