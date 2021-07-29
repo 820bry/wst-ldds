@@ -26,8 +26,8 @@
                 <p>Are you sure want to delete?</p>
             </div>
             <div class="event_delete_button">
-                <img class="cross" src="../style/images/cross.png" alt="logo" onclick="unloadConfirmationBox()">
-                <img class="tick" src="../style/images/tick.png" alt="logo" onclick="unloadConfirmationBox()">
+                <img class="cross" src="../style/images/cross.png" alt="logo" onclick="deleteEvent(false)">
+                <img class="tick" src="../style/images/tick.png" alt="logo" onclick="deleteEvent(true)">
             </div>
         </div>
     </div>
