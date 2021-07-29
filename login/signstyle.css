@@ -189,7 +189,6 @@ text-decoration: none;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100vw;
-    max-height: 90vh;
 }
 
 .signcontainer
@@ -331,8 +330,8 @@ text-decoration: none;
 {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 15px;
+    margin-bottom: 25px;
     font-family: "Roboto";
     color: rgba(255, 255, 255, 0.466);;
 }
