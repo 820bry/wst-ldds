@@ -1,8 +1,8 @@
 //Global variables
-var studName;
-var email;
-var password;
-var confirm_password;
+var studName = (sessionStorage.getItem("studName") != null) ? sessionStorage.getItem("studName") : "";
+var email = (sessionStorage.getItem("email") != null) ? sessionStorage.getItem("email") : "";
+var password = (sessionStorage.getItem("password") != null) ? sessionStorage.getItem("password") : "";
+var confirm_password = (sessionStorage.getItem("confirm_password") != null) ? sessionStorage.getItem("confirm_password") : "";
 var course_code;
 var faculty;
 var studentID;
@@ -33,18 +33,26 @@ icNoElement = document.getElementById("nric");
 
 
 window.onload = () => {
-    formElement.addEventListener("keypress", (e) => {
-        //Get page name
-        var path = window.location.pathname;
-        var page = path.split("/").pop();
+    //Get page name
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
 
-        if (page === "signup.html" && e.key === "Enter") {
+    //.toUpperCase() because site can be accessed case insensitively
+    if (page.toUpperCase() === "signUp_2.html".toUpperCase() && !signupValidate(-1)) {
+        //Direct access to signup2 without going through 1st sign up page
+        window.history.back();
+    }
+
+    formElement.addEventListener("keypress", (e) => {
+        if (page.toUpperCase() === "signup.html".toUpperCase() && e.key === "Enter") {
             nextPage();
         } else if (e.key === "Enter"){
             //Perform signup
             signupPerform();
         }            
     })
+
+    
 }
 
 function signupValidate(pageNo) {
@@ -56,6 +64,12 @@ function signupValidate(pageNo) {
             email = emailElement.value;
             password = passwordElement.value;
             confirm_password = confirmPasswordElement.value;
+
+            //Pass into session storage to be used in signup 2 page
+            sessionStorage.setItem("studName", studName);
+            sessionStorage.setItem("email", email);
+            sessionStorage.setItem("password", password);
+            sessionStorage.setItem("confirm_password", confirm_password);
         }
 
         if (studName != "" && email != "" && password != "" && confirm_password != "") {
@@ -162,5 +176,36 @@ function nextPage() {
 }
 
 function signupPerform() {
-    
+    if (signupValidate(2)) {
+        var authDetails = {
+            "authType": "signup",
+            "name": studName,
+            "email": email,
+            "password": password,
+            "courseCode": course_code,
+            "faculty": faculty,
+            "studentID": studentID,
+            "phoneNumber": phone_number,
+            "icNo": ic_no
+        }
+
+        authJSON = JSON.stringify(authDetails);
+
+        fetch("/wst-ldds/auth/", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: authJSON
+        })
+        .then(response => response.json())
+        .then((varResponse) => {
+            alert("Signup" + varResponse.status);
+        })
+        .catch((error) => {
+            console.error("Error: ", error);
+        })
+    } else {
+        //Do nothing since signupValidate will display error to user
+    }
 }

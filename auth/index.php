@@ -5,9 +5,7 @@
         //Decode the JSON passed
         $_POST = json_decode(file_get_contents('php://input'), true);
         $vals = [
-            'authType'     => $_POST["authType"],
-            'username'   => $_POST["auth_username"],
-            'password'   => $_POST["auth_password"],
+            'authType'   => $_POST["authType"]
         ];
         
         //use require() instead of include() to prevent passthrough
@@ -16,17 +14,13 @@
         //act as a JSON API
         header("Content-Type: application/json; charset=UTF-8");
 
-        //test
-        //echo '<script>alert("'.$_GET['authType'].'")</script>';
-
         if (isset($_POST["authType"]) && $_POST["authType"] === "login" && isset($_POST["auth_username"]) && isset($_POST["auth_password"]) && !empty($_POST["auth_username"]) && !empty($_POST["auth_password"])) {
-            
             //process login
             $auth_username = strtoupper($_POST["auth_username"]);
 
             //store hash since it is irreversible and we don't need to reveal passwords anyway
-            //$auth_password = hash_hmac("sha256", $_GET["auth_password"], "ldds");
-            $auth_password = $_POST["auth_password"];
+            $auth_password = hash_hmac("sha256", $_POST["auth_password"], "ldds");
+            //$auth_password = $_POST["auth_password"];
 
             //we look for both student ID and email
             //use prepare() instead of query to prevent SQL injection attack
@@ -54,9 +48,28 @@
                 }
 
             } else {
+                $vals['auth_username'] = $auth_username;
+                $vals['auth_password'] = $auth_password;
                 $vals['status'] = "fail";
                 echo json_encode($vals);
             }
+        } else if(isset($_POST["authType"]) && $_POST["authType"] === "signup" && isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["courseCode"]) && isset($_POST["faculty"]) && isset($_POST["studentID"]) && isset($_POST["phoneNumber"]) && isset($_POST["icNo"]) && !empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["password"]) && !empty($_POST["courseCode"]) && !empty($_POST["faculty"]) && !empty($_POST["studentID"]) && !empty($_POST["phoneNumber"]) && !empty($_POST["icNo"])) {
+            //process signup
+            $name = $_POST["name"];
+            $email = $_POST["email"];
+            $password = hash_hmac("sha256", $_POST["password"], "ldds");
+            $courseCode = $_POST["courseCode"];
+            $faculty = $_POST["faculty"];
+            $studentID = $_POST["studentID"];
+            $phoneNumber = $_POST["phoneNumber"];
+            $icNo = $_POST["icNo"];
+
+            $query = $conn->prepare("INSERT INTO $db_member (`name`, `student_id`, `password`, `ic_no`, `email`, `phone_no`, `faculty`, `course_code`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            $query -> bind_param("ssssssss", $name, $studentID, $password, $icNo, $email, $phoneNumber, $faculty, $courseCode);
+            $query -> execute();
+
+            $vals['status'] = "success";
+            echo json_encode($vals);
         }
     } else {
         //not POST request, assuming GET and redirect back to login page
