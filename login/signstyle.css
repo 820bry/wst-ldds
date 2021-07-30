@@ -20,6 +20,15 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
+.logbody .wlcmback
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
 .logincontainer
 {
     display: flex;
