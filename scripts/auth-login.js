@@ -1,25 +1,30 @@
+//Element declaration
+formElement = document.getElementById("user-details");
+emailElement = document.getElementById("email_id");
+passwordElement = document.getElementById("password");
+
 window.onload = () => {
-    document.getElementById("user-details").addEventListener("keypress",(e) => {
+    formElement.addEventListener("keypress",(e) => {
         if (e.key === "Enter")
             loginPerform();
     })
 }
 
 function loginValidate() {
-    return (document.getElementById("email_id").value != "" && document.getElementById("password") != "");
+    return (emailElement.value != "" && passwordElement != "");
 }
 
 function inputDisabled(bool) {
-    document.getElementById("email_id").disabled = bool;
-    document.getElementById("password").disabled = bool;
+    emailElement.disabled = bool;
+    passwordElement.disabled = bool;
 }
 
 function loginPerform() {
     if (loginValidate()) {
         //inputDisabled(true);
 
-        var auth_username = document.getElementById("email_id").value;
-        var auth_password = document.getElementById("password").value;
+        var auth_username = emailElement.value;
+        var auth_password = passwordElement.value;
 
         var authDetails = {
             "authType": "login",
@@ -49,6 +54,6 @@ function loginPerform() {
             console.error("Error: ", error);
         })
     } else {
-        
+        //Input empty
     }
 }
