@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2021 at 03:56 PM
+-- Generation Time: Jul 30, 2021 at 04:06 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -75,9 +75,11 @@ CREATE TABLE `event_registration` (
 CREATE TABLE `member` (
   `name` varchar(30) NOT NULL,
   `student_id` varchar(10) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `password` varchar(65) NOT NULL,
+  `ic_no` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone_no` varchar(12) NOT NULL,
+  `faculty` varchar(5) NOT NULL,
   `course_code` varchar(3) NOT NULL,
   `permission_level` int(10) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -86,8 +88,8 @@ CREATE TABLE `member` (
 -- Dumping data for table `member`
 --
 
-INSERT INTO `member` (`name`, `student_id`, `password`, `email`, `phone_no`, `course_code`, `permission_level`) VALUES
-('bryan', '20PMD00001', 'bryanshuai', 'bryanshuai@gmail.com', '0176969966', 'DFT', 0);
+INSERT INTO `member` (`name`, `student_id`, `password`, `ic_no`, `email`, `phone_no`, `faculty`, `course_code`, `permission_level`) VALUES
+('Chiam Jin Qin', '20PMD00003', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '010101-01-0101', 'chiamjinqin@gmail.com', '017-7777777', 'FOCS', 'DFT', 0);
 
 --
 -- Indexes for dumped tables
