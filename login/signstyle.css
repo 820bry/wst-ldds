@@ -8,8 +8,6 @@
 .logbody
 {
     background-color: #171717;
-    width: 50%;
-    align-content: center;
     display: flex;
     justify-content: flex-start;
     
@@ -54,9 +52,10 @@
 
 .logincontainer #label 
 {
+    display: flex;
     font-family: "Roboto";
     color: rgb(255, 255, 255);
-    margin: 100px 50px;
+    margin: 50px 100px;
 }
 
 .logincontainer .user-details
