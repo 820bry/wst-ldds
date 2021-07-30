@@ -324,6 +324,56 @@ div.fade-right {
     visibility: hidden;
 }
 
+.event_details{
+    width: 1020px;
+    height: 550px;
+    margin: auto;
+    background-color: white;
+}
+
+.pro_pic{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.person{
+    color: blue;
+    font-size: large;
+    margin-left: 15px;
+    padding: 25px;
+}
+
+.view_member{
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.photo{
+    width: 500px;
+    height: 300px;
+    z-index: 1;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.prog_details{
+    margin-left: 150px;
+}
+
+.join_event{   
+    padding: 15px;
+}
+
+.slotleft{
+
+}
+
+.deadline{
+    left: 0px;
+}
+
+.join{
+    right: 0;
+}
 /* Event End */
 
 /* Footer Start */
