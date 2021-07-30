@@ -101,12 +101,14 @@
 
 .logincontainer .user-details #inputError1
 {
+    visibility: hidden;
     position: absolute;
     left: 140px;
 }
 
 .logincontainer .user-details #inputError2
 {
+    visibility: hidden;
     position: absolute;
     top: 140px;
     left: 140px;
