@@ -67,6 +67,7 @@
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
+    position: relative;
 }
 
 .logincontainer .user-details .inputbox
@@ -91,6 +92,24 @@
 .logincontainer .inputbox input:focus
 {
     outline: none;
+}
+
+.logincontainer .user-details .inputError
+{
+    color: rgb(255, 25, 25);
+}
+
+.logincontainer .user-details #inputError1
+{
+    position: absolute;
+    left: 140px;
+}
+
+.logincontainer .user-details #inputError2
+{
+    position: absolute;
+    top: 140px;
+    left: 140px;
 }
 
 ::placeholder
@@ -140,6 +159,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     color:rgba(255, 255, 255, 0.466);
+    margin-top: 18px;
 }
 
 .remember label
