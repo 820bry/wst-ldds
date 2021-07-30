@@ -19,18 +19,6 @@
 
 <body>
 
-    <div class="event_delete" id="event_delete">
-        <div class="event_delete_window">
-            <div class="event_delete_text">
-                <p>Are you sure want to delete?</p>
-            </div>
-            <div class="event_delete_button">
-                <img class="cross" src="../style/images/cross.png" alt="logo">
-                <img class="tick" src="../style/images/tick.png" alt="logo">
-            </div>
-        </div>
-    </div>
-
     <div class="banner">
         <img src="../style/images/ldds-logo.png" alt="logo" />
         <a href="../">Home</a>
@@ -39,9 +27,38 @@
         <a href="../about-us/">About Us</a>
     </div>
 
+    <div class="event_details">
+        
+        <div class="per_i_c">
+
+        </div>
+
+        <div class="view">
+
+            <svg class="pro_pic" width="100" height="100" >
+                <circle id="propic" cx="50" cy="50" r="40" fill="grey" />   
+            </svg>
+
+            <span class="person">Hi humon</span>
+            <span class="view_member">View Members</span>
+
+        </div>
+
+        <div>
+            <img class="photo" src="../style/images/committee/CZ.JPG" />
+            <span class="prog_details">Programm Details</span>
+        </div>
 
 
+        <div class="join_event">
+            <span class="slotleft">Slot left</span>
+            <span class="deadline">Deadline</span>
+            <strong class="join">Join Event</strong>
+        </div>
 
+    </div>
+
+    
 
 </body>
 
