@@ -53,10 +53,12 @@
 
 .logincontainer .user-details
 {
+    width: 600px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: space-around;
-    justify-content: center;
+    align-content: center;
+    justify-content: space-around;
 }
 
 .logincontainer .user-details .inputbox
@@ -95,7 +97,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    max-width: 540px;
+    max-width: 600px;
     width: 100%;
     height: 100px;
     margin-bottom: 20px;
@@ -143,7 +145,7 @@
     justify-content: flex-start;
     font-family: "Roboto";
     color: rgba(255, 255, 255, 0.466);
-    margin-left: 78px;
+    margin-left: 100px;
     height: 30px;
     width: 429px;
 }
