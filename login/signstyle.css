@@ -396,3 +396,51 @@ text-decoration: none;
 {
     text-decoration: underline;
 }
+
+.signcontainer .inputError
+{
+    color: rgb(255, 25, 25);
+    margin-left: 30px;
+    font-family: "Roboto Light";
+
+}
+
+.signcontainer .user-details #error2
+{
+    visibility: hidden;
+}
+
+.signcontainer .user-details #error3
+{
+    visibility: hidden;
+}
+
+.signcontainer .user-details #error4
+{
+    visibility: hidden;
+}
+
+.signcontainer .user-details #error5
+{
+    visibility: hidden;
+}
+
+.signcontainer .user-details #error6
+{
+    margin-left: 205px;
+}
+
+.signcontainer .user-details #error7
+{
+    visibility: hidden;
+}
+
+.signcontainer .user-details #error8
+{
+    visibility: hidden;
+}
+
+.signcontainer .user-details #error9
+{
+    visibility: hidden;
+}
