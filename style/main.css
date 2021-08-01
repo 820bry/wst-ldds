@@ -324,6 +324,14 @@ div.fade-right {
     visibility: hidden;
 }
 
+.edit_edit{
+    cursor: pointer;
+}
+
+.edit_delete{
+    cursor: pointer;
+}
+
 .event_details{
     width: 1020px;
     height: 550px;
@@ -363,9 +371,6 @@ div.fade-right {
     padding: 15px;
 }
 
-.slotleft{
-
-}
 
 .deadline{
     left: 0px;
@@ -376,6 +381,51 @@ div.fade-right {
 }
 /* Event End */
 
+/* Student Info*/
+.stud_info{
+
+    margin: auto;
+    width: 900px;
+    height: 400px;
+    background-color: white;
+}
+
+.pic{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.name{
+    padding: 15px;
+}
+
+.stud_id{
+    padding: 15px;
+}
+
+.pro_icon{
+    display: flex;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-left: 94%;
+    margin-top: -100px;
+}
+
+.info{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.cross_tick{
+    margin: auto;
+    width: 10px;
+    height: 10px;
+}
 /* Footer Start */
 
 .footer {
