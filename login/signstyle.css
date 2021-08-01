@@ -238,6 +238,7 @@ text-decoration: none;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100vw;
+    background-position: center;
 }
 
 .signcontainer
