@@ -356,7 +356,7 @@ text-decoration: none;
     margin-bottom: 20px;
 }
 
-.signcontainer .signupAccount .button input
+.signcontainer .signupAccount .button button
 {
     margin-left: 20px;
     padding: 5px;
@@ -370,7 +370,7 @@ text-decoration: none;
     color: #6B8EE8;
 }
 
-.signcontainer .button input:hover
+.signcontainer .button button:hover
 {
     cursor:pointer;
 }
