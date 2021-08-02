@@ -1,0 +1,46 @@
+body{
+    background-image: url('./images/about_us.png');
+    background-size: cover;
+}
+
+.banner {
+    padding: 20px;
+    background-color: black;
+}
+
+.banner img {
+    width: 10%;
+    padding: 0 30px;
+}
+
+.banner a {
+    padding: 10px 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.banner a:hover {
+    background-color: red;
+}
+
+p{
+    font-family: cursive;
+    font-size: xx-large;
+    text-align: center;
+    padding: 5px;
+}
+
+.abtus{
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    margin: auto;
+
+}
+
+.back_main{
+    margin-left: 100px;
+}

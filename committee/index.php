@@ -27,6 +27,7 @@
         <h1>Committee</h1>
         <div class="committee">
             <div class="committee-box">
+                <img src="../style/images/committee/CZ.JPG" />
                 <div class="committee-info">
                     <h3>President</h3>
                     <span>LUCY YEOW</span>

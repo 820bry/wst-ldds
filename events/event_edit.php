@@ -51,7 +51,7 @@
             <div class="event">
                 <div class="edit" id="event_option_box">
                     <div>Edit</div>
-                    <div>Delete</div>
+                    <div onclick="loadConfirmationBox(this)" >Delete</div>
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
@@ -65,8 +65,8 @@
 
             <div class="event">
                 <div class="edit">
-                    <div>Edit</div>
-                    <div>Delete</div>
+                    <div class="e">Edit</div>
+                    <div class="d" onclick="loadConfirmationBox(this)">Delete</div>
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
@@ -78,9 +78,9 @@
             </div>
 
             <div class="event">
-                <div class="edit">
-                    <div>Edit</div>
-                    <div>Delete</div>
+            <div class="edit">
+                    <div class="e">Edit</div>
+                    <div class="d" onclick="loadConfirmationBox(this)">Delete</div>
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
@@ -92,9 +92,9 @@
             </div>
 
             <div class="event">
-                <div class="edit">
-                    <div>Edit</div>
-                    <div>Delete</div>
+            <div class="edit">
+                    <div class="e">Edit</div>
+                    <div class="d" onclick="loadConfirmationBox(this)">Delete</div>
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
@@ -106,9 +106,9 @@
             </div>
 
             <div class="event">
-                <div class="edit">
-                    <div>Edit</div>
-                    <div>Delete</div>
+            <div class="edit">
+                    <div class="e">Edit</div>
+                    <div class="d" onclick="loadConfirmationBox(this)">Delete</div>
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
@@ -120,9 +120,9 @@
             </div>
 
             <div class="event">
-                <div class="edit">
-                    <div>Edit</div>
-                    <div>Delete</div>
+            <div class="edit">
+                    <div class="edit_edit">Edit</div>
+                    <div class="edit_delete" onclick="loadConfirmationBox(this)">Delete</div>
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
