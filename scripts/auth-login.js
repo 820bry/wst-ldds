@@ -32,6 +32,7 @@ function loginPerform() {
             "auth_password": auth_password
         }
 
+        //Format into JSON format
         authJSON = JSON.stringify(authDetails);
 
         fetch("/wst-ldds/auth/", {

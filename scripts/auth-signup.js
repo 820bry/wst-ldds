@@ -1,8 +1,9 @@
 //Global variables
-var studName = (sessionStorage.getItem("studName") != null) ? sessionStorage.getItem("studName") : "";
-var email = (sessionStorage.getItem("email") != null) ? sessionStorage.getItem("email") : "";
-var password = (sessionStorage.getItem("password") != null) ? sessionStorage.getItem("password") : "";
-var confirm_password = (sessionStorage.getItem("confirm_password") != null) ? sessionStorage.getItem("confirm_password") : "";
+//Get input details of signup page 1 from session storage
+var studName = (sessionStorage.getItem("studName") || "");
+var email = (sessionStorage.getItem("email") || "");
+var password = (sessionStorage.getItem("password") || "");
+var confirm_password = (sessionStorage.getItem("confirm_password") || "");
 var course_code;
 var faculty;
 var studentID;
@@ -20,16 +21,16 @@ phoneNoPattern = /^(|\+6)(?:[0-9]( |-)?){6,10}[0-9]/;
 icNoPattern = /^(([[0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01]))-([0-9]{2})-([0-9]{4})$/;
 
 //Elements declaration
-formElement = document.getElementById("user-details");
-nameElement = document.getElementById("name");
-emailElement = document.getElementById("email");
-passwordElement = document.getElementById("pwd");
-confirmPasswordElement = document.getElementById("repwd");
-courseCodeElement = document.getElementById("ccode");
-facultyElement = document.getElementById("faculty");
-studentIDElement = document.getElementById("studID");
-phoneNoElement = document.getElementById("pnum");
-icNoElement = document.getElementById("nric");
+const formElement = document.getElementById("user-details");
+const nameElement = document.getElementById("name");
+const emailElement = document.getElementById("email");
+const passwordElement = document.getElementById("pwd");
+const confirmPasswordElement = document.getElementById("repwd");
+const courseCodeElement = document.getElementById("ccode");
+const facultyElement = document.getElementById("faculty");
+const studentIDElement = document.getElementById("studID");
+const phoneNoElement = document.getElementById("pnum");
+const icNoElement = document.getElementById("nric");
 
 
 window.onload = () => {
@@ -189,6 +190,7 @@ function signupPerform() {
             "icNo": ic_no
         }
 
+        //Format into JSON format
         authJSON = JSON.stringify(authDetails);
 
         fetch("/wst-ldds/auth/", {
