@@ -31,7 +31,14 @@ const facultyElement = document.getElementById("faculty");
 const studentIDElement = document.getElementById("studID");
 const phoneNoElement = document.getElementById("pnum");
 const icNoElement = document.getElementById("nric");
-
+const emailErrorMessageElement = document.getElementById("error2");
+const passwordErrorMessageElement = document.getElementById("error3");
+const confirmPasswordErrorMessageElement = document.getElementById("error4");
+const courseCodeErrorMessageElement = document.getElementById("error5");
+const facultyErrorMessageElement = document.getElementById("error6");
+const studentIDErrorMessageElement = document.getElementById("error7");
+const phoneNoErrorMessageElement = document.getElementById("error8");
+const icNoErrorMessageElement = document.getElementById("error9");
 
 window.onload = () => {
     //Get page name
@@ -56,11 +63,27 @@ window.onload = () => {
     
 }
 
+function resetErrorMessagePage1() {
+    emailErrorMessageElement.style.visibility = "hidden";
+    passwordErrorMessageElement.style.visibility = "hidden";
+    confirmPasswordErrorMessageElement.style.visibility = "hidden";
+}
+
+function resetErrorMessagePage2() {
+    courseCodeErrorMessageElement.style.visibility = "hidden";
+    facultyErrorMessageElement.style.visibility = "hidden";
+    studentIDErrorMessageElement.style.visibility = "hidden";
+    phoneNoErrorMessageElement.style.visibility = "hidden";
+    icNoErrorMessageElement.style.visibility = "hidden";
+}
+
+
 function signupValidate(pageNo) {
     //Assume -1 is used to validate page 1 from page 2
     //This can prevent users to bypass page 1 validation using the forward button
     if (pageNo == 1 || pageNo == -1) {
         if (pageNo == 1) {
+            resetErrorMessagePage1();
             studName = nameElement.value;
             email = emailElement.value;
             password = passwordElement.value;
@@ -75,40 +98,79 @@ function signupValidate(pageNo) {
 
         if (studName != "" && email != "" && password != "" && confirm_password != "") {
             //Validation test
-            if (password === confirm_password) {
-                //Student name check
-                if (namePattern.test(studName)) {}
-                else {
-                    //Student name check fail
-                    return false;
-                }
+            var checkPassed = true;
 
-                //Email check
-                if (emailPattern.test(email)) {}
-                else {
-                    //Email check fail
-                    return false;
-                }
-
-                //Password check
-                if (passwordPattern.test(password)) {}
-                else {
-                    //Password check fail
-                    return false;
-                }
-
-                //Passed all checks
-                return true;
-            } else {
+            //Password and confirm password check
+            if (password === confirm_password) {} 
+            else {
                 //password and confirm password not match
-                return false;
+                if (pageNo == 1) {
+                    confirmPasswordErrorMessageElement.style.visibility = "visible";
+                    confirmPasswordErrorMessageElement.innerHTML = "Passwords Do Not Match";
+                }
+                checkPassed = false;
             }
+
+            //Student name check
+            if (namePattern.test(studName)) {}
+            else {
+                //Student name check fail
+                checkPassed = false;
+            }
+
+            //Email check
+            if (emailPattern.test(email)) {}
+            else {
+                //Email check fail
+                if (pageNo == 1) {
+                    emailErrorMessageElement.style.visibility = "visible";
+                    emailErrorMessageElement.innerHTML = "Invalid E-Mail";
+                }
+                checkPassed = false;
+            }
+
+            //Password check
+            if (passwordPattern.test(password)) {}
+            else {
+                //Password check fail
+                if (pageNo == 1) {
+                    passwordErrorMessageElement.style.visibility = "visible";
+                    passwordErrorMessageElement.innerHTML = "Password must consist of at least 1 upper character and 1 number";
+                }
+                checkPassed = false;
+            }
+
+            //Passed all checks
+            return checkPassed;
         } else {
             //One or more fields no fill
+            if (pageNo != 1) return false;
+
+            if (studName === "") {
+
+            }
+
+            if (email === "") {
+                emailErrorMessageElement.style.visibility = "visible";
+                emailErrorMessageElement.innerHTML = "Empty E-Mail";
+            }
+
+            if (password === "") {
+                passwordErrorMessageElement.style.visibility = "visible";
+                passwordErrorMessageElement.innerHTML = "Empty password";
+            }
+
+            if (confirm_password === "") {
+                confirmPasswordErrorMessageElement.style.visibility = "visible";
+                confirmPasswordErrorMessageElement.innerHTML = "Empty Confirm Password";
+            }
+
             return false;
         }
     } else {
         //2nd page
+        resetErrorMessagePage2();
+
         course_code = courseCodeElement.value;
         faculty = facultyElement.value;
         studentID = studentIDElement.value;
@@ -118,51 +180,83 @@ function signupValidate(pageNo) {
         //Check for all values again
         if (studName != "" && email != "" && password != "" && confirm_password != "" && course_code != "" && faculty != "" && studentID != "" && phone_number != "" && ic_no != "") {
             //Validation test
+            var checkPassed = true;
+
             //Revalidate page 1
             if (signupValidate(-1)) {}
             else {
                 //Page 1 validation fail
                 window.location.href = "/wst-ldds/login/signUp.html";
-                return false;
+                checkPassed = false;
             }
             //Course code check
             if (courseCodePattern.test(course_code)) {}
             else {
                 //Course code check fail
-                return false;
+                courseCodeErrorMessageElement.style.visibility = "visible";
+                courseCodeErrorMessageElement.innerHTML = "Invalid Course Code";
+                checkPassed = false;
             }
 
             //Faculty check
             if (facultyPattern.test(faculty)) {}
             else {
                 //Faculty check fail
-                return false;
+                facultyErrorMessageElement.style.visibility = "visible";
+                facultyErrorMessageElement.innerHTML = "Invalid Course Code";
+                checkPassed = false;
             }
 
             //Student ID check
             if (studentIDPattern.test(studentID)) {}
             else {
                 //Student ID check fail
-                return false;
+                studentIDErrorMessageElement.style.visibility = "visible";
+                studentIDErrorMessageElement.innerHTML = "Invalid Student ID";
+                checkPassed = false;
             }
 
             //Phone number check
             if (phoneNoPattern.test(phone_number)) {}
             else {
                 //Phone number check fail
-                return false
+                phoneNoErrorMessageElement.style.visibility = "visible";
+                phoneNoErrorMessageElement.innerHTML = "Invalid Phone Number";
+                checkPassed = false
             }
 
             if (icNoPattern.test(ic_no)) {}
             else {
                 //IC No check fail
-                return false;
+                icNoErrorMessageElement.style.visibility = "visible";
+                icNoErrorMessageElement.innerHTML = "Invalid NRIC Number";
+                checkPassed = false;
             }
 
             //Passed all checks
-            return true;
+            return checkPassed;
         } else {
             //One or more fields no fill
+            if (course_code === "") {
+                courseCodeErrorMessageElement.style.visibility = "visible";
+                courseCodeErrorMessageElement.innerHTML = "Empty Course Code";
+            }
+            if (faculty === "") {
+                facultyErrorMessageElement.style.visibility = "visible";
+                facultyErrorMessageElement.innerHTML = "Empty Faculty Code";
+            }
+            if (studentID === "") {
+                studentIDErrorMessageElement.style.visibility = "visible";
+                studentIDErrorMessageElement.innerHTML = "Empty Student ID";
+            }
+            if (phone_number === "") {
+                phoneNoErrorMessageElement.style.visibility = "visible";
+                phoneNoErrorMessageElement.innerHTML = "Empty Phone Number";
+            }
+            if (ic_no === "") {
+                icNoErrorMessageElement.style.visibility = "visible";
+                icNoErrorMessageElement.innerHTML = "Empty NRIC Number";
+            }
         }
     }
 }

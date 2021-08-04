@@ -1,7 +1,9 @@
 //Element declaration
-formElement = document.getElementById("user-details");
-emailElement = document.getElementById("email_id");
-passwordElement = document.getElementById("password");
+const formElement = document.getElementById("user-details");
+const emailElement = document.getElementById("email_id");
+const passwordElement = document.getElementById("password");
+const emailErrorMessageElement = document.getElementById("inputError1");
+const passwordErrorMessageElement = document.getElementById("inputError2");
 
 window.onload = () => {
     formElement.addEventListener("keypress",(e) => {
@@ -11,7 +13,7 @@ window.onload = () => {
 }
 
 function loginValidate() {
-    return (emailElement.value != "" && passwordElement != "");
+    return (emailElement.value != "" && passwordElement.value != "");
 }
 
 function inputDisabled(bool) {
@@ -19,7 +21,14 @@ function inputDisabled(bool) {
     passwordElement.disabled = bool;
 }
 
+function resetErrorMessage() {
+    emailErrorMessageElement.style.visibility = "hidden";
+    passwordErrorMessageElement.style.visibility = "hidden";
+}
+
 function loginPerform() {
+    resetErrorMessage();
+
     if (loginValidate()) {
         //inputDisabled(true);
 
@@ -48,7 +57,11 @@ function loginPerform() {
                 window.alert(varResponse.status);
             } else {
                 window.alert(varResponse.status);
-                inputDisabled(false);
+                emailErrorMessageElement.style.visibility = "visible";
+                emailErrorMessageElement.innerHTML = "Invalid Email/Student ID";
+                passwordErrorMessageElement.style.visibility = "visible";
+                passwordErrorMessageElement.innerHTML = "Invalid Password";
+                //inputDisabled(false);
             }
         })
         .catch((error) => {
@@ -56,5 +69,13 @@ function loginPerform() {
         })
     } else {
         //Input empty
+        if (emailElement.value === "") {
+            emailErrorMessageElement.style.visibility = "visible";
+            emailErrorMessageElement.innerHTML = "Empty Email/Student ID";
+        }
+        if (passwordElement.value === "") {
+            passwordErrorMessageElement.style.visibility = "visible";
+            passwordErrorMessageElement.innerHTML = "Empty Password";
+        }
     }
 }
