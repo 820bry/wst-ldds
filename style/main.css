@@ -328,8 +328,9 @@ div.fade-right {
     cursor: pointer;
 }
 
-.edit_delete{
+.edit .dlt:hover{
     cursor: pointer;
+    
 }
 
 .event_details{
@@ -379,6 +380,8 @@ div.fade-right {
 .join{
     right: 0;
 }
+
+
 /* Event End */
 
 /* Student Info*/

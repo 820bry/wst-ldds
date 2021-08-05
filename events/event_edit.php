@@ -66,7 +66,7 @@
             <div class="event">
                 <div class="edit">
                     <div class="e">Edit</div>
-                    <div class="d" onclick="loadConfirmationBox(this)">Delete</div>
+                    <a class="dlt" onclick="loadConfirmationBox(this)">Delete</a>
                 </div>
                 <div class="event_info_top">
                     <span>Event Name</span>
