@@ -24,38 +24,38 @@ require_once('../banner.php');
         <h1>Committee</h1>
         <div class="committee">
             <div class="committee-box">
-                <img src="../style/images/committee/CZ.JPG" />
+                <img src="../style/images/committee/Bryan.JPG" />
                 <div class="committee-info">
                     <h3>President</h3>
-                    <span>LUCY YEOW</span>
+                    <span>BRYAN LAI WEI MING</span>
+                </div>
+            </div>
+            <div class="committee-box">
+                <img src="../style/images/committee/Natalyn.JPG" />
+                <div class="committee-info">
+                    <h3>Vice President</h3>
+                    <span>NATALYN KOK LI SING</span>
+                </div>
+            </div>
+            <div class="committee-box">
+                <img src="../style/images/committee/vv.JPG" />
+                <div class="committee-info">
+                    <h3>Secretary</h3>
+                    <span>VIVIAN GOH SHIN YING</span>
+                </div>
+            </div>
+            <div class="committee-box">
+                <img src="../style/images/committee/Calvin.JPG" />
+                <div class="committee-info">
+                    <h3>Treasurer</h3>
+                    <span>CALVIN ONG ZHIEN WEI</span>
                 </div>
             </div>
             <div class="committee-box">
                 <img src="../style/images/committee/CZ.JPG" />
                 <div class="committee-info">
-                    <h3>President</h3>
-                    <span>LUCY YEOW</span>
-                </div>
-            </div>
-            <div class="committee-box">
-                <img src="../style/images/committee/CZ.JPG" />
-                <div class="committee-info">
-                    <h3>President</h3>
-                    <span>LUCY YEOW</span>
-                </div>
-            </div>
-            <div class="committee-box">
-                <img src="../style/images/committee/CZ.JPG" />
-                <div class="committee-info">
-                    <h3>President</h3>
-                    <span>LUCY YEOW</span>
-                </div>
-            </div>
-            <div class="committee-box">
-                <img src="../style/images/committee/CZ.JPG" />
-                <div class="committee-info">
-                    <h3>President</h3>
-                    <span>LUCY YEOW</span>
+                    <h3>Committee Member</h3>
+                    <span>YEOW CHEN ZHENG</span>
                 </div>
             </div>
         </div>
