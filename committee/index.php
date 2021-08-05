@@ -1,3 +1,7 @@
+<?php
+require_once('../banner.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,13 +19,6 @@
     <title>Committee | LDDS</title>
 </head>
 <body>
-    <div class="banner">
-        <img src="../style/images/ldds-logo.png" alt="logo" />
-        <a href="../">Home</a>
-        <a href="../events/">Events</a>
-        <a href="../committee/">Committee</a>
-        <a href="../about-us/">About Us</a>
-    </div>
 
     <div class="content">
         <h1>Committee</h1>

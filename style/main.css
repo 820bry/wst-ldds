@@ -3,33 +3,6 @@ body {
     background-size: cover;
 }
 
-/* Banner Start */
-
-.banner {
-    padding: 20px;
-    background-color: black;
-}
-
-.banner img {
-    width: 10%;
-    padding: 0 30px;
-}
-
-.banner a {
-    padding: 10px 30px;
-    border-radius: 12px;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 3px;
-}
-
-.banner a:hover {
-    background-color: red;
-}
-
-/* Banner End */
-
 .content {
     padding: 0 80px;
     color: white;

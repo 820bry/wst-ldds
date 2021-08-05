@@ -1,0 +1,31 @@
+.banner {
+    padding: 20px;
+    background-color: black;
+}
+
+.banner .logo {
+    height: 100px;
+    padding: 0 30px;
+}
+
+.banner .navbar {
+    padding: 10px 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.banner .navbar:hover {
+    background-color: red;
+}
+
+.banner .user-icon {
+    float: right;
+    padding: auto;
+}
+
+.banner .user-icon img {
+    height: 100px;
+}
