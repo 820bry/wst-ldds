@@ -5,6 +5,14 @@ window.onload = () => {
         if (!document.getElementById("event_delete_window").contains(e.target))
             unloadConfirmationBox();
     })
+
+    $(".holder").on("mouseleave", () => {
+        var imgholders = document.getElementsByClassName("imgholder");
+
+        Array.from(imgholders).forEach((holder) => {
+            unloadEventOptionBox(holder.firstElementChild);
+        })
+    })
 }
 
 function loadConfirmationBox(elementFor) {
