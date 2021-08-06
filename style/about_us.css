@@ -1,5 +1,5 @@
 body{
-    background-image: url('./images/about_us.png');
+    background-image: url('./images/grey.png');
     background-size: cover;
 }
 
@@ -7,17 +7,110 @@ p{
     font-family: cursive;
     font-size: xx-large;
     text-align: center;
-    padding: 5px;
+    color: white;
+    padding: 10px;
 }
 
-.abtus{
+
+.sentence{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 800px;
-    height: 500px;
-    background-color: white;
+    height: 400px;
     margin: auto;
-
+    color: white;
 }
 
-.back_main{
-    margin-left: 100px;
+
+
+.backmain{
+    padding: 15px 30px;
+    box-sizing: border-box;
+    color: black;
+    position: relative;
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: large;
+    text-decoration: none;
+    color: #C5C6D0;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 15px;
+    left: 42.5%;
 }
+
+.backmain:hover{
+    color: black;
+    background: #C5C6D0;
+    box-shadow: 0 0 10px #C5C6D0, 0 0 40px #C5C6D0, 0 0 80px #C5C6D0;
+    transition-delay: 1s;
+    opacity: 0.5;
+}
+
+
+.backmain span{
+    position:absolute;
+    display: block;
+}
+
+.backmain span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#C5C6D0);
+}
+
+.backmain:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+
+.backmain span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#C5C6D0);
+}
+
+.backmain:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.backmain span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#C5C6D0);
+}
+
+.backmain:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.backmain span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#C5C6D0);
+}
+
+.backmain:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+

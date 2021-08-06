@@ -11,7 +11,7 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="/wst-ldds/style/event.css">
     <script src="../scripts/carousel.js" type="text/javascript"></script>
     <script src="../scripts/events.js" type="text/javascript"></script>
     <title>Events | LDDS</title>
@@ -43,99 +43,97 @@
 
 
     <div class="content">
-        <h3>Event</h3>
+        <h2>Event</h2>
 
         
 
         <div class="event_list">
-            <div class="event">
-                <div class="edit" id="event_option_box">
-                    <div>Edit</div>
-                    <div onclick="loadConfirmationBox(this)" >Delete</div>
-                </div>
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
-                </div>
 
-            </div>
-
-            <div class="event">
-                <div class="edit">
-                    <div class="e">Edit</div>
-                    <a class="dlt" onclick="loadConfirmationBox(this)">Delete</a>
-                </div>
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
+            <div class="holder">
+                    <div class="edit">
+                        <div class="Edit">Edit</div>
+                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+                    </div>
+                <div class="imgholder">
+                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox>
+                        <img src="../style/images/committee/CZ.JPG" />
+                    </div>
+                    <div class="paragraphs">
+                        <h3>Event 3</h3>
+                        <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="event">
-            <div class="edit">
-                    <div class="e">Edit</div>
-                    <div class="d" onclick="loadConfirmationBox(this)">Delete</div>
-                </div>
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
-                </div>
-            </div>
-
-            <div class="event">
-            <div class="edit">
-                    <div class="e">Edit</div>
-                    <div class="d" onclick="loadConfirmationBox(this)">Delete</div>
-                </div>
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
+            <div class="holder">
+                    <div class="edit">
+                        <div class="Edit">Edit</div>
+                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+                    </div>
+                <div class="imgholder">
+                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox>
+                        <img src="../style/images/committee/CZ.JPG" />
+                    </div>
+                    <div class="paragraphs">
+                        <h3>Event 3</h3>
+                        <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="event">
-            <div class="edit">
-                    <div class="e">Edit</div>
-                    <div class="d" onclick="loadConfirmationBox(this)">Delete</div>
-                </div>
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
-                </div>
-            </div>
-
-            <div class="event">
-            <div class="edit">
-                    <div class="edit_edit">Edit</div>
-                    <div class="edit_delete" onclick="loadConfirmationBox(this)">Delete</div>
-                </div>
-                <div class="event_info_top">
-                    <span>Event Name</span>
-                    <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                </div>
-                <div class="event_info_btm">
-                    <span>Details</span>
+            <div class="holder">
+                    <div class="edit">
+                        <div class="Edit">Edit</div>
+                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+                    </div>
+                <div class="imgholder">
+                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox>
+                        <img src="../style/images/committee/CZ.JPG" />
+                    </div>
+                    <div class="paragraphs">
+                        <h3>Event 3</h3>
+                        <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                    </div>
                 </div>
             </div>
 
-        </div> 
+            <div class="holder">
+                    <div class="edit">
+                        <div class="Edit">Edit</div>
+                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+                    </div>
+                <div class="imgholder">
+                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox>
+                        <img src="../style/images/committee/CZ.JPG" />
+                    </div>
+                    <div class="paragraphs">
+                        <h3>Event 3</h3>
+                        <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                    </div>
+                </div>
+            </div>
 
-        
+            <div class="holder">
+                    <div class="edit">
+                        <div class="Edit">Edit</div>
+                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+                    </div>
+                <div class="imgholder">
+                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox>
+                        <img src="../style/images/committee/CZ.JPG" />
+                    </div>
+                    <div class="paragraphs">
+                        <h3>Event 3</h3>
+                        <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="footer">

@@ -187,6 +187,82 @@ div.fade-right {
 
 /* Event Start */
 
+.holder{
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.holder .imgholder{
+    margin: 0;
+    padding: 0;
+    max-width: 310px;
+    height: 215px;
+    position: relative;
+    height: 420px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.holder .imgholder:hover{
+    margin: 0;
+    padding: 0;
+    height: 450px;
+}
+
+.holder .imgholder .imgbox{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.holder .imgholder .imgbox img{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.holder .imgholder .paragraphs{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition:  0.3s ease-in-out;
+    color: black;
+}
+
+.holder .imgholder:hover .paragraphs{
+    margin: 0;
+    padding: 0;
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.25s;
+}
+
+
 .event_list{
     display: flex;
     flex-wrap: wrap;
@@ -271,12 +347,14 @@ div.fade-right {
 .tick{
     width: 40px;
     height: 40px;
+    cursor: pointer;
     /* position */
 }
 
 .cross{
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 .edit{
@@ -297,13 +375,12 @@ div.fade-right {
     visibility: hidden;
 }
 
-.edit_edit{
+.Edit{
     cursor: pointer;
 }
 
-.edit .dlt:hover{
+.dlt{
     cursor: pointer;
-    
 }
 
 .event_details{
@@ -402,6 +479,7 @@ div.fade-right {
     width: 10px;
     height: 10px;
 }
+
 /* Footer Start */
 
 .footer {
