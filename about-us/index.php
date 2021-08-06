@@ -23,19 +23,7 @@ require_once('../banner.php');
 
 <body>
 
-<<<<<<< Updated upstream:about-us/index.php
-    <div>
-=======
-    <div class="banner">
-        <img src="../style/images/ldds-logo.png" alt="logo" />
-        <a href="../">Home</a>
-        <a href="../events/">Events</a>
-        <a href="../committee/">Committee</a>
-        <a href="../about-us/">About Us</a>
-    </div>
-
     <div  class="abtus">
->>>>>>> Stashed changes:about_us/about_us.php
         <p>About Us</p>
 
         <div  class="sentence">

@@ -1,3 +1,7 @@
+<?php
+require_once('banner.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,23 +15,10 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/banner.css">
     <script src="scripts/carousel.js" type="text/javascript"></script>
     <title>Home | LDDS</title>
 </head>
 <body>
-    <div class="banner">
-        <img class="logo" src="style/images/ldds-logo.png" alt="logo" />
-        <a class="navbar" href="">Home</a>
-        <a class="navbar" href="events/">Events</a>
-        <a class="navbar" href="committee/">Committee</a>
-        <a class="navbar" href="about-us/">About Us</a>
-
-        <a class="user-icon" href="#">
-            <img src="style/images/user-icon.png" alt="user" />
-        </a>
-    </div>
-
     <div class="content">
         <div class="carousel-container">
             <div class="carousel-item">

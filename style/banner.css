@@ -36,6 +36,8 @@
     background-color: #b3b3b3;
     right: 0;
     min-width: 200px;
+
+    transition: display 0.5s;
 }
 
 .dropdown-content a {
@@ -51,5 +53,5 @@
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;;
+    display: block;
 }

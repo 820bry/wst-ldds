@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="/wst-ldds/style/banner.css">
 
-        <script src="/wst-ldds/scripts/banner.js" defer></script>
+        <script src="/wst-ldds/scripts/main.js" defer></script>
     </head>
     <body>
         <div class="banner">
