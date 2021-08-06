@@ -17,7 +17,7 @@ function unloadConfirmationBox() {
 }
 
 function deleteEvent(bool) {
-    var eventElements = document.getElementsByClassName("event");
+    var eventElements = document.getElementsByClassName("holder");
 
     if (bool) {
         //Delete the event box
