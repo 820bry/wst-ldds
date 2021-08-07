@@ -15,16 +15,17 @@ require_once('banner.php');
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="style/main.css">
-    <script src="scripts/home.js" type="text/javascript"></script>
-    <script src="scripts/scrollbar.js" type="text/javascript"></script>
-    <script src="scripts/carousel.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/wst-ldds/style/main.css">
+    <link rel="stylesheet" href="/wst-ldds/style/carousel.css">
+    <script src="/wst-ldds/scripts/home.js" type="text/javascript"></script>
+    <script src="/wst-ldds/scripts/scrollbar.js" type="text/javascript"></script>
+    <script src="/wst-ldds/scripts/carousel.js" type="text/javascript"></script>
     <title>Home | LDDS</title>
 </head>
 <body class="hidden-scrollbar">
     <div class="content">
-        <!-- <div class="carousel-container">
-            <div class="carousel-item">
+        <div class="carousel-container">
+            <div class="carousel-item" style="display: none;">
                 <a href="#">
                     <img src="style/images/carousel/JLC.jpg" />
                     <div class="caption-box fade-right">
@@ -33,7 +34,7 @@ require_once('banner.php');
                     </div>
                 </a>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" style="display: none;">
                 <a href="#">
                     <img src="style/images/carousel/Odyssey Night.JPG" />
                     <div class="caption-box fade-right">
@@ -42,7 +43,7 @@ require_once('banner.php');
                     </div>
                 </a>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" style="display: none;">
                 <a href="#">
                     <img src="style/images/carousel/Orientation Week.JPG" />
                     <div class="caption-box fade-right">
@@ -51,7 +52,7 @@ require_once('banner.php');
                     </div>
                 </a>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" style="display: none;"> 
                 <a href="#">
                     <img src="style/images/carousel/Team Building.png" />
                     <div class="caption-box fade-right">
@@ -68,9 +69,6 @@ require_once('banner.php');
                     generateIndicator();
                 </script>
             </div>
-        </div> -->
-        <div class="carousel-container">
-            
         </div>
 
         <div class = "home-comm" id = "home-comm">

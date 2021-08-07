@@ -3,9 +3,9 @@ var currSlide = 1;
 var slides = document.getElementsByClassName("carousel-item");
 var indicators = document.getElementsByClassName("dot");
 
-// window.onload = function() {
-//     display(currSlide);
-// };
+window.addEventListener('load', () => {
+    display(currSlide);
+});
 
 // generate carousel page indicator
 function generateIndicator() {
