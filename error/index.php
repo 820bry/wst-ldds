@@ -31,7 +31,7 @@
 <a class="error_button" id="error_button" href="/wst-ldds/">Back To Home</a>
 
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var boxerror = document.body;
     window.onmousemove = function(e){
         var x = - e.clientX/5,
@@ -40,7 +40,7 @@
         boxerror.style.backgroundPositionY = y + 'px';
     }
 
-</script>
+</script> -->
 </body>
 
 

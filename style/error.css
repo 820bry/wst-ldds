@@ -1,6 +1,5 @@
 body{
-    background-image: url('/wst-ldds/style/images/p404.png');
-    background-repeat: no-repeat;
+    background-color: #18191A;
 }
 
 
@@ -24,11 +23,7 @@ body{
     margin-right: auto;
 }
 
-#boxerror{
-    width: 100%;
-    height: 100%;
 
-}
 
 .error_paragraph{
     text-align: center;
