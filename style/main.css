@@ -2,6 +2,23 @@ body {
     background-image: url('./images/bg.svg');
     background-size: cover;
     overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+*::-webkit-scrollbar
+{
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track
+{
+    border-radius: 100px;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background-color: #202020;
+    border-radius: 100px;
 }
 
 .content {
