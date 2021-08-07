@@ -2,10 +2,10 @@
     <head>
         <link rel="stylesheet" href="/wst-ldds/style/banner.css">
 
-        <script src="/wst-ldds/scripts/main.js" defer></script>
+        <script src="/wst-ldds/scripts/banner.js" defer></script>
     </head>
     <body>
-        <div class="banner">
+        <div class="banner" id="banner">
             <img class="logo "src="/wst-ldds/style/images/ldds-logo.png" alt="logo" />
             <a class="navbar" href="/wst-ldds/">Home</a>
             <a class="navbar" href="/wst-ldds/events/">Events</a>

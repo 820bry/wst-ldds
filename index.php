@@ -21,7 +21,7 @@ require_once('banner.php');
 </head>
 <body class="hidden-scrollbar">
     <div class="content">
-        <div class="carousel-container">
+        <!-- <div class="carousel-container">
             <div class="carousel-item">
                 <a href="#">
                     <img src="style/images/carousel/JLC.jpg" />
@@ -66,7 +66,11 @@ require_once('banner.php');
                     generateIndicator();
                 </script>
             </div>
+        </div> -->
+        <div class="carousel-container">
+            
         </div>
+
         <div class = "home-comm" id = "home-comm">
             <h1>Committee</h1>
             <div class = "comm-desc" id = "comm-desc">

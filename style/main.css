@@ -1,6 +1,7 @@
 body {
-    background-image: url('./images/bg.svg');
+    background: url('./images/bg.svg') fixed;
     background-size: cover;
+
     overflow-x: hidden;
     overflow-y: overlay;
 }
@@ -38,6 +39,7 @@ body {
 
 /* Home Start */
 
+/*
 div.carousel-container {
     position: relative;
     width: 75%;
@@ -169,7 +171,7 @@ div.fade-right {
         right: 70px;
     }
 }
-
+*/
 .home-comm
 {
     display: flex;
