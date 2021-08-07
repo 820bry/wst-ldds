@@ -148,6 +148,65 @@ div.fade-right {
     }
 }
 
+.home-comm
+{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.home-comm .comm-desc
+{
+    background-color: #d26515;
+    transform: skewY(-10deg) translate(-100px, 200px);
+    width: 100%;
+    padding: 20px 90px;
+}
+
+.home-comm .comm-desc > p
+{
+    color: white;
+    transform: skewY(9deg);
+    margin: 70px 10px;
+    width: 675px;
+    font-size: 1.2rem;
+}
+
+.home-comm .comm-disp
+{
+    margin-left: 600px;
+    width: 600px;
+    transform: translateX(250px) translateY(-300px);
+    max-height: 500px;
+}
+
+.home-comm .comm-disp > img
+{
+    max-width: 450px;
+    max-height: 450px;
+}
+
+.home-comm .more-comm-info
+{
+    transform: translate(50px, -170px);
+}
+
+.home-comm .more-comm-info > a
+{
+    padding: 20px 50px;
+    background: linear-gradient(180deg, #62FDA0 0%, #00FFD1 100%);
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.75rem;
+}
+
+.home-comm .more-comm-info >a:hover
+{
+    background: linear-gradient(180deg, #3cf384 0%, #00826a 100%);
+}
+
 /* Home End */
 
 /* Committee Start */
