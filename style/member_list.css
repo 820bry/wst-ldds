@@ -49,6 +49,7 @@ body {
     padding: 20px;
     border: none;
     background-color: transparent;
+    width: 40px;
 }
 
 .head_of_table .close-button button:hover
@@ -56,10 +57,15 @@ body {
     cursor: pointer;
 }
 
+.head_of_table .close-button span {
+    border-radius: 100%;
+}
+
 .head_of_table .close-button button:active, .head_of_table .close-button span 
 {
     transform: translate(1px, 1px);
     border: none;
+    width: 40px;
 }
 
 .head_of_table .searchbar::placeholder
