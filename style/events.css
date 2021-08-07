@@ -1,0 +1,35 @@
+.events-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.event-box {
+    border-radius: 10px;
+    text-decoration: none;
+    background: green;
+    width: 500px;
+}
+
+.event-box > h3 {
+    border-radius: 10px;
+    letter-spacing: 2px;
+    padding: 30px 20px 10px 20px;
+    margin: 0;
+    background: gray;
+}
+
+.event-box > .desc {
+    padding: 10px;
+}
+
+.event-box > .deadline, .event-box > .slots-left {
+    display: inline-block;
+    padding: 25px;
+    font-size: 20px;
+}
+
+.event-box > .slots-left {
+    float: right;
+}
