@@ -156,6 +156,13 @@ div.fade-right {
     margin: auto;
 }
 
+.home-comm > h1 {
+    color: white;
+    text-transform: uppercase;
+    transform: translateY(20rem);
+    font-size: 3.2rem;
+}
+
 .home-comm .comm-desc
 {
     background-color: #d26515;
@@ -207,6 +214,76 @@ div.fade-right {
     background: linear-gradient(180deg, #3cf384 0%, #00826a 100%);
 }
 
+.home-event
+{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.home-event h1
+{
+    color: white;
+    text-transform: uppercase;
+    transform: translate(70rem, 30rem);
+    font-size: 3.2rem;
+}
+
+.home-event .event-desc
+{
+    display: flex;
+    background-color: #d22315;
+    transform: skewY(10deg) translate(100px, 330px);
+    width: 100%;
+    padding: 20px 90px;
+    justify-content: flex-end;
+}
+
+.home-event .event-desc > p
+{
+    color: white;
+    transform: skewY(-9deg);
+    margin: 70px 10px;
+    width: 675px;
+    font-size: 1.2rem;
+}
+
+.home-event .event-disp
+{
+    width: 600px;
+    max-height: 500px;
+    margin-right: 400px;
+    transform: translate(-90px, -200px);
+}
+
+.home-event .event-disp > img
+{
+    max-width: 450px;
+    max-height: 450px;
+}
+
+.home-event .more-event-info
+{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.home-event .more-event-info > a
+{
+    padding: 20px 50px;
+    background: linear-gradient(180deg, #DFACAC 0%, #F14747 100%);
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.75rem;
+}
+
+.home-event .more-event-info >a:hover
+{
+    background: linear-gradient(180deg, #ff0000 0%, #723232 100%);
+}
 /* Home End */
 
 /* Committee Start */
