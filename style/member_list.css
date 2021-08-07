@@ -26,37 +26,129 @@ body {
     background-color: red;
 }
 
+.member-container
+{
+    background-color: white;
+    padding: 0 50px 0 35px;
+    margin: 0 60px;
+}
 
 .head_of_table{
-    color: white;
+    color: black;
     display: flex;
 }
 
+.head_of_table > h3
+{
+     margin: 20px 45px 20px 0;
+}
+
+.head_of_table .searchbar
+{
+    margin-top: 15px;
+    width: 674px;
+    height: 50px;
+    background-color: rgba(201,201,201,0.2);
+    border: none;
+    padding-left: 20px;
+}
+
+.head_of_table .searchbar:focus
+{
+    outline: none;
+}
+
+.head_of_table .close-button
+{
+    margin-left: 31%;
+    padding: 14px 0 14px 14px;
+}
+
+.head_of_table .close-button button
+{
+    background-image: url("images/close_button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.head_of_table .close-button button:hover
+{
+    cursor: pointer;
+}
+
+.head_of_table .close-button button:active
+{
+    transform: translate(1px, 1px);
+}
+
+.head_of_table .close-button button:focus
+{
+    border: none;
+    outlline: none;
+    background-color: transparent;
+}
+
+.head_of_table .searchbar::placeholder
+{
+    color: black;
+}
+
+.member-container .page-controls
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.member-container .page-controls span, .member-container .page-controls button
+{
+    margin-right: 20px;
+}
+
+
+
+.member-container .page-controls button:hover
+{
+    cursor: pointer;
+}
+
+.member-container .page-controls button:active
+{
+    transform: translate(1px, 1px);
+}
 
 .table_list{
     display: flex;
     border-collapse: collapse;
-    margin: 0 50px;
 }
 
 .member_list{
-    justify-content: center;
     box-sizing: border-box;
-    color: white;
+    color: black;
     width: 100%;
     border-collapse: collapse;
+    margin: 10px 0;
 }
 
 .member_list td, .member_list th{
-    padding: 10px 12px;
+    padding: 10px 12px 10px 0;
     text-align: center;
     font-size: 15px;
 }
 
-.member_list th{
+.member_list .chckbox
+{
+    width: 1%;
+}
+
+/*.member_list th{
     background-color: black;
     /* background-color: #B5B5B5;
-    color: #C9C9C9; */
+    color: #C9C9C9; 
 }
 
 .member_list tbody tr:nth-child(even){
@@ -73,4 +165,4 @@ body {
 
 .member_list tbody tr:nth-child(odd):hover{
     background-color: #BABABA;
-}
+}*/
