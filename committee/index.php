@@ -14,11 +14,12 @@ require_once('../banner.php');
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+    <script src="scripts/scrollbar.js" type="text/javascript"></script>
     <link rel="stylesheet" href="../style/main.css">
 
     <title>Committee | LDDS</title>
 </head>
-<body>
+<body class="hidden-scrollbar">
 
     <div class="content">
         <h1>Committee</h1>

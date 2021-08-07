@@ -5,6 +5,10 @@ body {
     overflow-y: overlay;
 }
 
+.hidden-scrollbar::-webkit-scrollbar {
+    width: 0 !important;
+ }
+
 *::-webkit-scrollbar
 {
     width: 4px;
