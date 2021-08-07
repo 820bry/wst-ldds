@@ -1,3 +1,4 @@
+/* Event List Page */
 .events-list {
     display: flex;
     flex-wrap: wrap;
@@ -32,4 +33,69 @@
 
 .event-box > .slots-left {
     float: right;
+}
+
+/* Event Info Page */
+.content {
+    padding: 0 300px;
+}
+
+.event-info {
+    position: relative;
+    border-radius: 40px;
+    color: black;
+    background: white;
+    padding: 40px 5%;
+}
+
+.person-in-charge {
+    padding: 20px 0;
+}
+
+.person-in-charge > img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.person-in-charge > span {
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 100% 20px;
+    font-size: 30px;
+}
+
+.event-img {
+    display: inline-block;
+    position: relative;
+    width: 55%;
+}
+
+.event-img > img {
+    width: 100%;
+}
+
+.event-details {
+    float: right;
+    width: 40%;
+}
+
+.event-details > .desc {
+    font-size: 18px;
+    padding-bottom: 50px;
+}
+
+.event-details > .slots-left, .event-details > .deadline {
+    font-size: 25px;
+    display: inline-block;
+}
+
+.event-details > .deadline {
+    float: right;
+}
+
+.event-details > .register {
+    width: 100px;
+    height: 40px;
+    padding: auto;
 }
