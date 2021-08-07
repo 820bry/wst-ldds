@@ -66,6 +66,9 @@ require_once('banner.php');
                 </script>
             </div>
         </div>
+        <div class = "committee" id = "committee">
+            
+        </div>
     </div>
 
 </body>
