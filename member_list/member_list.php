@@ -29,9 +29,7 @@
 
     <div class="head_of_table">
         <h3 class="head_one">Member</h3>
-        <div class="head_two">
             <input type="text" class="searchbar" id="searchbar" placeholder="Search">
-        </div>
     </div>
 
     <div class="table_list">
