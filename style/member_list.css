@@ -1,7 +1,34 @@
+@-webkit-keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: .5;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+}
+ 
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: .5;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+}
+
 body {
     background-image: url('./images/bg.svg');
     background-size: cover;
 }
+
 
 .member-container
 {
@@ -136,9 +163,24 @@ body {
     background-color: #fff;
 }
 
+.member_list th:hover
+{
+    cursor: pointer;
+}
+
+.member_list th:active
+{
+    transform: translateY(2px);
+}
+
 .member_list tr selected
 {
     background-color: #e0e0e0;
+}
+
+.member_list .material-icons
+{
+    font-size: 18px;
 }
 
 /*

@@ -45,10 +45,10 @@ require_once('../banner.php');
             <table class="member_list" id = "member_list">
                 <thead>
                     <th class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-0"><input type="checkbox" id="checkbox-0" class="mdl-checkbox__input" onclick="checkAllBox(this)"></label></th>
-                    <th>Name</th>
-                    <th>Student ID</th>
-                    <th>Course</th>
-                    <th>Email</th>
+                    <th>Name <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th>Student ID <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th>Course <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th>Email <span class="material-icons">keyboard_arrow_down</span> </th>
                 </thead>
 
             <tbody>
