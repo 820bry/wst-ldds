@@ -3,34 +3,11 @@ body {
     background-size: cover;
 }
 
-.banner {
-    padding: 20px;
-    background-color: black;
-}
-
-.banner img {
-    width: 10%;
-    padding: 0 30px;
-}
-
-.banner a {
-    padding: 10px 30px;
-    border-radius: 12px;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 3px;
-}
-
-.banner a:hover {
-    background-color: red;
-}
-
 .member-container
 {
     background-color: white;
     padding: 0 50px 0 35px;
-    margin: 0 60px;
+    margin: 70px 60px ;
 }
 
 .head_of_table{
@@ -79,16 +56,10 @@ body {
     cursor: pointer;
 }
 
-.head_of_table .close-button button:active
+.head_of_table .close-button button:active, .head_of_table .close-button span 
 {
     transform: translate(1px, 1px);
-}
-
-.head_of_table .close-button button:focus
-{
     border: none;
-    outlline: none;
-    background-color: transparent;
 }
 
 .head_of_table .searchbar::placeholder
@@ -126,12 +97,18 @@ body {
     border-collapse: collapse;
 }
 
-.member_list{
+.member_list
+{
     box-sizing: border-box;
     color: black;
     width: 100%;
     border-collapse: collapse;
     margin: 10px 0;
+}
+
+.member_list tr:hover
+{
+   background-color: #eee;
 }
 
 .member_list td, .member_list th{
@@ -143,14 +120,22 @@ body {
 .member_list .chckbox
 {
     width: 1%;
+    padding-left: 12px;
 }
 
-/*.member_list th{
-    background-color: black;
-    /* background-color: #B5B5B5;
-    color: #C9C9C9; 
+
+.member_list th{
+    color: black; 
+    font-weight: bold;
+    background-color: #fff;
 }
 
+.member_list tr selected
+{
+    background-color: #e0e0e0;
+}
+
+/*
 .member_list tbody tr:nth-child(even){
     background-color: #3D3D3D;
 }

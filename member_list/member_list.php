@@ -1,3 +1,7 @@
+<?php
+require_once('../banner.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +14,7 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="/wst-ldds/style/main.css"/>
 
     <link rel="stylesheet" href="/wst-ldds/style/member_list.css">
     <script src="../scripts/carousel.js" type="text/javascript"></script>
@@ -19,15 +24,6 @@
 
 
 <body>
-
-    <div class="banner">
-        <img src="../style/images/ldds-logo.png" alt="logo" />
-        <a href="../">Home</a>
-        <a href="../events/">Events</a>
-        <a href="../committee/">Committee</a>
-        <a href="../about-us/">About Us</a>
-    </div>
-
     <div class = "member-container" id = "member-container">
         <div class="head_of_table">
             <h3 class="head_one">Members</h3>
@@ -44,7 +40,7 @@
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect"><i class="material-icons">navigate_next</i></button>
         </div>
         <div class="table_list">
-            <table class="member_list">
+            <table class="member_list" id = "member_list">
                 <thead>
                     <th class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-0"><input type="checkbox" id="checkbox-0" class="mdl-checkbox__input"></label></th>
                     <th>Name</th>
