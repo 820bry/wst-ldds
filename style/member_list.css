@@ -60,17 +60,17 @@ body {
 }
 
 .member_list tbody tr:nth-child(even){
-    background-color: #7D7D7D;
+    background-color: #3D3D3D;
 }
 
 .member_list tbody tr:nth-child(even):hover{
-    background-color: #7D7D7D;
+    background-color: #4D4D4D;
 }
 
 .member_list tbody tr:nth-child(odd){
-    background-color: #525252;
+    background-color: #919191;
 }
 
 .member_list tbody tr:nth-child(odd):hover{
-    background-color: #6B6B6B;
+    background-color: #BABABA;
 }
