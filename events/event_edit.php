@@ -49,92 +49,90 @@
 
         <div class="event_list">
 
-            <div class="holder">
-                    <div class="edit">
-                        <div class="Edit">Edit</div>
-                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+            <div id="holder" class="holder">
+                    <div onmouseout = "unloadEventOptionBox(this)" class="edit" id="edit">
+                        <div class="Edit" id="Edit">Edit</div>
+                        <div class="dlt" id="dlt" onclick="loadConfirmationBox(this)">Delete</div>
                     </div>
-                <div class="imgholder">
-                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                    <div class=imgbox>
+                <div class="imgholder" id="imgholder">
+                <img onmouseout = "unloadEventOptionBox(this)" src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox id="imgbox">
                         <img src="../style/images/committee/CZ.JPG" />
                     </div>
-                    <div class="paragraphs">
+                    <div class="paragraphs" id="paragraphs">
                         <h3>Event 3</h3>
                         <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="holder">
-                    <div class="edit">
-                        <div class="Edit">Edit</div>
-                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+            <div id="holder" class="holder">
+                    <div onmouseout = "unloadEventOptionBox(this)" class="edit" id="edit">
+                        <div class="Edit" id="Edit">Edit</div>
+                        <div class="dlt" id="dlt" onclick="loadConfirmationBox(this)">Delete</div>
                     </div>
-                <div class="imgholder">
-                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                    <div class=imgbox>
+                <div class="imgholder" id="imgholder">
+                <img onmouseout = "unloadEventOptionBox(this)" src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox id="imgbox">
                         <img src="../style/images/committee/CZ.JPG" />
                     </div>
-                    <div class="paragraphs">
+                    <div class="paragraphs" id="paragraphs">
                         <h3>Event 3</h3>
                         <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="holder">
-                    <div class="edit">
-                        <div class="Edit">Edit</div>
-                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+            <div id="holder" class="holder">
+                    <div onmouseout = "unloadEventOptionBox(this)" class="edit" id="edit">
+                        <div class="Edit" id="Edit">Edit</div>
+                        <div class="dlt" id="dlt" onclick="loadConfirmationBox(this)">Delete</div>
                     </div>
-                <div class="imgholder">
-                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                    <div class=imgbox>
+                <div class="imgholder" id="imgholder">
+                <img onmouseout = "unloadEventOptionBox(this)" src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox id="imgbox">
                         <img src="../style/images/committee/CZ.JPG" />
                     </div>
-                    <div class="paragraphs">
+                    <div class="paragraphs" id="paragraphs">
                         <h3>Event 3</h3>
                         <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="holder">
-                    <div class="edit">
-                        <div class="Edit">Edit</div>
-                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+            <div id="holder" class="holder">
+                    <div onmouseout = "unloadEventOptionBox(this)" class="edit" id="edit">
+                        <div class="Edit" id="Edit">Edit</div>
+                        <div class="dlt" id="dlt" onclick="loadConfirmationBox(this)">Delete</div>
                     </div>
-                <div class="imgholder">
-                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                    <div class=imgbox>
+                <div class="imgholder" id="imgholder">
+                <img onmouseout = "unloadEventOptionBox(this)" src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox id="imgbox">
                         <img src="../style/images/committee/CZ.JPG" />
                     </div>
-                    <div class="paragraphs">
+                    <div class="paragraphs" id="paragraphs">
                         <h3>Event 3</h3>
                         <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="holder">
-                    <div class="edit">
-                        <div class="Edit">Edit</div>
-                        <div class="dlt" onclick="loadConfirmationBox(this)">Delete</div>
+            <div id="holder" class="holder">
+                    <div onmouseout = "unloadEventOptionBox(this)" class="edit" id="edit">
+                        <div class="Edit" id="Edit">Edit</div>
+                        <div class="dlt" id="dlt" onclick="loadConfirmationBox(this)">Delete</div>
                     </div>
-                <div class="imgholder">
-                <img src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
-                    <div class=imgbox>
+                <div class="imgholder" id="imgholder">
+                <img onmouseout = "unloadEventOptionBox(this)" src="../style/images/option.png" alt="logo" class="option" onclick="loadEventOptionBox(this)"/>
+                    <div class=imgbox id="imgbox">
                         <img src="../style/images/committee/CZ.JPG" />
                     </div>
-                    <div class="paragraphs">
+                    <div class="paragraphs" id="paragraphs">
                         <h3>Event 3</h3>
                         <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
     <div class="footer">
         <p>Copyright (C) Literature, Dance & Drama Society</p>

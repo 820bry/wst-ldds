@@ -1,0 +1,76 @@
+body {
+    background-image: url('./images/bg.svg');
+    background-size: cover;
+}
+
+.banner {
+    padding: 20px;
+    background-color: black;
+}
+
+.banner img {
+    width: 10%;
+    padding: 0 30px;
+}
+
+.banner a {
+    padding: 10px 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.banner a:hover {
+    background-color: red;
+}
+
+
+.head_of_table{
+    color: white;
+    display: flex;
+}
+
+
+.table_list{
+    display: flex;
+    border-collapse: collapse;
+    margin: 0 50px;
+}
+
+.member_list{
+    justify-content: center;
+    box-sizing: border-box;
+    color: white;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.member_list td, .member_list th{
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.member_list th{
+    background-color: black;
+    /* background-color: #B5B5B5;
+    color: #C9C9C9; */
+}
+
+.member_list tbody tr:nth-child(even){
+    background-color: #7D7D7D;
+}
+
+.member_list tbody tr:nth-child(even):hover{
+    background-color: #7D7D7D;
+}
+
+.member_list tbody tr:nth-child(odd){
+    background-color: #525252;
+}
+
+.member_list tbody tr:nth-child(odd):hover{
+    background-color: #6B6B6B;
+}
