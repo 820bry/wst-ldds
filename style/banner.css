@@ -4,7 +4,7 @@
 }
 
 .banner .logo {
-    height: 100px;
+    height: 80px;
     padding: 0 30px;
 }
 
@@ -29,7 +29,8 @@
 }
 
 .dropdown .user-icon {
-    height: 100px;
+    vertical-align: middle;
+    height: 80px;
     cursor: pointer;
 }
 

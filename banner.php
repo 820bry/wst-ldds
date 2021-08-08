@@ -17,8 +17,8 @@
 
                 <div class="dropdown-content">
                     <div id="anonymous">
-                        <a href="#">Log In</a>
-                        <a href="#">Sign Up</a>
+                        <a href="/wst-ldds/login">Log In</a>
+                        <a href="/wst-ldds/signup">Sign Up</a>
                     </div>
 
                     <div id="member">
@@ -29,7 +29,7 @@
 
                     <div id="admin">
                         <a href="/wst-ldds/member_list/member_list.php">View Member List</a>
-                        <a href="#">View Event List</a>
+                        <a href="/wst-ldds/event_list/">View Event List</a>
                     </div>
                 </div>
             </div>

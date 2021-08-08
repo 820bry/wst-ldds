@@ -1,0 +1,42 @@
+.profile {
+    margin: 10px 50px;
+    padding: 30px 110px;
+    border-radius: 20px;
+    color: black;
+    background: white;
+}
+
+.heading {
+    
+}
+
+.heading > img {
+    width: 180px;
+    border-radius: 50%;
+}
+
+.heading-info {
+    padding: 0 40px;
+    display: inline-block;
+}
+
+.information {
+    padding: 50px 0;
+}
+
+.information > table {
+    font-size: 25px;
+}
+
+.information > table td {
+    padding: 10px 0;
+}
+
+.information > table .data {
+    font-weight: bolder;
+    text-align: right;
+}
+
+.information > table .value {
+    padding: 0 50px;
+}
