@@ -5,6 +5,11 @@
     src: url("wst-ldds/login/LDDS-wfont/roboto-light-webfont.woff") format("woff");
 }
 
+*::-webkit-scrollbar
+{
+    overflow: hidden;
+}
+
 .logbody
 {
     background-color: #171717;
@@ -25,6 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    transform: translateX(-40px);
 }
 
 .logincontainer
@@ -38,6 +44,7 @@
     background: #000000;
     padding-left: 120px;
     border-radius: 20px;
+    transform: translateX(-60px);
 }
 
 .logincontainer .signup > a
