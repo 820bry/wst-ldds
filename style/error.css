@@ -19,10 +19,14 @@ body{
     text-align: center;
     padding: 50px 0;
     display: block;
+    top: 10%;
     margin-left: auto;
     margin-right: auto;
 }
 
+.error{
+    animation: moving ;
+}
 
 
 .error_paragraph{
@@ -34,13 +38,28 @@ body{
 
 .error_button{
     color: #fff;
+    font-size: medium;
     display: block;
     padding: 20px;
     width: 10%;
     text-align: center;
     text-decoration: none;
-    background-color: red;
-    border-radius: 20px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
     margin: auto;
+    box-sizing: border-box;
+}
 
+.error_button:hover{
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
 }
