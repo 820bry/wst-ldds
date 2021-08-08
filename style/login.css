@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("/wst-ldds/login/LDDS-wfont/roboto-medium-webfont.woff") format("woff");
+    font-family: "Roboto Light";
+    src: url("/wst-ldds/login/LDDS-wfont/roboto-light-webfont.woff") format("woff");
+}
+
 html {
     width: 100%;
     height: 100%;
@@ -70,10 +77,16 @@ img.lock {
     font-weight: 700;
     color: #FFFFFF;
     top:15%; */
-
-    font-size: 20px;
+    font-size: 1.9rem;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #fff;
+    font-family: "Roboto Light";
+    background-image: linear-gradient(180deg, white, rgb(245 245 245 / 32%));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    height: 3.75rem;
 }
 
 .input-container {
@@ -150,7 +163,34 @@ img.lock {
     transition: 0.5s;
 }
 
+.nextBtn4 {
 
+background: linear-gradient(115deg, #616aef94 0%, #ff0000 89.58%);
+
+border-radius: 30px;
+
+position: relative;
+
+margin: auto;
+
+border: none;
+
+color: white;
+
+font-size: large;
+
+font-weight: 600;
+
+font-family: "Roboto Light";
+
+background-size: 200% auto;
+
+width: 14rem;
+
+height: 4rem;
+
+transition: 0.5s;
+}
 
 button:hover {
     cursor: pointer;
