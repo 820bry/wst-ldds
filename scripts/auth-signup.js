@@ -51,7 +51,7 @@ window.onload = () => {
         window.history.back();
     }
 
-    formElement.addEventListener("keypress", (e) => {
+    document.body.addEventListener("keypress", (e) => {
         if ((page.toUpperCase() === "signup.html".toUpperCase() || page.toUpperCase() === "signup".toUpperCase()) && e.key === "Enter") {
             nextPage();
         } else if (e.key === "Enter"){
