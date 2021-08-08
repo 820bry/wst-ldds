@@ -28,7 +28,7 @@ require_once('../../banner.php');
         <div class="event-info">
             <div class="person-in-charge">
                 <img src="/wst-ldds/style/images/committee/CZ.JPG">
-                <span>Lucy Yeow</span>
+                <span>Yeow Chen Zheng</span>
             </div>
             <div class="event-img">
                 <!-- Could be carousel, tbd -->
@@ -46,7 +46,7 @@ require_once('../../banner.php');
                     Deadline: 31/12/2021
                 </div>
                 <div class="join-btn">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="join-btn">
                         Join Event
                     </button>
                 </div>
@@ -54,6 +54,24 @@ require_once('../../banner.php');
         </div>
     </div>
 
+    <div id="join-success-msg" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+
+    <!-- MDL Snackbar -->
+    <script>
+    (function() {
+    'use strict';
+    var snackbarContainer = document.querySelector('#join-success-msg');
+    var showToastButton = document.querySelector('#join-btn');
+    showToastButton.addEventListener('click', function() {
+        'use strict';
+        var data = {message: 'You have successfully joined this event!'};
+        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+    });
+    }());
+    </script>
 </body>
 
 </html>
