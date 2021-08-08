@@ -17,7 +17,7 @@ require_once('banner.php');
 
     <link rel="stylesheet" href="/wst-ldds/style/main.css">
     <link rel="stylesheet" href="/wst-ldds/style/carousel.css">
-    <script src="/wst-ldds/scripts/home.js" type="text/javascript"></script>
+    <script src="/wst-ldds/scripts/home.js" type="text/javascript" defer></script>
     <script src="/wst-ldds/scripts/scrollbar.js" type="text/javascript"></script>
     <script src="/wst-ldds/scripts/carousel.js" type="text/javascript"></script>
     <title>Home | LDDS</title>
@@ -71,7 +71,7 @@ require_once('banner.php');
             </div>
         </div>
 
-        <div class = "home-comm" id = "home-comm">
+        <div class = "home-comm" id = "home-comm" style="display: none;">
             <h1>Committee</h1>
             <div class = "comm-desc" id = "comm-desc">
                 <p>
@@ -89,7 +89,7 @@ require_once('banner.php');
             </div>
         </div>
         
-        <div class = "home-event" id = "home-event">
+        <div class = "home-event" id = "home-event" style="display: none;">
             <h1>Events</h1>
             <div class = "event-desc" id = "event-desc">
                 <p>
