@@ -46,7 +46,7 @@ require_once('../../banner.php');
                     Deadline: 31/12/2021
                 </div>
                 <div class="join-btn">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="join-btn">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="join-btn">
                         Join Event
                     </button>
                 </div>
@@ -65,7 +65,9 @@ require_once('../../banner.php');
     'use strict';
     var snackbarContainer = document.querySelector('#join-success-msg');
     var showToastButton = document.querySelector('#join-btn');
-    showToastButton.addEventListener('click', function() {
+    showToastButton.addEventListener('click', function(e) {
+        e.currentTarget.disabled = true;
+        e.currentTarget.innerHTML = "Joined";
         'use strict';
         var data = {message: 'You have successfully joined this event!'};
         snackbarContainer.MaterialSnackbar.showSnackbar(data);

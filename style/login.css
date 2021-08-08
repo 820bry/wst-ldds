@@ -126,7 +126,7 @@ img.lock {
     width: 45%;
     height: 7%;
     position: relative;
-    top: 40%;
+    margin: 0 auto;
     border: none;
     color: white;
     font-size: large;
@@ -141,7 +141,7 @@ img.lock {
     width: 45%;
     height: 7%;
     position: relative;
-    top: 40%;
+    margin: 0 auto;
     border: none;
     color: white;
     font-size: large;
@@ -152,13 +152,13 @@ img.lock {
 
 
 
-input[type=submit]:hover {
+button:hover {
     cursor: pointer;
     background-position: right center; 
     /* Glowing effect */
     /* box-shadow: 0 0 20px #eee;  */
 }
 
-input.nextBtn1:active {
+button:active {
     transform: translateY(3px);
 }
