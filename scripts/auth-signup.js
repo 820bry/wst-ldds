@@ -31,6 +31,7 @@ const facultyElement = document.getElementById("faculty");
 const studentIDElement = document.getElementById("studID");
 const phoneNoElement = document.getElementById("pnum");
 const icNoElement = document.getElementById("nric");
+const nameErrorMessageElement = document.getElementById("error1");
 const emailErrorMessageElement = document.getElementById("error2");
 const passwordErrorMessageElement = document.getElementById("error3");
 const confirmPasswordErrorMessageElement = document.getElementById("error4");
@@ -64,6 +65,7 @@ window.onload = () => {
 }
 
 function resetErrorMessagePage1() {
+    nameErrorMessageElement.style.visibility = "hidden";
     emailErrorMessageElement.style.visibility = "hidden";
     passwordErrorMessageElement.style.visibility = "hidden";
     confirmPasswordErrorMessageElement.style.visibility = "hidden";
@@ -115,6 +117,10 @@ function signupValidate(pageNo) {
             if (namePattern.test(studName)) {}
             else {
                 //Student name check fail
+                if (pageNo == 1) {
+                    nameErrorMessageElement.style.visibility = "visible";
+                    nameErrorMessageElement.innerHTML = "Invalid Name";
+                }
                 checkPassed = false;
             }
 
@@ -147,7 +153,8 @@ function signupValidate(pageNo) {
             if (pageNo != 1) return false;
 
             if (studName === "") {
-
+                nameErrorMessageElement.style.visibility = "visible";
+                nameErrorMessageElement.innerHTML = "Empty Name";
             }
 
             if (email === "") {
@@ -266,7 +273,7 @@ function nextPage() {
         window.location.href = "/wst-ldds/signup2";
     } else {
         //Do nothing since signupValidate will display error to user
-        alert("Validation fail");
+        //alert("Validation fail");
     }
 }
 
@@ -297,9 +304,10 @@ function signupPerform() {
         .then(response => response.json())
         .then((varResponse) => {
             alert("Signup" + varResponse.status);
+            window.location.href = "/wst-ldds/login";
         })
         .catch((error) => {
-            console.error("Error: ", error);
+            //console.error("Error: ", error);
         })
     } else {
         //Do nothing since signupValidate will display error to user
