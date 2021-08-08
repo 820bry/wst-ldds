@@ -184,6 +184,12 @@ body {
     font-size: 18px;
 }
 
+td:last-child label{
+    margin-left: 20px;
+}
+
+
+
 /*
 .member_list tbody tr:nth-child(even){
     background-color: #3D3D3D;

@@ -24,10 +24,6 @@ body{
     margin-right: auto;
 }
 
-.error{
-    animation: moving ;
-}
-
 
 .error_paragraph{
     text-align: center;
@@ -52,7 +48,7 @@ body{
 }
 
 .error_button:hover{
-    animation: animate 8s linear infinite;
+    animation: animate 10s linear infinite;
 }
 
 @keyframes animate{
