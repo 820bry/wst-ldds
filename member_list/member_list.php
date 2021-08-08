@@ -50,7 +50,7 @@ require_once('../banner.php');
             <span class ="page-count" id = "page-count">1 - 1 of 1</span>
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="refresh"><i class="material-icons">cached</i></button>
             <div class="mdl-tooltip" for="refresh">Refresh</div>
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="del-selected"><i class="material-icons">delete</i></button>
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="del-selected" onclick="deleteSelectedRow()"><i class="material-icons">delete</i></button>
             <div class="mdl-tooltip" for="del-selected">Delete Selected</div>
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="prev"><i class="material-icons">navigate_before</i></button>
             <div class="mdl-tooltip" for="prev">Previous Page</div>
@@ -88,7 +88,7 @@ require_once('../banner.php');
                         <div class="mdl-tooltip" for="edit1">Edit</div>
                     </td>
                     <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete1"><i class="material-icons">delete</i></button>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete1" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
                         <div class="mdl-tooltip" for="delete1">Delete</div>
                     </td>
                     <td>
@@ -112,7 +112,7 @@ require_once('../banner.php');
                         <div class="mdl-tooltip" for="edit2">Edit</div>
                     </td>
                     <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete2"><i class="material-icons">delete</i></button>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete2" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
                         <div class="mdl-tooltip" for="delete2">Delete</div>
                     </td>
                     <td>
@@ -136,7 +136,7 @@ require_once('../banner.php');
                         <div class="mdl-tooltip" for="edit3">Edit</div>
                     </td>
                     <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete3"><i class="material-icons">delete</i></button>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete3" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
                         <div class="mdl-tooltip" for="delete3">Delete</div>
                     </td>
                     <td>
@@ -160,7 +160,7 @@ require_once('../banner.php');
                         <div class="mdl-tooltip" for="edit4">Edit</div>
                     </td>
                     <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete4"><i class="material-icons">delete</i></button>
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete4" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
                         <div class="mdl-tooltip" for="delete4">Delete</div>
                     </td>
                     <td>
