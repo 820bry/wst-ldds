@@ -4,6 +4,10 @@ body{
 
 }
 
+.about {
+    text-align: center;
+}
+
 p{
     font-family: cursive;
     font-size: xx-large;
@@ -55,7 +59,6 @@ p{
     transition: 0.2s;
     border-radius: 15px;
     top: 20px;
-    left: 42.5%;
 }
 
 .backmain:hover{
