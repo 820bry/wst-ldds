@@ -46,7 +46,7 @@ window.onload = () => {
     var page = path.split("/").pop();
 
     //.toUpperCase() because site can be accessed case insensitively
-    if (page.toUpperCase() === "signUp_2.html".toUpperCase() && !signupValidate(-1)) {
+    if ((page.toUpperCase() === "signUp_2.html".toUpperCase() || page.toUpperCase() === "signup2".toUpperCase()) && !signupValidate(-1)) {
         //Direct access to signup2 without going through 1st sign up page
         window.history.back();
     }
