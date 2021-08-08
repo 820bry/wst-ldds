@@ -79,7 +79,10 @@
 
 .logincontainer .user-details .inputbox
 {
-    margin: 10px;
+    margin: .3rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .logincontainer .user-details .inputbox input
@@ -104,20 +107,17 @@
 .logincontainer .user-details .inputError
 {
     color: rgb(255, 25, 25);
+    margin: 0 1rem;
 }
 
 .logincontainer .user-details #inputError1
-{     visibility: hidden;
-      position: absolute;
-      top: 4rem;
-      left: 11rem;
+{
+      visibility: hidden;
 }
 
 .logincontainer .user-details #inputError2
-{     visibility: hidden; 
-      position: absolute;
-      top: 9rem;
-      left: 11rem;
+{
+      visibility: hidden;
 }
 
 ::placeholder
