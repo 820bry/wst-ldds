@@ -9,25 +9,31 @@
 .event-box {
     border-radius: 10px;
     text-decoration: none;
-    background: green;
+    background: linear-gradient(to bottom, lightgreen, green);
     width: 500px;
+
+    transition: box-shadow .2s;
 }
 
 .event-box > h3 {
     border-radius: 10px;
     letter-spacing: 2px;
-    padding: 30px 20px 10px 20px;
+    padding: 80px 20px 10px 20px;
     margin: 0;
-    background: gray;
+
+    background: url('/wst-ldds/style/images/carousel/JLC.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
 
 .event-box > .desc {
-    padding: 10px;
+    padding: 20px;
 }
 
 .event-box > .deadline, .event-box > .slots-left {
     display: inline-block;
-    padding: 25px;
+    padding: 20px;
     font-size: 20px;
 }
 
@@ -35,8 +41,12 @@
     float: right;
 }
 
+.event-box:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+
 /* Event Info Page */
-.content {
+.info-content {
     padding: 0 300px;
 }
 

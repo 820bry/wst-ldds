@@ -33,11 +33,23 @@ require_once('../banner.php');
                     <div class="deadline">Deadline: 31/12/2021</div>
                     <div class="slots-left">Slots Left: 69</div>
                 </a>
-                <a class="event-box" href="#">
-                    aaaaaaaaaaaaaaaaa
+                <a class="event-box" href="/wst-ldds/events/event_info/">
+                    <h3>Event B</h3>
+                    <div class="desc">A Short Description for Event B.</div>
+                    <div class="deadline">Deadline: 31/12/2021</div>
+                    <div class="slots-left">Slots Left: 69</div>
                 </a>
-                <a class="event-box" href="#">
-                    aaaaaaaaaaaaaaaaa
+                <a class="event-box" href="/wst-ldds/events/event_info/">
+                    <h3>Event C</h3>
+                    <div class="desc">A Short Description for Event C.</div>
+                    <div class="deadline">Deadline: 31/12/2021</div>
+                    <div class="slots-left">Slots Left: 69</div>
+                </a>
+                <a class="event-box" href="/wst-ldds/events/event_info/">
+                    <h3>Event D</h3>
+                    <div class="desc">A Short Description for Event D.</div>
+                    <div class="deadline">Deadline: 31/12/2021</div>
+                    <div class="slots-left">Slots Left: 69</div>
                 </a>
             </div>
         </div>  

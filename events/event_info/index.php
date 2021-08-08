@@ -24,7 +24,7 @@ require_once('../../banner.php');
 
 <body class="hidden-scrollbar">
 
-    <div class="content">
+    <div class="content info-content">
         <h1>Event A</h1>
         <div class="event-info">
             <div class="person-in-charge">
