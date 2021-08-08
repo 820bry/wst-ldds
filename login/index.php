@@ -13,13 +13,17 @@
 <h1 id = "label">Login to Your Account</h1>
     <div class = "user-details" id="user-details">
         <div class = "inputbox">
-            <input type = "text" placeholder="Email / Student ID" class = "email_id" id="email_id" name = "email_id" required><br>
+            <input type = "text" placeholder="Email / Student ID" class = "email_id" id="email_id" name = "email_id" required>
+            <span class = "inputError" id = "inputError1">Invalid Email/Student ID</span>
+            <br>
         </div>
-        <span class = "inputError" id = "inputError1">Invalid Email/Student ID</span> 
+         
         <div class = inputbox>
-            <input type="password" placeholder="Password" class = "password" id="password" name = "password" required><br>
+            <input type="password" placeholder="Password" class = "password" id="password" name = "password" required>
+            <span class = "inputError" id = "inputError2">Invalid Password</span>
+            <br>
         </div>
-        <span class = "inputError" id = "inputError2">Invalid Password</span>
+        
     </div>
         <div class = "remember">
             <input type="checkbox" name="RememberMe" id="chckbox">
