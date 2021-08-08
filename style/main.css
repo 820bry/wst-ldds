@@ -45,6 +45,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
+    max-height: 1000px;
     margin: auto;
 }
 
@@ -111,14 +112,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
+    max-height: 800px;
     margin: auto;
+    align-content: flex-start;
 }
 
 .home-event h1
 {
     color: white;
     text-transform: uppercase;
-    transform: translate(70rem, 30rem);
+    transform: translateX(70rem);
     font-size: 3.2rem;
 }
 
@@ -126,7 +129,7 @@ body {
 {
     display: flex;
     background-color: #d22315;
-    transform: skewY(10deg) translate(100px, 330px);
+    transform: skewY(10deg) translate(100px, 90px);
     width: 100%;
     padding: 20px 90px;
     justify-content: flex-end;
@@ -146,7 +149,7 @@ body {
     width: 600px;
     max-height: 500px;
     margin-right: 400px;
-    transform: translate(-90px, -200px);
+    transform: translate(-90px, -475px);
 }
 
 .home-event .event-disp > img
@@ -160,7 +163,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    transform: translateY(-35px);
+    transform: translateY(-300px);
 }
 
 .home-event .more-event-info > a

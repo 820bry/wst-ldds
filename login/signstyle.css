@@ -1,8 +1,8 @@
 @font-face {
     font-family: "Roboto";
-    src: url("wst-ldds/login/LDDS-wfont/roboto-medium-webfont.woff") format("woff");
+    src: url("/wst-ldds/login/LDDS-wfont/roboto-medium-webfont.woff") format("woff");
     font-family: "Roboto Light";
-    src: url("wst-ldds/login/LDDS-wfont/roboto-light-webfont.woff") format("woff");
+    src: url("/wst-ldds/login/LDDS-wfont/roboto-light-webfont.woff") format("woff");
 }
 
 *::-webkit-scrollbar
@@ -262,7 +262,7 @@ text-decoration: none;
     border-radius: 40px;
 }
 
-.back
+.signcontainer .back
 {
     width: 4%;
     position: absolute;
@@ -270,12 +270,12 @@ text-decoration: none;
     top: 20px;
 }
 
-.back:hover
+.signcontainer .back:hover
 {
     cursor: pointer;
 }
 
-.back:active
+.signcontainer .back:active
 {
     transform: translateY(2px);
 }
