@@ -104,8 +104,7 @@
     float: right;
 }
 
-.event-details > .register {
-    width: 100px;
-    height: 40px;
-    padding: auto;
+.event-details > .join-btn {
+    margin: 40px 0;
+    text-align: center;
 }

@@ -45,8 +45,11 @@ require_once('../../banner.php');
                 <div class="deadline">
                     Deadline: 31/12/2021
                 </div>
-                <br>
-                <input class="register" id="register" type="button" value="Join" />
+                <div class="join-btn">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                        Join Event
+                    </button>
+                </div>
             </div>
         </div>
     </div>
