@@ -29,7 +29,8 @@ require_once('../banner.php');
         <div class="head_of_table">
             <h3 class="head_one">Members</h3>
                 <input type="text" class="searchbar" id="searchbar" placeholder="Search">
-            <span>
+            
+            <span class="select-custom">
                 <select id="choose_item" name="chooseitem" form="item">
                     <option value="name">Name</option>
                     <option value="student_id">Student ID</option>
@@ -39,6 +40,7 @@ require_once('../banner.php');
                     <option value="e-mail">Email</option>
                     <option value="phone_num">Phone Number</option>
                 </select>
+                    <span class="arrow_down"></span>
             </span>
 
             <div class = "close-button">

@@ -188,7 +188,29 @@ td:last-child label{
     margin-left: 20px;
 }
 
+select{
+    font-size: 1.3rem;
+    background-color: #eeeeee;
+    color: black;
+    border: none;
+    height: 35px;
 
+    outline: none;
+    cursor: pointer;
+}
+
+
+.arrow_down{
+    background: #3b3c47;
+    position: absolute;
+    pointer-events: none;
+}
+
+.all_item{
+    position: absolute;
+    margin: 25px 0 0 15px;
+    display: inline-block;
+}
 
 /*
 .member_list tbody tr:nth-child(even){
