@@ -52,7 +52,7 @@ window.onload = () => {
     }
 
     formElement.addEventListener("keypress", (e) => {
-        if (page.toUpperCase() === "signup.html".toUpperCase() && e.key === "Enter") {
+        if ((page.toUpperCase() === "signup.html".toUpperCase() || page.toUpperCase() === "signup".toUpperCase()) && e.key === "Enter") {
             nextPage();
         } else if (e.key === "Enter"){
             //Perform signup
@@ -263,7 +263,7 @@ function signupValidate(pageNo) {
 
 function nextPage() {
     if (signupValidate(1)) {
-        window.location.href = "/wst-ldds/login/signUp_2.html";
+        window.location.href = "/wst-ldds/signup2";
     } else {
         //Do nothing since signupValidate will display error to user
         alert("Validation fail");
