@@ -1,5 +1,5 @@
 <?php
-require_once('/wst-ldds/banner.php');
+require_once('banner.php');
 ?>
 
 <!DOCTYPE html>
