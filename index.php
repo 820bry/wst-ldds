@@ -1,5 +1,5 @@
 <?php
-require_once('banner.php');
+require_once('/wst-ldds/banner.php');
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ require_once('banner.php');
         <div class="carousel-container">
             <div class="carousel-item" style="display: none;">
                 <a href="#">
-                    <img src="style/images/carousel/JLC.jpg" />
+                    <img src="/wst-ldds/style/images/carousel/JLC.jpg" />
                     <div class="caption-box fade-right">
                         <h1>Junior Leadership Camp</h1>
                         <p>Lorem Ipsum</p>
@@ -36,7 +36,7 @@ require_once('banner.php');
             </div>
             <div class="carousel-item" style="display: none;">
                 <a href="#">
-                    <img src="style/images/carousel/Odyssey Night.JPG" />
+                    <img src="/wst-ldds/style/images/carousel/Odyssey Night.JPG" />
                     <div class="caption-box fade-right">
                         <h1>Junior Leadership Camp</h1>
                         <p>Lorem Ipsum</p>
@@ -45,7 +45,7 @@ require_once('banner.php');
             </div>
             <div class="carousel-item" style="display: none;">
                 <a href="#">
-                    <img src="style/images/carousel/Orientation Week.JPG" />
+                    <img src="/wst-ldds/style/images/carousel/Orientation Week.JPG" />
                     <div class="caption-box fade-right">
                         <h1>Junior Leadership Camp</h1>
                         <p>Lorem Ipsum</p>
@@ -54,7 +54,7 @@ require_once('banner.php');
             </div>
             <div class="carousel-item" style="display: none;"> 
                 <a href="#">
-                    <img src="style/images/carousel/Team Building.png" />
+                    <img src="/wst-ldds/style/images/carousel/Team Building.png" />
                     <div class="caption-box fade-right">
                         <h1>Junior Leadership Camp</h1>
                         <p>Lorem Ipsum</p>
@@ -80,10 +80,10 @@ require_once('banner.php');
                 </p>
             </div>
             <div class = "comm-disp" id = "comm-disp">
-                <img src = "style/images/committee/CZ.jpg">
+                <img src = "/wst-ldds/style/images/committee/CZ.jpg">
             </div>
             <div class = "more-comm-info" id = "more-comm-info">
-                <a href = "committee/index.php">
+                <a href = "/wst-ldds/committee/index.php">
                     More
                 </a>
             </div>
@@ -98,10 +98,10 @@ require_once('banner.php');
                 </p>
             </div>
             <div class = "event-disp" id = "event-disp">
-                <img src = "style/images/committee/CZ.jpg">
+                <img src = "/wst-ldds/style/images/committee/CZ.jpg">
             </div>
             <div class = "more-event-info" id = "more-event-info">
-                <a href = "events/index.php">
+                <a href = "/wst-ldds/events/index.php">
                     More
                 </a>
             </div>
