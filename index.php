@@ -30,7 +30,9 @@ require_once('banner.php');
                     <img src="/wst-ldds/style/images/carousel/JLC.jpg" />
                     <div class="caption-box fade-right">
                         <h1>Junior Leadership Camp</h1>
-                        <p>Lorem Ipsum</p>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
                     </div>
                 </a>
             </div>
@@ -38,8 +40,10 @@ require_once('banner.php');
                 <a href="#">
                     <img src="/wst-ldds/style/images/carousel/Odyssey Night.JPG" />
                     <div class="caption-box fade-right">
-                        <h1>Junior Leadership Camp</h1>
-                        <p>Lorem Ipsum</p>
+                        <h1>Orientation Odyssey Night</h1>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
                     </div>
                 </a>
             </div>
@@ -47,8 +51,10 @@ require_once('banner.php');
                 <a href="#">
                     <img src="/wst-ldds/style/images/carousel/Orientation Week.JPG" />
                     <div class="caption-box fade-right">
-                        <h1>Junior Leadership Camp</h1>
-                        <p>Lorem Ipsum</p>
+                        <h1>Orientation Week</h1>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
                     </div>
                 </a>
             </div>
@@ -56,8 +62,10 @@ require_once('banner.php');
                 <a href="#">
                     <img src="/wst-ldds/style/images/carousel/Team Building.png" />
                     <div class="caption-box fade-right">
-                        <h1>Junior Leadership Camp</h1>
-                        <p>Lorem Ipsum</p>
+                        <h1>Team Building</h1>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
                     </div>
                 </a>
             </div>
@@ -98,7 +106,7 @@ require_once('banner.php');
                 </p>
             </div>
             <div class = "event-disp" id = "event-disp">
-                <img src = "/wst-ldds/style/images/committee/CZ.jpg">
+                <img src = "/wst-ldds/style/images/carousel/JLC.jpg">
             </div>
             <div class = "more-event-info" id = "more-event-info">
                 <a href = "/wst-ldds/events/index.php">

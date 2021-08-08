@@ -59,20 +59,20 @@
 }
 
 .person-in-charge {
-    padding: 20px 0;
+    padding-bottom: 20px;
 }
 
 .person-in-charge > img {
     border-radius: 50%;
-    width: 150px;
+    width: 100px;
 }
 
 .person-in-charge > span {
     vertical-align: middle;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    padding: 100% 20px;
-    font-size: 30px;
+    letter-spacing: 2px;
+    padding: 0 20px;
+    font-size: 17px;
 }
 
 .event-img {

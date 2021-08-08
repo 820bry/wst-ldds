@@ -1,7 +1,7 @@
 div.carousel-container {
     position: relative;
     width: 75%;
-    height: 50%;
+    height: 60%;
     margin: auto;
 }
 
@@ -13,6 +13,7 @@ div.carousel-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
 
     transition: opacity 0.5s;
 }
@@ -71,7 +72,7 @@ div.prev:hover, div.next:hover {
 }
 
 div.page-indicator {
-    padding: 5px 2px;
+    padding: 15px 20px;
 }
 
 div.page-indicator > span.dot {
@@ -88,7 +89,7 @@ div.page-indicator > span.dot {
 }
 
 div.page-indicator > .dot:hover, div.page-indicator > span.active {
-    background-color: blue;
+    background-color: rgb(255, 152, 0);
 }
 
 div.fade-left {

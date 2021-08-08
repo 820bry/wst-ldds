@@ -149,13 +149,13 @@ body {
     width: 600px;
     max-height: 500px;
     margin-right: 400px;
-    transform: translate(-90px, -475px);
+    transform: translate(-150px, -475px);
 }
 
 .home-event .event-disp > img
 {
-    max-width: 450px;
-    max-height: 450px;
+    max-width: 650px;
+    max-height: 650px;
 }
 
 .home-event .more-event-info
