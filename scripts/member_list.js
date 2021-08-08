@@ -13,6 +13,21 @@ function checkAllBox(element) {
     }
 }
 
+function deleteSelectedRow() {
+    var tableRows = document.getElementById("member_list").children[1].getElementsByTagName("tr");
+
+    for (i = 0; i < tableRows.length; i++) {
+        if (tableRows[i].firstElementChild.firstElementChild.classList.contains("is-checked")) {
+            tableRows[i].remove();
+            i--;
+        }
+    }
+}
+
+function deleteRow(element) {
+    element.parentElement.parentElement.remove();
+}
+
 document.getElementById("searchbar").addEventListener("input", () => {
     var tableBody = document.getElementById("member_list").children[1];
     var tableRows = tableBody.getElementsByTagName("tr");
