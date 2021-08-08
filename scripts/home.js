@@ -1,11 +1,16 @@
-// $(document).scroll(() => {
-//     if ($(document).scrollTop() >= 8467) {
-//         $("#home-comm").fadeIn(2000);
-//         console.log($(document).scrollTop());
-//     }
-//     else $("#home-comm").fadeOut();
+const homeEventTopOffset = Object.freeze($("#home-event").position().top);
 
-//     if ($(document).scrollTop() >= 9609) $("#home-event").fadeIn(2000);
-//     else $("#home-event").fadeOut();
+$(document).scroll(() => {
+    if ($(document).scrollTop() >= homeEventTopOffset) {
+        $("#home-event").fadeIn(2000);
+        console.log($(document).scrollTop(), homeEventTopOffset);
+    }
+    else $("#home-event").fadeOut();
     
-// })
+})
+
+$("#home-event").css("display", "none");
+
+setTimeout(() => {
+    $("#home-comm").fadeIn(2000);
+}, 1000)
