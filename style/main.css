@@ -121,7 +121,7 @@ body {
 {
     color: white;
     text-transform: uppercase;
-    transform: translateX(70rem);
+    transform: translate(70rem, 12rem);
     font-size: 3.2rem;
 }
 

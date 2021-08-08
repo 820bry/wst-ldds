@@ -158,3 +158,7 @@ input[type=submit]:hover {
     /* Glowing effect */
     /* box-shadow: 0 0 20px #eee;  */
 }
+
+input.nextBtn1:active {
+    transform: translateY(3px);
+}
