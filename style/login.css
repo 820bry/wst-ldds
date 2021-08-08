@@ -34,18 +34,23 @@ div.box {
 }
 
 img.back {
-    /* position: relative;
+/*     position: relative;
     float: left;
     max-width: 7%;
     max-height: 7%;
     top: 5%;
     left: 5%; */
-
+    
     width: 7%;
 }
 
 img.back:hover {
     cursor: pointer;
+}
+
+img.back:active
+{
+    transform: translateY(2px);
 }
 
 img.lock {
