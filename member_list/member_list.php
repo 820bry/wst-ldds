@@ -1,5 +1,5 @@
 <?php
-require_once('/wst-ldds/banner.php');
+require_once('../banner.php');
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +17,11 @@ require_once('/wst-ldds/banner.php');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/style/main.css"/>
 
-    <link rel="stylesheet" href="/style/member_list.css">
-    <script src="/scripts/carousel.js" type="text/javascript"></script>
-    <script src="/scripts/events.js" type="text/javascript"></script>
-    <script src="/scripts/member_list.js" type="text/javascript" defer></script>
-    <title>Events | LDDS</title>
+    <link rel="stylesheet" href="/wst-ldds/style/member_list.css">
+    <script src="/wst-ldds/scripts/carousel.js" type="text/javascript"></script>
+    <script src="/wst-ldds/scripts/events.js" type="text/javascript"></script>
+    <script src="/wst-ldds/scripts/member_list.js" type="text/javascript" defer></script>
+    <title>Member List | LDDS</title>
 </head>
 
 

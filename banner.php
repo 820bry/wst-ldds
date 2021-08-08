@@ -28,7 +28,7 @@
                     </div>
 
                     <div id="admin">
-                        <a href="#">View Member List</a>
+                        <a href="/wst-ldds/member_list/member_list.php">View Member List</a>
                         <a href="#">View Event List</a>
                     </div>
                 </div>
