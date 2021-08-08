@@ -270,6 +270,16 @@ text-decoration: none;
     top: 20px;
 }
 
+.back:hover
+{
+    cursor: pointer;
+}
+
+.back:active
+{
+    transform: translateY(2px);
+}
+
 .signcontainer .logo
 {
     padding: 20px;
