@@ -65,7 +65,9 @@ require_once('../../banner.php');
     'use strict';
     var snackbarContainer = document.querySelector('#join-success-msg');
     var showToastButton = document.querySelector('#join-btn');
-    showToastButton.addEventListener('click', function() {
+    showToastButton.addEventListener('click', function(e) {
+        e.currentTarget.disabled = true;
+        e.currentTarget.innerHTML = "Joined";
         'use strict';
         var data = {message: 'You have successfully joined this event!'};
         snackbarContainer.MaterialSnackbar.showSnackbar(data);
