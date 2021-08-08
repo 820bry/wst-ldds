@@ -22,8 +22,8 @@
                     </div>
 
                     <div id="member">
-                        <a href="#">Profile</a>
-                        <a href="#">My Events</a>
+                        <a href="/wst-ldds/profile">Profile</a>
+                        <!-- <a href="#">My Events</a> -->
                         <a href="#">Sign Out</a>
                     </div>
 
