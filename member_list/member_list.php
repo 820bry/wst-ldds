@@ -18,7 +18,6 @@ require_once('../banner.php');
     <link rel="stylesheet" href="/style/main.css"/>
 
     <link rel="stylesheet" href="/wst-ldds/style/member_list.css">
-    <script src="/wst-ldds/scripts/carousel.js" type="text/javascript"></script>
     <script src="/wst-ldds/scripts/events.js" type="text/javascript"></script>
     <script src="/wst-ldds/scripts/member_list.js" type="text/javascript" defer></script>
     <title>Member List | LDDS</title>

@@ -16,7 +16,6 @@ require_once('../../banner.php');
 
     <link rel="stylesheet" href="/wst-ldds/style/main.css">
     <link rel="stylesheet" href="/wst-ldds/style/events.css">
-    <script src="/wst-ldds/scripts/carousel.js" type="text/javascript"></script>
     <script src="/wst-ldds/scripts/events.js" type="text/javascript"></script>
     <title>Event Name | LDDS</title>
 </head>

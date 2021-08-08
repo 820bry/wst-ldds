@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" href="/wst-ldds/style/main.css">
     <link rel="stylesheet" href="/wst-ldds/style/event.css">
-    <script src="../scripts/carousel.js" type="text/javascript"></script>
     <script src="scripts/scrollbar.js" type="text/javascript"></script>
     <script src="../scripts/events.js" type="text/javascript"></script>
     <title>Events | LDDS</title>
