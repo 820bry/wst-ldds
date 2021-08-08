@@ -152,13 +152,13 @@ img.lock {
 
 
 
-input[type=submit]:hover {
+button.nextBtn1:hover {
     cursor: pointer;
     background-position: right center; 
     /* Glowing effect */
     /* box-shadow: 0 0 20px #eee;  */
 }
 
-input.nextBtn1:active {
+button.nextBtn1:active {
     transform: translateY(3px);
 }
