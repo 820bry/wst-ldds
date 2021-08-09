@@ -24,12 +24,12 @@
 
             //we look for both student ID and email
             //use prepare() instead of query to prevent SQL injection attack
-            $query1 = $conn->prepare("SELECT * FROM ".$db_member." WHERE student_id=? AND password=? ");
+            $query1 = $conn->prepare("SELECT * FROM ${db_member} WHERE student_id=? AND password=? ");
             $query1->bind_param("ss", $auth_username, $auth_password);
             $query1->execute();
             $result1 = $query1 -> get_result();
 
-            $query2 = $conn->prepare("SELECT * FROM ".$db_member." WHERE email=? AND password=? ");            
+            $query2 = $conn->prepare("SELECT * FROM ${db_member} WHERE email=? AND password=? ");            
             $query2->bind_param("ss", $auth_username, $auth_password);
             $query2->execute();
             $result2 = $query2 -> get_result();
@@ -64,7 +64,7 @@
             $phoneNumber = $_POST["phoneNumber"];
             $icNo = $_POST["icNo"];
 
-            $query = $conn->prepare("INSERT INTO $db_member (`name`, `student_id`, `password`, `ic_no`, `email`, `phone_no`, `faculty`, `course_code`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            $query = $conn->prepare("INSERT INTO ${db_member} (`name`, `student_id`, `password`, `ic_no`, `email`, `phone_no`, `faculty`, `course_code`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
             $query -> bind_param("ssssssss", $name, $studentID, $password, $icNo, $email, $phoneNumber, $faculty, $courseCode);
             $query -> execute();
 
