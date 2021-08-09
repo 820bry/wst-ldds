@@ -2,11 +2,11 @@
     //use require() instead of include() to prevent passthrough
     require("./../config/session.php");
 
+    //act as a JSON API
+    header("Content-Type: application/json; charset=UTF-8");
+
     if (isset($_GET['value']) && isset($_GET['category'])  && !empty($_GET['category'])) {
         require("./../config/conn.php");
-
-        //act as a JSON API
-        header("Content-Type: application/json; charset=UTF-8");
 
         $value = $_GET['value'];
         //Using mysqli_real_escape_string() because column name variable aren't suitable for prepared statements

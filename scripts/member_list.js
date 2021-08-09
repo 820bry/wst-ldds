@@ -20,8 +20,35 @@ function checkAllBox(element) {
     }
 }
 
+function deleteRowRequest(studentIDs) {
+    var deleteDetails = {
+        "studentID": studentIDs
+    };
+
+    var deleteJSON = JSON.stringify(deleteDetails);
+
+    fetch("/wst-ldds/member_list/delete.php", {
+        method: "POST",
+        headers: {
+            "Content-type":"application/json",
+        },
+        body: deleteJSON,
+    })
+    .then(response => response.json())
+    .then((varResponse) => {
+        if (varResponse.status === "success") {
+            //Refresh table
+            search(page);
+        }
+    })
+    .catch((error) => {
+        console.error("Error: ", error);
+    })
+}
+
 function deleteSelectedRow() {
     var tableRows = document.getElementById("member_list").rows;
+    var studentID = [];
 
     //1st row is table head, so iterate from 2nd row
     for (i = 1; i < tableRows.length; i++) {
@@ -29,18 +56,27 @@ function deleteSelectedRow() {
         var checkboxRow = tableRows[i].firstElementChild.firstElementChild;
 
         if (checkboxRow.classList.contains("is-checked")) {
+            studentID.push(tableRows[i].children[2].innerHTML);
             tableRows[i].remove();
             i--;
         }
     }
+
+    deleteRowRequest(studentID);
 }
 
 function deleteRow(element) {
     var tableRows = document.getElementById("member_list").rows;
+    var studentID = [];
 
     for (i = 1; i < tableRows.length; i++) {
-        if (tableRows[i].contains(element)) tableRows[i].remove();
+        if (tableRows[i].contains(element)) {
+            studentID.push(tableRows[i].children[2].innerHTML);
+            tableRows[i].remove();
+        }
     }
+
+    deleteRowRequest(studentID);
 }
 
 function clearTable() {

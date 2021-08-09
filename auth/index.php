@@ -74,6 +74,6 @@
     } else {
         //not POST request, assuming GET and redirect back to login page
         http_response_code(302);
-        header("Location: /wst-ldds/main/LDDS%20Web/login.html");
+        header("Location: /wst-ldds/error");
     }
 ?>
