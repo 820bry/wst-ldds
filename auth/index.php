@@ -44,6 +44,9 @@
                     //authenticated
                     $userDetails = boolval($respond1) ? $respond1 : $respond2;
                     $_SESSION['isAuth'] = true;
+
+                    //Based on https://stackoverflow.com/questions/2140090/operator-for-array-in-php, 
+                    //$userDetails should be at the left side to make sure its value will overwrite the ones in $_SESSION
                     $_SESSION = $userDetails + $_SESSION;
 
                     $vals['status'] = "success";
