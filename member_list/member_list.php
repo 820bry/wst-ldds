@@ -63,16 +63,16 @@ require_once('../banner.php');
             <table class="member_list" id = "member_list">
                 <thead>
                     <th class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-checkbox--accent" for="checkbox-0"><input type="checkbox" id="checkbox-0" class="mdl-checkbox__input" onclick="checkAllBox(this)"></label></th>
-                    <th>Name <span class="material-icons">keyboard_arrow_down</span> </th>
-                    <th>Student ID <span class="material-icons">keyboard_arrow_down</span> </th>
-                    <th>Faculty <span class="material-icons">keyboard_arrow_down</span> </th>
-                    <th>Course <span class="material-icons">keyboard_arrow_down</span> </th>
-                    <th>NRIC <span class="material-icons">keyboard_arrow_down</span> </th>
-                    <th>Email <span class="material-icons">keyboard_arrow_down</span> </th>
-                    <th>Phone Number <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th onclick="sortByElement(this)">Name <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th onclick="sortByElement(this)">Student ID <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th onclick="sortByElement(this)">Faculty <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th onclick="sortByElement(this)">Course <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th onclick="sortByElement(this)">NRIC <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th onclick="sortByElement(this)">Email <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th onclick="sortByElement(this)">Phone Number <span class="material-icons">keyboard_arrow_down</span> </th>
                     <th>Edit</th>
                     <th>Delete</th>
-                    <th>Admin <span class="material-icons">keyboard_arrow_down</span></th>
+                    <th onclick="sortByElement(this)">Admin <span class="material-icons">keyboard_arrow_down</span></th>
                 </thead>
 
             <tbody>

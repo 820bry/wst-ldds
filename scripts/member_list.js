@@ -1,9 +1,11 @@
 //Global variables
 page = 1;
 noOfRowsPerPage = 3;
+sortBy = "name";
+sortDirection = "asc";
 
 //Onload, not using window.onload to prevent conflict with other js file
-search(1);
+search(1, sortBy, sortDirection);
 
 function checkAllBox(element) {
     var tableRows = document.getElementById("member_list").rows;
@@ -38,7 +40,7 @@ function deleteRowRequest(studentIDs) {
     .then((varResponse) => {
         if (varResponse.status === "success") {
             //Refresh table
-            search(page);
+            search(page, sortBy, sortDirection);
         }
     })
     .catch((error) => {
@@ -84,9 +86,13 @@ function clearTable() {
     tableBody.innerHTML = "";
 }
 
-function search(noOfPage) {
+function search(noOfPage, sortBy, sortDirection) {
     //In case of input smaller than 1
     if(noOfPage < 1) noOfPage = 1;
+
+    globalThis.sortBy = sortBy;
+
+    if (sortDirection === "asc" || sortDirection === "desc") globalThis.sortDirection = sortDirection;
 
     page = noOfPage;
     var searchBar = document.getElementById("searchbar");
@@ -97,7 +103,7 @@ function search(noOfPage) {
     if (category === "course") category = "course_code";
     if (category === "nric") category = "ic_no";
 
-    fetch("/wst-ldds/member_list/search.php?value="+searchValue+"&category="+category)
+    fetch(`/wst-ldds/member_list/search.php?value=${searchValue}&category=${category}&sortBy=${sortBy}&sortDirection=${sortDirection}`)
     .then(response => response.json())
     .then((varResponse) => {
         if (varResponse.status === "success") {
@@ -111,7 +117,7 @@ function search(noOfPage) {
 
                 if (page > 1 && resultsArray.length < ((page-1)*noOfRowsPerPage)+1) {
                     //Page no more than 1 but there isn't anything to show, reduce page by 1
-                    search(noOfPage-1);
+                    search(noOfPage-1, sortBy, sortDirection);
                     return;
                 }
 
@@ -188,4 +194,35 @@ function search(noOfPage) {
     .catch((error) => {
         console.log("Error: ", error);
     })
+}
+
+
+function sortByElement(element) {
+    var elementText =  element.innerText.split(" ");
+    var arrowDirection = elementText.pop(); //Pop out the keyboard direction into the variable
+    var sortByValue = elementText.join(" "); //Remove last text, leaving value with space intact
+
+    if (arrowDirection === "keyboard_arrow_up") {
+        sortDirection = "asc";
+        element.children[0].innerHTML = "keyboard_arrow_down";
+    } else {
+        sortDirection = "desc";
+        element.children[0].innerHTML = "keyboard_arrow_up";
+    }
+
+    //Reset all table head arrows
+    var tableHeads = document.getElementsByTagName("th");
+    for (i = 1; i < tableHeads.length; i++) {
+        if (tableHeads[i].children.length === 1 && !tableHeads[i].contains(element)) {
+            tableHeads[i].children[0].innerHTML = "keyboard_arrow_down";
+        }
+    }
+
+    if (sortByValue === "Student ID") sortByValue = "student_id";
+    else if (sortByValue === "Course") sortByValue = "course_code";
+    else if (sortByValue === "NRIC") sortByValue = "ic_no";
+    else if (sortByValue === "Phone Number") sortByValue = "phone_no";
+    else if (sortByValue === "Admin") sortByValue = "permission_level";
+
+    search(1, sortByValue, sortDirection);
 }
