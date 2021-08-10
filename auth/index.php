@@ -42,7 +42,10 @@
 
                 if (boolval($respond1) || boolval($respond2)) {
                     //authenticated
+                    $userDetails = boolval($respond1) ? $respond1 : $respond2;
                     $_SESSION['isAuth'] = true;
+                    $_SESSION = $userDetails + $_SESSION;
+
                     $vals['status'] = "success";
                     echo json_encode($vals);
                 }

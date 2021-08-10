@@ -1,3 +1,6 @@
+<?php
+require_once("./config/session.php");
+?>
 <html>
     <head>
         <link rel="stylesheet" href="/wst-ldds/style/banner.css">
@@ -16,21 +19,38 @@
                 <img class="user-icon" src="/wst-ldds/style/images/user-icon.png" alt="user" />
 
                 <div class="dropdown-content">
-                    <div id="anonymous">
-                        <a href="/wst-ldds/login">Log In</a>
-                        <a href="/wst-ldds/signup">Sign Up</a>
-                    </div>
+                    <?php
+                        if ($_SESSION['permission_level'] == 0) {
+                            //Member
+                            $dropDown = '
+                                <div id="member">
+                                    <a href="/wst-ldds/profile">Profile</a>
+                                    <!-- <a href="#">My Events</a> -->
+                                    <a href="#">Sign Out</a>
+                                </div>';
+                        } else if ($_SESSION['permission_level'] == 1) {
+                            //Admin
+                            $dropDown = '
+                                <div id="member">
+                                    <a href="/wst-ldds/profile">Profile</a>
+                                    <!-- <a href="#">My Events</a> -->
+                                    <a href="#">Sign Out</a>
+                                </div>
+                                <div id="admin">
+                                    <a href="/wst-ldds/member_list/member_list.php">View Member List</a>
+                                    <a href="/wst-ldds/event_list/">View Event List</a>
+                                </div>';
+                        } else {
+                            //Anonymous user
+                            $dropDown = '
+                                <div id="anonymous">
+                                    <a href="/wst-ldds/login">Log In</a>
+                                    <a href="/wst-ldds/signup">Sign Up</a>
+                                </div>';
+                        }
 
-                    <div id="member">
-                        <a href="/wst-ldds/profile">Profile</a>
-                        <!-- <a href="#">My Events</a> -->
-                        <a href="#">Sign Out</a>
-                    </div>
-
-                    <div id="admin">
-                        <a href="/wst-ldds/member_list/member_list.php">View Member List</a>
-                        <a href="/wst-ldds/event_list/">View Event List</a>
-                    </div>
+                        echo $dropDown;
+                    ?>
                 </div>
             </div>
         </div>

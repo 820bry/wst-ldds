@@ -1,5 +1,6 @@
 <?php
 require_once('banner.php');
+require_once("./config/session.php");
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +24,13 @@ require_once('banner.php');
     <title>Home | LDDS</title>
 </head>
 <body class="hidden-scrollbar">
+    <?php
+        if (!isset($_SESSION['permission_level'])) {
+            //assume anonymous without login
+        } else {
+            var_dump($_SESSION['permission_level']);
+        }
+    ?>
     <div class="content">
         <div class="carousel-container">
             <div class="carousel-item" style="display: none;">
