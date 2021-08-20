@@ -28,7 +28,7 @@ require_once("./config/session.php");
         if (!isset($_SESSION['permission_level'])) {
             //assume anonymous without login
         } else {
-            var_dump($_SESSION['permission_level']);
+            //var_dump($_SESSION['permission_level']);
         }
     ?>
     <div class="content">
