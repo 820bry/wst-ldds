@@ -142,15 +142,15 @@ function search(noOfPage, sortBy, sortDirection) {
 
                 for (i = (page-1)*noOfRowsPerPage; i < resultsArray.length && i < (page * noOfRowsPerPage);i++) {
                     var checked = (resultsArray[i].permission_level === 0) ? "" : "checked";
-                    var rowHTML = `<tr>
+                    var rowHTML = `<tr class="edit_color">
                         <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-${no}"><input type="checkbox" id="checkbox-${no}" class="mdl-checkbox__input"></label></td>
-                        <td>${resultsArray[i].name}</td>
-                        <td>${resultsArray[i].student_id}</td>
-                        <td>${resultsArray[i].faculty}</td>
-                        <td>${resultsArray[i].course_code}</td>
-                        <td>${resultsArray[i].ic_no}</td>
-                        <td>${resultsArray[i].email}</td>
-                        <td>${resultsArray[i].phone_no}</td>
+                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].name}" disabled></input></td>
+                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].student_id}" disabled></input></td>
+                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].faculty}" disabled></input></td>
+                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].course_code}" disabled></input></td>
+                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].ic_no}" disabled></input></td>
+                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].email}" disabled></input></td>
+                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].phone_no}" disabled></input></td>
                         <td>
                             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}"><i class="material-icons">edit</i></button>
                             <div class="mdl-tooltip" for="edit${no}">Edit</div>
