@@ -76,10 +76,14 @@
             $query -> bind_param("ssssssss", $name, $studentID, $password, $icNo, $email, $phoneNumber, $faculty, $courseCode);
             $query -> execute();
 
-            $vals['status'] = "success";
-            echo json_encode($vals);
+            if ($query->affected_rows > 0) {
+                $vals['status'] = "success";
+            }else {
+                $vals['status'] = "fail";
+            }            
 
             $conn -> close();
+            echo json_encode($vals);
         } else if (isset($_POST["authType"]) && $_POST["authType"] === "signout") {
             //process signout, destroy session
             session_destroy();

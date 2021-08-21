@@ -28,7 +28,7 @@
                         onfocusout="addPlaceholder(this.id, 'Email')" style="background: none;color: white;"/>
                 </div>
                 <span class = "inputError" id = "error1">Invalid Email</span>
-            </div><button class="nextBtn1" onclick="window.location.href = '/wst-ldds/login/forgetPassword2.html';">Next</button>
+            </div><button class="nextBtn1" onclick="recoverPasswordPerform()">Next</button>
         </div>
 
         <br>

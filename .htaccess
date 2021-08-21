@@ -10,12 +10,16 @@ RewriteBase /wst-ldds/
 #RewriteRule ^([^.?]+)$ %{REQUEST_URI}/index.php [L]
 
 RewriteRule ^home?$ index.php [L]
-RewriteRule ^signup?$ login/signUp.html [L]
-RewriteRule ^signup2?$ login/signUp_2.html [L]
+RewriteRule ^signup?$ login/signUp.php [L]
+RewriteRule ^signup2?$ login/signUp_2.php [L]
 RewriteRule ^event?$ events/ [L]
 RewriteRule ^events?$ events/ [L]
 RewriteRule ^events/search/(.+)$ events/event_info/index.php?b=$1 [QSA,L]
 RewriteRule ^event/search/(.+)$ events/event_info/index.php?b=$1 [QSA,L]
+RewriteRule ^forgetpassword?$ login/forgetPassword.php [L]
+RewriteRule ^forgetpassword2?$ login/forgetPassword2.php [L]
+RewriteRule ^forgetpassword3?$ login/forgetPassword3.php [L]
+RewriteRule ^forgetpassword4?$ login/forgetPassword4.php [L]
 
 # Disable directory browsing 
 Options -Indexes

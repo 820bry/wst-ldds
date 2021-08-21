@@ -29,7 +29,7 @@
             <input type="checkbox" name="RememberMe" id="chckbox">
             <label for="chckbox">Remember Me</label>
         </div>
-        <div id = "fgtpwd"><a href="forgetPassword1.html">Forgot Password?</a></div>
+        <div id = "fgtpwd"><a href="/wst-ldds/forgetpassword">Forgot Password?</a></div>
         <div class = "button">
             <button onclick="loginPerform()">Login to Your Account</button>
         </div>
