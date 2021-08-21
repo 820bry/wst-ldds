@@ -59,6 +59,8 @@
                 $vals['status'] = "fail";
                 echo json_encode($vals);
             }
+
+            $conn -> close();
         } else if(isset($_POST["authType"]) && $_POST["authType"] === "signup" && isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["courseCode"]) && isset($_POST["faculty"]) && isset($_POST["studentID"]) && isset($_POST["phoneNumber"]) && isset($_POST["icNo"]) && !empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["password"]) && !empty($_POST["courseCode"]) && !empty($_POST["faculty"]) && !empty($_POST["studentID"]) && !empty($_POST["phoneNumber"]) && !empty($_POST["icNo"])) {
             //process signup
             $name = $_POST["name"];
@@ -73,6 +75,14 @@
             $query = $conn->prepare("INSERT INTO ${db_member} (`name`, `student_id`, `password`, `ic_no`, `email`, `phone_no`, `faculty`, `course_code`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
             $query -> bind_param("ssssssss", $name, $studentID, $password, $icNo, $email, $phoneNumber, $faculty, $courseCode);
             $query -> execute();
+
+            $vals['status'] = "success";
+            echo json_encode($vals);
+
+            $conn -> close();
+        } else if (isset($_POST["authType"]) && $_POST["authType"] === "signout") {
+            //process signout, destroy session
+            session_destroy();
 
             $vals['status'] = "success";
             echo json_encode($vals);
