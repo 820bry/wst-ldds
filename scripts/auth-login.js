@@ -54,7 +54,7 @@ function loginPerform() {
         .then(response => response.json())
         .then((varResponse) => {
             if (varResponse.status === "success") {
-                window.alert(varResponse.status);
+                window.location.replace("/wst-ldds/home");
             } else {
                 window.alert(varResponse.status);
                 emailErrorMessageElement.style.visibility = "visible";

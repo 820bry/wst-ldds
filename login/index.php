@@ -1,3 +1,12 @@
+<?php
+require("./../config/session.php");
+
+if (isset($_SESSION['permission_level'])) {
+    //permission_level set, assume logged in
+    header("Location: http://".$_SERVER['HTTP_HOST']."/wst-ldds/home");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang = en dir ="ltr">
 

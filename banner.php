@@ -20,14 +20,14 @@ require_once(__DIR__."/config/session.php");
 
                 <div class="dropdown-content">
                     <?php
-                        if (isset($_SESSION['permission_level']) && !empty($_SESSION['permission_level'])) {
+                        if (isset($_SESSION['permission_level'])) {
                             if ($_SESSION['permission_level'] == 0) {
                                 //Member
                                 $dropDown = '
                                     <div id="member">
                                         <a href="/wst-ldds/profile">Profile</a>
                                         <!-- <a href="#">My Events</a> -->
-                                        <a href="#">Sign Out</a>
+                                        <a href="#" onclick="signout()">Sign Out</a>
                                     </div>';
                             } else if ($_SESSION['permission_level'] == 1) {
                                 //Admin
@@ -57,7 +57,7 @@ require_once(__DIR__."/config/session.php");
                                     <a href="/wst-ldds/signup">Sign Up</a>
                                 </div>';
                         }
-
+                        
                         echo $dropDown;
                     ?>
                 </div>
