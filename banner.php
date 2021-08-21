@@ -20,26 +20,35 @@ require_once(__DIR__."/config/session.php");
 
                 <div class="dropdown-content">
                     <?php
-                        if ($_SESSION['permission_level'] == 0) {
-                            //Member
-                            $dropDown = '
-                                <div id="member">
-                                    <a href="/wst-ldds/profile">Profile</a>
-                                    <!-- <a href="#">My Events</a> -->
-                                    <a href="#">Sign Out</a>
-                                </div>';
-                        } else if ($_SESSION['permission_level'] == 1) {
-                            //Admin
-                            $dropDown = '
-                                <div id="member">
-                                    <a href="/wst-ldds/profile">Profile</a>
-                                    <!-- <a href="#">My Events</a> -->
-                                    <a href="#">Sign Out</a>
-                                </div>
-                                <div id="admin">
-                                    <a href="/wst-ldds/member_list/member_list.php">View Member List</a>
-                                    <a href="/wst-ldds/event_list/">View Event List</a>
-                                </div>';
+                        if (isset($_SESSION['permission_level']) && !empty($_SESSION['permission_level'])) {
+                            if ($_SESSION['permission_level'] == 0) {
+                                //Member
+                                $dropDown = '
+                                    <div id="member">
+                                        <a href="/wst-ldds/profile">Profile</a>
+                                        <!-- <a href="#">My Events</a> -->
+                                        <a href="#">Sign Out</a>
+                                    </div>';
+                            } else if ($_SESSION['permission_level'] == 1) {
+                                //Admin
+                                $dropDown = '
+                                    <div id="member">
+                                        <a href="/wst-ldds/profile">Profile</a>
+                                        <!-- <a href="#">My Events</a> -->
+                                        <a href="#">Sign Out</a>
+                                    </div>
+                                    <div id="admin">
+                                        <a href="/wst-ldds/member_list/member_list.php">View Member List</a>
+                                        <a href="/wst-ldds/event_list/">View Event List</a>
+                                    </div>';
+                            } else {
+                                //$_SESSION['permission_level'] defined but value invalid, assume anonymous user
+                                $dropDown = '
+                                    <div id="anonymous">
+                                        <a href="/wst-ldds/login">Log In</a>
+                                        <a href="/wst-ldds/signup">Sign Up</a>
+                                    </div>';
+                            }
                         } else {
                             //Anonymous user
                             $dropDown = '
