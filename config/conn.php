@@ -24,7 +24,7 @@
         // increase max_allowed_packet (https://stackoverflow.com/questions/8062496/how-to-change-max-allowed-packet-size/8062996#8062996)
         $max_allowed_packet = 16777216; //default is 1048576
         $query = $conn -> query('SET global max_allowed_packet = '.$max_allowed_packet);
-
+        
     }
 
 ?>

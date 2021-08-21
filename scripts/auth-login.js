@@ -42,7 +42,7 @@ function loginPerform() {
         }
 
         //Format into JSON format
-        authJSON = JSON.stringify(authDetails);
+        var authJSON = JSON.stringify(authDetails);
 
         fetch("/wst-ldds/auth/", {
             method: "POST",

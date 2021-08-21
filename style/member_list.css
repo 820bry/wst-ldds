@@ -140,10 +140,15 @@ body {
     margin: 10px 0;
 }
 
-.member_list tr:hover
+.member_list tr:hover 
 {
    background-color: #eee;
 }
+
+.member_list tr:hover .invi_edit{
+    background-color: #eee;
+}
+
 
 .member_list td, .member_list th{
     padding: 10px 12px 10px 0;
