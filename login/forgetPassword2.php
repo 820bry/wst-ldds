@@ -15,7 +15,6 @@
     <title>Forget Password</title>
 </head>
 <body style="display: flex;justify-content: center;">
-<?php var_dump($_SESSION['OTPauth'])?>
     <div class="box" style="display: flex;flex-direction: column;/* margin: auto; */">
         <div style="display: flex;padding: 1.4rem 1rem 0 1.5rem; align-items: flex-end;">
             <img src="/wst-ldds/style/images/back icon.png" class="back" onclick="window.history.back();">
