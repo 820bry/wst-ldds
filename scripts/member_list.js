@@ -440,6 +440,13 @@ function editAdmin(toggle) {
                     //Fail to edit, alert user
                     //Didn't refresh table to prevent interrupting user edit
                     alert("Permission level failed to change. Please try again later.");
+                    
+                    //Reverse the toggle
+                    if (editDetails['permission_level'] == 1) {
+                        toggle.classList.remove("is-checked");
+                    } else {
+                        toggle.classList.add("is-checked");
+                    }
                 }
             })
             .catch((error) => {
