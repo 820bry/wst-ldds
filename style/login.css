@@ -94,7 +94,7 @@ img.lock {
     top: 25%; */
 }
 
-#email, #email2 {
+#email, #OTP, #password, #passwordconfirm {
     /* position: relative;
     top: 30%;
     width: 50%;
@@ -108,13 +108,13 @@ img.lock {
     border: none;
 }
 
-#email::placeholder, #email2::placeholder {
+#email::placeholder, #OTP::placeholder, #passwordconfirm::placeholder, #password::placeholder {
     color: rgba(255, 255, 255, 0.753);
     font-weight: 550;
     font-size: large;
 }
 
-#email:focus, #email2:focus {
+#email:focus, #OTP:focus, #password:focus, #passwordconfirm:focus {
     outline: none;
 }
 
