@@ -217,6 +217,16 @@ select{
     display: inline-block;
 }
 
+.member_list td input[type="text" i]:disabled {
+    border: none !important;
+}
+
+.member_list td input[type="text" i] {
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+}
+
 /*
 .member_list tbody tr:nth-child(even){
     background-color: #3D3D3D;

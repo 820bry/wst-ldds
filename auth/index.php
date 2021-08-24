@@ -66,9 +66,9 @@
             $name = $_POST["name"];
             $email = $_POST["email"];
             $password = hash_hmac("sha256", $_POST["password"], "ldds");
-            $courseCode = $_POST["courseCode"];
-            $faculty = $_POST["faculty"];
-            $studentID = $_POST["studentID"];
+            $courseCode = strtoupper($_POST["courseCode"]);
+            $faculty = strtoupper($_POST["faculty"]);
+            $studentID = strtoupper($_POST["studentID"]);
             $phoneNumber = $_POST["phoneNumber"];
             $icNo = $_POST["icNo"];
 

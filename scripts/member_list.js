@@ -3,6 +3,7 @@ page = 1;
 noOfRowsPerPage = 2;
 sortBy = "name";
 sortDirection = "asc";
+rowItems = [];
 
 //Onload, not using window.onload to prevent conflict with other js file
 search(1, sortBy, sortDirection);
@@ -58,7 +59,7 @@ function deleteSelectedRow() {
         var checkboxRow = tableRows[i].firstElementChild.firstElementChild;
 
         if (checkboxRow.classList.contains("is-checked")) {
-            studentID.push(tableRows[i].children[2].innerHTML);
+            studentID.push(tableRows[i].children[2].firstElementChild.value);
             tableRows[i].remove();
             i--;
         }
@@ -73,7 +74,7 @@ function deleteRow(element) {
 
     for (i = 1; i < tableRows.length; i++) {
         if (tableRows[i].contains(element)) {
-            studentID.push(tableRows[i].children[2].innerHTML);
+            studentID.push(tableRows[i].children[2].firstElementChild.value);
             tableRows[i].remove();
         }
     }
@@ -152,7 +153,7 @@ function search(noOfPage, sortBy, sortDirection) {
                         <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].email}" disabled></input></td>
                         <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].phone_no}" disabled></input></td>
                         <td>
-                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}"><i class="material-icons">edit</i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}" onclick="editButton(this)"><i class="material-icons">edit</i></button>
                             <div class="mdl-tooltip" for="edit${no}">Edit</div>
                         </td>
                         <td>
@@ -160,7 +161,7 @@ function search(noOfPage, sortBy, sortDirection) {
                             <div class="mdl-tooltip" for="delete${no}">Delete</div>
                         </td>
                         <td>
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-${no}">
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-${no}" onchange="editAdmin(this)">
                         <input type="checkbox" id="switch-${no}" class="mdl-switch__input" ${checked}>
                         <span class="mdl-switch__label"></span></label>
                         </td>
@@ -225,4 +226,225 @@ function sortByElement(element) {
     else if (sortByValue === "Admin") sortByValue = "permission_level";
 
     search(1, sortByValue, sortDirection);
+}
+
+function editButton(button) {
+    var tableRows = document.getElementById("member_list").rows;
+    var no = button.id.replace("edit", "");
+
+    //1st row is table head, so iterate from 2nd row
+    for (i = 1; i < tableRows.length; i++) {
+        // If this is the row that contains the button clicked
+        if (tableRows[i].contains(button)) {
+            var editTd = tableRows[i].children[8];
+            // Change the button to tick and cancel
+            editTd.innerHTML = `
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="done${no}" onclick="doneEdit(this)"><i class="material-icons">done</i></button>
+                <div class="mdl-tooltip" for="done${no}">Done</div>
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="close${no}" onclick="cancelEdit(this)"><i class="material-icons">close</i></button>
+                <div class="mdl-tooltip" for="close${no}">Cancel</div>
+            `;
+
+            //MDL upgrade the elements in the td to make it works
+            for (x = 0; x < editTd.children.length; x++) {
+                componentHandler.upgradeElement(editTd.children[x]);
+            }
+
+            //Enable the input (2nd td to 7th td are the inputs, using for loop to simplify things)
+            //Then, insert the row values for cancel/undo purpose
+            var tdValues = [tableRows[i]]; //Store the row into it, so can be used to find the edited row later
+            for (x = 1; x <= 7; x++) {
+                var inputElement = tableRows[i].children[x].firstElementChild;
+
+                inputElement.disabled = false;
+
+                tdValues.push(inputElement.value);
+            }
+
+            //Save tdValues array into rowItems
+            rowItems.push(tdValues);
+            
+        }
+    }
+}
+
+function cancelEdit(button) {
+    var tableRows = document.getElementById("member_list").rows;
+    var no = button.id.replace("close", "");
+
+    //1st row is table head, so iterate from 2nd row
+    for (i = 1; i < tableRows.length; i++) {
+        // If this is the row that contains the button clicked
+        if (tableRows[i].contains(button)) {
+            var editTd = tableRows[i].children[8];
+            // Change the button back to edit button
+            editTd.innerHTML = `
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}" onclick="editButton(this)"><i class="material-icons">edit</i></button>
+                <div class="mdl-tooltip" for="edit${no}">Edit</div>
+            `;
+
+            //MDL upgrade the elements in the td to make it works
+            for (x = 0; x < editTd.children.length; x++) {
+                componentHandler.upgradeElement(editTd.children[x]);
+            }
+
+            //Insert back the original values and disable the input
+            //First, loop through the rowItems array and find the corresponding subarray
+            for (x = 0; x < rowItems.length; x++) {
+                if (tableRows[i].contains(rowItems[x][0])) {
+                    for (z = 1; z <= 7; z++) {
+                        var inputElement = tableRows[i].children[z].firstElementChild;
+
+                        inputElement.disabled = true;
+
+                        //Insert back the original values
+                        inputElement.value = rowItems[x][z];
+                    }
+                    rowItems.splice(x,1);
+                    break;
+                }
+            }
+        }
+    }
+}
+
+function doneEdit(button) {
+    var tableRows = document.getElementById("member_list").rows;
+    var no = button.id.replace("done", "");
+
+    //1st row is table head, so iterate from 2nd row
+    for (i = 1; i < tableRows.length; i++) {
+        // If this is the row that contains the button clicked
+        if (tableRows[i].contains(button)) {
+            var editTd = tableRows[i].children[8];
+            // Change the button back to edit button
+            editTd.innerHTML = `
+                <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}" onclick="editButton(this)"><i class="material-icons">edit</i></button>
+                <div class="mdl-tooltip" for="edit${no}">Edit</div>
+            `;
+
+            //MDL upgrade the elements in the td to make it works
+            for (x = 0; x < editTd.children.length; x++) {
+                componentHandler.upgradeElement(editTd.children[x]);
+            }
+
+            //Disable the input
+            for (x = 1; x <= 7; x++) {
+                var inputElement = tableRows[i].children[x].firstElementChild;
+
+                inputElement.disabled = true;
+            }
+
+            //Remove from database
+            var editDetails = {};
+
+            //Loop through rowItems and get the originalID
+            for (x = 0; x < rowItems.length; x++) {
+                if (tableRows[i].contains(rowItems[x][0])) {
+                    editDetails["originalID"] = rowItems[x][2];
+                }
+            }
+
+            //Insert new values into array
+            editDetails["name"] = tableRows[i].children[1].firstElementChild.value;
+            editDetails["studentID"] = tableRows[i].children[2].firstElementChild.value;
+            editDetails["faculty"] = tableRows[i].children[3].firstElementChild.value;
+            editDetails["courseCode"] = tableRows[i].children[4].firstElementChild.value;
+            editDetails["icNo"] = tableRows[i].children[5].firstElementChild.value;
+            editDetails["email"] = tableRows[i].children[6].firstElementChild.value;
+            editDetails["phoneNumber"] = tableRows[i].children[7].firstElementChild.value;
+
+            var editJSON = JSON.stringify(editDetails);
+
+            fetch("/wst-ldds/member_list/edit.php", {
+                method: "POST",
+                headers: {
+                    "Content-type":"application/json",
+                },
+                body: editJSON,
+            })
+            .then(response => response.json())
+            .then((varResponse) => {
+                if (varResponse.status === "Success") {
+                    //Loop through rowItems and remove the original values from array
+                    for (x = 0; x < rowItems.length; x++) {
+                        if (tableRows[i].contains(rowItems[x][0])) {
+                            rowItems.splice(x,1);
+                        }
+                    }
+                } else {
+                    //Fail to edit, insert back the original values
+                    for (x = 0; x < rowItems.length; x++) {
+                        if (tableRows[i].contains(rowItems[x][0])) {
+                            for (z = 1; z <= 7; z++) {
+                                var inputElement = tableRows[i].children[z].firstElementChild;
+        
+                                //Insert back the original values
+                                inputElement.value = rowItems[x][z];
+                            }
+                            rowItems.splice(x,1);
+                            break;
+                        }
+                    }
+                }
+            })
+            .catch((error) => {
+                console.error("Error: ", error);
+            })
+        }
+    }
+}
+
+function editAdmin(toggle) {
+    var tableRows = document.getElementById("member_list").rows;
+    var editDetails = {};
+
+    if (toggle.classList.contains("is-checked")) {
+        editDetails['permission_level'] = 1;
+    } else {
+        editDetails['permission_level'] = 0;
+    }
+
+    //1st row is table head, so iterate from 2nd row
+    for (i = 1; i < tableRows.length; i++) {
+        // If this is the row that contains the toggle clicked
+        if (tableRows[i].contains(toggle)) {
+            //Check rowItems to get original ID, in case edit button is clicked and didn't done yet
+            //Loop through rowItems and get the originalID
+            for (x = 0; x < rowItems.length; x++) {
+                if (tableRows[i].contains(rowItems[x][0])) {
+                    editDetails["studentID"] = rowItems[x][2];
+                }
+            }
+
+            //Get value from input if rowItems doesn't contain the ID
+            if (editDetails["studentID"] == null) {
+                editDetails["studentID"] = tableRows[i].children[2].firstElementChild.value;
+            }
+
+            var editJSON = JSON.stringify(editDetails);
+
+            //Proceed to edit admin
+            fetch("/wst-ldds/member_list/updateAdmin.php", {
+                method: "POST",
+                headers: {
+                    "Content-type":"application/json",
+                },
+                body: editJSON,
+            })
+            .then(response => response.json())
+            .then((varResponse) => {
+                if (varResponse.status === "Success") {
+                    //Do nothing
+                } else {
+                    //Fail to edit, alert user
+                    //Didn't refresh table to prevent interrupting user edit
+                    alert("Permission level failed to change. Please try again later.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error: ", error);
+            })
+        }
+    }
 }
