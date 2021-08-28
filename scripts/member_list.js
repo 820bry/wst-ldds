@@ -8,6 +8,15 @@ rowItems = [];
 //Onload, not using window.onload to prevent conflict with other js file
 search(1, sortBy, sortDirection);
 
+function notificationMsg(message) {
+    var notification = document.querySelector('.mdl-js-snackbar');
+    notification.MaterialSnackbar.showSnackbar(
+    {
+        "message": message
+    }
+    );
+}
+
 function checkAllBox(element) {
     var tableRows = document.getElementById("member_list").rows;
 
@@ -42,6 +51,9 @@ function deleteRowRequest(studentIDs) {
         if (varResponse.status === "success") {
             //Refresh table
             search(page, sortBy, sortDirection);
+            notificationMsg("Row deleted successfully");
+        } else {
+            notificationMsg("Error occured. Please try again later.");
         }
     })
     .catch((error) => {
@@ -123,14 +135,14 @@ function search(noOfPage, sortBy, sortDirection) {
                 }
 
                 //Page update
-                document.getElementById("page-count").innerHTML = `${noOfPage} of ${Math.ceil(resultsArray.length / noOfRowsPerPage)}`;
+                document.getElementById("page-count").innerHTML = `${(page-1)*noOfRowsPerPage+1}-${(page * noOfRowsPerPage)} of ${resultsArray.length}`;
 
                 //Previous page button update
                 if (page > 1 && resultsArray.length < ((page*noOfRowsPerPage)+1)) {
                     document.getElementById("prev").disabled = false;
                 } else {
                     document.getElementById("prev").disabled = true;
-                    document.getElementById("prev-tooltip").classList.remove("is-active");
+                    $('#prev-tooltip.is-active').removeClass('is-active');
                 }
 
                 //Next page button update
@@ -138,7 +150,7 @@ function search(noOfPage, sortBy, sortDirection) {
                     document.getElementById("next").disabled = false;
                 } else {
                     document.getElementById("next").disabled = true;
-                    document.getElementById("next-tooltip").classList.remove("is-active");
+                    $('#next-tooltip.is-active').removeClass('is-active');
                 }
 
                 for (i = (page-1)*noOfRowsPerPage; i < resultsArray.length && i < (page * noOfRowsPerPage);i++) {
@@ -366,6 +378,9 @@ function doneEdit(button) {
             .then(response => response.json())
             .then((varResponse) => {
                 if (varResponse.status === "Success") {
+                    //Display message
+                    notificationMsg("Updated successfully");
+
                     //Loop through rowItems and remove the original values from array
                     for (x = 0; x < rowItems.length; x++) {
                         if (tableRows[i].contains(rowItems[x][0])) {
@@ -373,6 +388,9 @@ function doneEdit(button) {
                         }
                     }
                 } else {
+                    //Display message
+                    notificationMsg("Error occured. Please try again later.");
+
                     //Fail to edit, insert back the original values
                     for (x = 0; x < rowItems.length; x++) {
                         if (tableRows[i].contains(rowItems[x][0])) {
@@ -435,11 +453,12 @@ function editAdmin(toggle) {
             .then(response => response.json())
             .then((varResponse) => {
                 if (varResponse.status === "Success") {
-                    //Do nothing
+                    //Display message
+                    notificationMsg("Updated successfully");
                 } else {
                     //Fail to edit, alert user
                     //Didn't refresh table to prevent interrupting user edit
-                    alert("Permission level failed to change. Please try again later.");
+                    notificationMsg("Error occured. Please try again later.");
                     
                     //Reverse the toggle
                     if (editDetails['permission_level'] == 1) {

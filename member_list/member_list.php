@@ -43,14 +43,14 @@ require_once('../banner.php');
                     <span class="arrow_down"></span>
             </span>
 
-            <div class = "close-button">
+            <!-- <div class = "close-button">
                 <button class = "mdl-button mdl-js-button mdl-button--mini-fab mdl-js-ripple-effect"></button>
-            </div>
+            </div> -->
         </div>
         <div class = "page-controls" id = "page-controls">
             <span><b>Page</b></span>
             <span class ="page-count" id = "page-count">1 of 1</span>
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="refresh" onclick="search(page, sortBy, sortDirection)"><i class="material-icons">cached</i></button>
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="refresh" onclick="search(page, sortBy, sortDirection); notificationMsg('Table refreshed.')"><i class="material-icons">cached</i></button>
             <div class="mdl-tooltip" for="refresh">Refresh</div>
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="del-selected" onclick="deleteSelectedRow()"><i class="material-icons">delete</i></button>
             <div class="mdl-tooltip" for="del-selected">Delete Selected</div>
@@ -108,7 +108,10 @@ require_once('../banner.php');
         </div>
     </div>
 
-
+    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
+    </div>
 
 </body>
 
