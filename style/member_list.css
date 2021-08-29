@@ -34,7 +34,7 @@ body {
 {
     background-color: white;
     padding: 0 50px 0 35px;
-    margin: 70px 60px ;
+    align-content: center;
 }
 
 .head_of_table{
@@ -149,12 +149,16 @@ body {
     background-color: #eee;
 }
 
-
-.member_list td, .member_list th{
-    padding: 10px 12px 10px 0;
+.invi_edit{
     text-align: center;
-    font-size: 15px;
 }
+
+.member_list td{
+    padding: 10px 12px 10px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
 
 .member_list .chckbox
 {
