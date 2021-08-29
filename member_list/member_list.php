@@ -43,22 +43,24 @@ require_once('../banner.php');
                     <span class="arrow_down"></span>
             </span>
 
-            <div class = "close-button">
+            <!-- <div class = "close-button">
                 <button class = "mdl-button mdl-js-button mdl-button--mini-fab mdl-js-ripple-effect"></button>
-            </div>
+            </div> -->
         </div>
         <div class = "page-controls" id = "page-controls">
             <span><b>Page</b></span>
             <span class ="page-count" id = "page-count">1 of 1</span>
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="refresh" onclick="search(page, sortBy, sortDirection)"><i class="material-icons">cached</i></button>
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="refresh" onclick="search(page, sortBy, sortDirection); notificationMsg('Table refreshed.')"><i class="material-icons">cached</i></button>
             <div class="mdl-tooltip" for="refresh">Refresh</div>
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="del-selected" onclick="deleteSelectedRow()"><i class="material-icons">delete</i></button>
             <div class="mdl-tooltip" for="del-selected">Delete Selected</div>
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="export" onclick="location.href='/wst-ldds/member_list/exportMember.php'"><i class="material-icons">file_download</i></button>
+            <div class="mdl-tooltip" for="export" id="next-tooltip">Export as CSV</div>
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="prev" onclick="search(page-1, sortBy, sortDirection)" disabled><i class="material-icons">navigate_before</i></button>
             <div class="mdl-tooltip" for="prev" id="prev-tooltip">Previous Page</div>
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="next" onclick="search(page+1, sortBy, sortDirection)"><i class="material-icons">navigate_next</i></button>
             <div class="mdl-tooltip" for="next" id="next-tooltip">Next Page</div>
-        </div>
+           </div>
         <div class="table_list">
             <table class="member_list" id = "member_list">
                 <thead>
@@ -106,7 +108,10 @@ require_once('../banner.php');
         </div>
     </div>
 
-
+    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
+    </div>
 
 </body>
 
