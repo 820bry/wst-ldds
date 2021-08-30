@@ -56,6 +56,7 @@ body {
     border: none;
     padding-left: 20px;
     display: inline-block;
+    border-radius: 7px;
 }
 
 .head_of_table .searchbar:focus
@@ -129,15 +130,17 @@ body {
 .table_list{
     display: flex;
     border-collapse: collapse;
+    margin: auto;
 }
 
 .member_list
 {
     box-sizing: border-box;
     color: black;
-    width: 100%;
     border-collapse: collapse;
     margin: 10px 0;
+    text-align: center;
+    table-layout: fixed;
 }
 
 .member_list tr:hover 
@@ -150,10 +153,12 @@ body {
 }
 
 .invi_edit{
+    display: inline-block;
     text-align: center;
 }
 
 .member_list td{
+
     padding: 10px 12px 10px 0;
     font-size: 15px;
     text-align: center;
@@ -198,16 +203,72 @@ td:last-child label{
 }
 
 select{
-    font-size: 1.3rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
     background-color: #eeeeee;
-    color: black;
-    border: none;
-    height: 35px;
-
-    outline: none;
+    border: 0!important;
+    /* height: 35px;
+    margin-left: 5px; */
+    outline: 0;
     cursor: pointer;
+    border-radius: 7px;
+    flex: 1;
+    padding: 0.5em;
+    color: black;
+    cursor: pointer;
+    font-size: 1em;
 }
 
+select::-ms-expand{
+    display: none;
+}
+
+.select-custom{
+    position: relative;
+    display: flex;
+    width: 15em;
+    height: 3em;
+    line-height: 3;
+    background: #eeeeee;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+option:checked{
+    display: none;
+}
+
+option:hover{
+    background-color:black;
+}
+
+.select-custom:hover{
+    color: #3b3c47;
+}
+
+.select-custom::after{
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0.5em;
+    color: black;
+    background: #E8E8E8;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.25s all ease;
+}
+
+.select-custom:hover::after{
+    color: grey;
+}
+
+/* .select-custom{
+    background-color: #eeeeee ;
+    margin-left: 5px;
+    outline: none;
+} */
 
 .arrow_down{
     background: #3b3c47;
@@ -230,7 +291,34 @@ select{
     border-width: thin;
     border-color: black;
     text-align: center;
+    border-radius: 10px;
 }
+
+td .col_small{
+    width: 75px;
+}
+
+/* thead th:nth-child(4){
+    display: inline-block;
+    width: 90px;
+}
+
+
+thead th:nth-child(5){
+    display: inline-block;
+    padding: 5px;
+}
+
+tr td:nth-child(4){
+    display: inline-block;
+    width: 90px;
+}
+
+tr td:nth-child(5){
+    display: inline-block;
+    width: ;
+} */
+
 
 /*
 .member_list tbody tr:nth-child(even){

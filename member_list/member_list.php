@@ -30,6 +30,13 @@ require_once('../banner.php');
             <h3 class="head_one">Members</h3>
                 <input type="text" class="searchbar" id="searchbar" placeholder="Search" oninput="search(1, sortBy, sortDirection)">
             
+
+
+            <!-- <div class = "close-button">
+                <button class = "mdl-button mdl-js-button mdl-button--mini-fab mdl-js-ripple-effect"></button>
+            </div> -->
+        </div>
+        <div class = "page-controls" id = "page-controls">
             <span class="select-custom">
                 <select id="choose_item" name="chooseitem" form="item">
                     <option value="name">Name</option>
@@ -42,12 +49,6 @@ require_once('../banner.php');
                 </select>
                     <span class="arrow_down"></span>
             </span>
-
-            <!-- <div class = "close-button">
-                <button class = "mdl-button mdl-js-button mdl-button--mini-fab mdl-js-ripple-effect"></button>
-            </div> -->
-        </div>
-        <div class = "page-controls" id = "page-controls">
             <span><b>Page</b></span>
             <span class ="page-count" id = "page-count">1 of 1</span>
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="refresh" onclick="search(page, sortBy, sortDirection); notificationMsg('Table refreshed.')"><i class="material-icons">cached</i></button>
@@ -77,32 +78,34 @@ require_once('../banner.php');
                     <th onclick="sortByElement(this)">Admin <span class="material-icons">keyboard_arrow_down</span></th>
                 </thead>
 
-            <tbody>
-                <!-- HTML Code for row (Commented for template purpose) 
-                    <tr>
-                    <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1"><input type="checkbox" id="checkbox-1" class="mdl-checkbox__input"></label></td>
-                    <td>Abu</td>
-                    <td>00PMD00000</td>
-                    <td>FOCS</td>
-                    <td>DFT</td>
-                    <td>000000-00-0000</td>
-                    <td>abuabuabu@gmail.com</td>
-                    <td>010-0000000</td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit1"><i class="material-icons">edit</i></button>
-                        <div class="mdl-tooltip" for="edit1">Edit</div>
-                    </td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete1" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
-                        <div class="mdl-tooltip" for="delete1">Delete</div>
-                    </td>
-                    <td>
-                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-                    <input type="checkbox" id="switch-1" class="mdl-switch__input">
-                    <span class="mdl-switch__label"></span></label>
-                    </td>
-                </tr> -->                
-            </tbody>
+                <tbody>
+
+
+                    <!-- HTML Code for row (Commented for template purpose) 
+                        <tr>
+                        <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1"><input type="checkbox" id="checkbox-1" class="mdl-checkbox__input"></label></td>
+                        <td>Abu</td>
+                        <td>00PMD00000</td>
+                        <td>FOCS</td>
+                        <td>DFT</td>
+                        <td>000000-00-0000</td>
+                        <td>abuabuabu@gmail.com</td>
+                        <td>010-0000000</td>
+                        <td>
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit1"><i class="material-icons">edit</i></button>
+                            <div class="mdl-tooltip" for="edit1">Edit</div>
+                        </td>
+                        <td>
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete1" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
+                            <div class="mdl-tooltip" for="delete1">Delete</div>
+                        </td>
+                        <td>
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                        <input type="checkbox" id="switch-1" class="mdl-switch__input">
+                        <span class="mdl-switch__label"></span></label>
+                        </td>
+                    </tr> -->                
+                </tbody>
             </table>
 
         </div>
