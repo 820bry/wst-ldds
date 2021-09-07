@@ -1,5 +1,22 @@
 <?php
 require_once('../banner.php');
+
+require("./../config/session.php");
+
+if (isset($_SESSION['permission_level'])) {
+    //logged in, check if user is admin or not
+    if ($_SESSION['permission_level'] != 1) {
+        //Not admin, go to error page
+        http_response_code(302);
+        header("Location: http://".$_SERVER['HTTP_HOST']."/wst-ldds/error");
+        exit;
+    } 
+} else {
+    //No login yet
+    http_response_code(302);
+    header("Location: http://".$_SERVER['HTTP_HOST']."/wst-ldds/error");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
