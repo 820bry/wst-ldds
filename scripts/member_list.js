@@ -1,6 +1,6 @@
 //Global variables
 page = 1;
-noOfRowsPerPage = 2;
+noOfRowsPerPage = 1;
 sortBy = "name";
 sortDirection = "asc";
 rowItems = [];
@@ -64,6 +64,7 @@ function deleteRowRequest(studentIDs) {
 function deleteSelectedRow() {
     var tableRows = document.getElementById("member_list").rows;
     var studentID = [];
+    var noOfCheckedRows = 0;
 
     //1st row is table head, so iterate from 2nd row
     for (i = 1; i < tableRows.length; i++) {
@@ -73,11 +74,19 @@ function deleteSelectedRow() {
         if (checkboxRow.classList.contains("is-checked")) {
             studentID.push(tableRows[i].children[2].firstElementChild.value);
             tableRows[i].remove();
+            noOfCheckedRows++;
             i--;
         }
     }
 
-    deleteRowRequest(studentID);
+    //If no rows selected, notify user
+    if (noOfCheckedRows == 0) {
+        notificationMsg("No rows selected");
+    } else {
+        deleteRowRequest(studentID);
+    }
+
+    
 }
 
 function deleteRow(element) {
