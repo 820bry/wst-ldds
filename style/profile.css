@@ -40,3 +40,7 @@
 .information > table .value {
     padding: 0 50px;
 }
+
+.value{
+    visibility: hidden;
+}

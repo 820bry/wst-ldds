@@ -168,8 +168,8 @@ function search(noOfPage, sortBy, sortDirection) {
                         <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-${no}"><input type="checkbox" id="checkbox-${no}" class="mdl-checkbox__input"></label></td>
                         <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].name}" disabled></input></td>
                         <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].student_id}" disabled></input></td>
-                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].faculty}" disabled></input></td>
-                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].course_code}" disabled></input></td>
+                        <td class="col_small"><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].faculty}" disabled></input></td>
+                        <td class="col_small"><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].course_code}" disabled></input></td>
                         <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].ic_no}" disabled></input></td>
                         <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].email}" disabled></input></td>
                         <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].phone_no}" disabled></input></td>

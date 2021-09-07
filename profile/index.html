@@ -15,6 +15,7 @@ require_once('../banner.php');
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
     <script src="/wst-ldds/scripts/scrollbar.js" type="text/javascript"></script>
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/wst-ldds/style/main.css">
     <link rel="stylesheet" href="/wst-ldds/style/profile.css">
 
@@ -25,34 +26,43 @@ require_once('../banner.php');
     <div class="content">
         <h1>Your Profile</h1>
         <div class="profile">
+        <span class="material-icons-outlined">edit</span>
             <div class="heading">
                 <img src="/wst-ldds/style/images/committee/CZ.JPG">
                 <div class="heading-info">
-                    <h3>YEOW CHEN ZHENG</h3>
-                    <h5>20PMD01234</h5>
+                    <table>
+                        <tr>
+                            <td class="value"><input type="text" class="user_info" id="user_info"></td>
+                        </tr>
+                        <tr>
+                            <td class="value"><input type="text" class="user_info" id=“user_info></td>
+                        </tr>
+                    </table>
+                    <!-- <h3>YEOW CHEN ZHENG</h3>
+                    <h5>20PMD01234</h5> -->
                 </div>
             </div>
             <div class="information">
                 <table>
                     <tr>
                         <td class="data">Gender</td>
-                        <td class="value">Male</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
                     </tr>
                     <tr>
                         <td class="data">NRIC No.</td>
-                        <td class="value">010203-04-0506</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
                     </tr>
                     <tr>
                         <td class="data">Email</td>
-                        <td class="value">yeowcz-pk20@student.tarc.edu.my</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
                     </tr>
                     <tr>
                         <td class="data">Programme</td>
-                        <td class="value">DFT - Diploma in Information Technology</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
                     </tr>
                     <tr>
                         <td class="data">Faculty</td>
-                        <td class="value">FOCS - Faculty of Computing and Information Technology</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
                     </tr>
                 </table>
             </div>
