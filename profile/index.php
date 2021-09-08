@@ -23,14 +23,39 @@ require_once('../banner.php');
 </head>
 <body class="hidden-scrollbar">
 
+    <div class="event_delete" id="event_delete">
+        <div class="event_delete_window" id="event_delete_window">
+            <div class="event_delete_text">
+                <p>Are you sure want to delete?</p>
+            </div>
+
+            <div class="event_delete_button">
+                <img class="cross" src="../style/images/cross.png" alt="logo" onclick="deleteEvent(false)">
+                <img class="tick" src="../style/images/tick.png" alt="logo" onclick="deleteEvent(true)">
+            </div>
+        </div>
+    </div>
+
     <div class="content">
         <h1>Your Profile</h1>
+
         <div class="profile">
-        <span class="material-icons-outlined">edit</span>
-            <div class="heading">
+            
+        <span>
+
+        
+        </span>
+        
+        <div class="heading">
                 <img src="/wst-ldds/style/images/committee/CZ.JPG">
+                
+                <form class="choose_photo" action="#">
+                    <input type="file" id="pfp" >
+                </form>
+
                 <div class="heading-info">
                     <table>
+
                         <tr>
                             <td class="value"><input type="text" class="user_info" id="user_info"></td>
                         </tr>
@@ -66,6 +91,19 @@ require_once('../banner.php');
                     </tr>
                 </table>
             </div>
+
+            <div class="button_info">
+                <div class="delete_button" id="delete_button">
+                    <input type="button" value="Delete">
+                </div>
+                <div class="reset_button" id="reset_button">
+                    <input type="reset" value="Back">
+                </div>
+                <div class="submit_button" id="submit_button">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+
         </div>
     </div>
 
