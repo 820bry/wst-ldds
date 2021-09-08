@@ -43,6 +43,7 @@ require_once('../banner.php');
             
         <span>
 
+            <button class="edit_profile"><i class="material-icons">edit</i></button>
         
         </span>
         
