@@ -48,7 +48,7 @@ if (isset($_SESSION['permission_level'])) {
         </div>
         <div class = "page-controls" id = "page-controls">
             <span class="select-custom">
-                <select id="choose_item" name="chooseitem" form="item">
+                <select class="sort-by-select" id="choose_item" name="chooseitem" form="item">
                     <option value="name">Name</option>
                     <option value="student_id">Student ID</option>
                     <option value="faculty">Faculty</option>

@@ -163,31 +163,6 @@ function search(noOfPage, sortBy, sortDirection) {
 
                 for (i = (page-1)*noOfRowsPerPage; i < resultsArray.length && i < (page * noOfRowsPerPage);i++) {
                     var checked = (resultsArray[i].permission_level === 0) ? "" : "checked";
-                    /*
-                    var rowHTML = `<tr class="edit_color">
-                        <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-${no}"><input type="checkbox" id="checkbox-${no}" class="mdl-checkbox__input"></label></td>
-                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].name}" disabled></input></td>
-                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].student_id}" disabled></input></td>
-                        <td class="col_small"><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].faculty}" disabled></input></td>
-                        <td class="col_small"><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].course_code}" disabled></input></td>
-                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].ic_no}" disabled></input></td>
-                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].email}" disabled></input></td>
-                        <td><input type="text" id="invi_edit" class="invi_edit" value="${resultsArray[i].phone_no}" disabled></input></td>
-                        <td>
-                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}" onclick="editButton(this)"><i class="material-icons">edit</i></button>
-                            <div class="mdl-tooltip" for="edit${no}">Edit</div>
-                        </td>
-                        <td>
-                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete${no}" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
-                            <div class="mdl-tooltip" for="delete${no}">Delete</div>
-                        </td>
-                        <td>
-                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-${no}" onchange="editAdmin(this)">
-                        <input type="checkbox" id="switch-${no}" class="mdl-switch__input" ${checked}>
-                        <span class="mdl-switch__label"></span></label>
-                        </td>
-                    </tr>`;
-                    */
                     var rowHTML = `
                     <tr>
                         <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1"><input type="checkbox" id="checkbox-1" class="mdl-checkbox__input"></label></td>
@@ -199,6 +174,10 @@ function search(noOfPage, sortBy, sortDirection) {
                         <td>${resultsArray[i].venue}</td>
                         <td>${resultsArray[i].capacity}</td>
                         <td>${resultsArray[i].deadline}</td>
+                        <td>
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="show${no}"><i class="material-icons">launch</i></button>
+                            <div class="mdl-tooltip" for="show${no}">Show Participants List</div>
+                        </td>
                         <td>
                             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}"><i class="material-icons">edit</i></button>
                             <div class="mdl-tooltip" for="edit${no}">Edit</div>
