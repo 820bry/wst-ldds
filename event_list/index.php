@@ -1,5 +1,22 @@
 <?php
 require_once('../banner.php');
+
+require_once('./../config/session.php');
+/*
+if(isset($_SESSION['permission_level']))
+{
+    if($_SESSION['permission_level'] != 1)
+    {
+        http_response_code(302);
+        header("Location: http://".$_SERVER['HTTP_HOST']."/wst-ldds/error");
+        exit;
+    }
+} else {
+    http_response_code(302);
+    header("Location: http://".$_SERVER['HTTP_HOST']."/wst-ldds/error");
+    exit;
+}
+*/
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +36,7 @@ require_once('../banner.php');
 
     <link rel="stylesheet" href="/wst-ldds/style/member_list.css">
     <script src="/wst-ldds/scripts/events.js" type="text/javascript"></script>
-    <script src="/wst-ldds/scripts/member_list.js" type="text/javascript" defer></script>
+    <!-- <script src="/  wst-ldds/scripts/member_list.js" type="text/javascript" defer></script> -->
     <title>Event List | LDDS</title>
 </head>
 

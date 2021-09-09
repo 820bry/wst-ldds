@@ -1,6 +1,6 @@
 //Global variables
 page = 1;
-noOfRowsPerPage = 1;
+noOfRowsPerPage = 3;
 sortBy = "name";
 sortDirection = "asc";
 rowItems = [];
