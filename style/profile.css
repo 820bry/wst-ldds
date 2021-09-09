@@ -140,6 +140,18 @@ table tr td input{
     font-size: 18px;
 }
 
+.content td input[type="text" i]:disabled {
+    border: none !important;
+}
+
+.content td input[type="text" i] {
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+
 /* table tr td input[type="text" i]:disabled {
     border: none !important;
 }
