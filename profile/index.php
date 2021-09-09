@@ -1,16 +1,35 @@
 <?php
 require_once('../banner.php');
-require("./../config/session.php");
+@require("./../config/session.php");
 require("./../config/conn.php");
 
 if (isset($_POST['submit'])) {
     //Submit button is pressed
     $name = $_POST['name'];
+    $studentID = $_POST['studentID'];
+    $icNo = $_POST['icNo'];
+    $email = $_POST['email'];
+    $phoneNumber = $_POST['phoneNo'];
+    $faculty = $_POST['faculty'];
+    $courseCode = $_POST['courseCode'];
 
     $query = $conn->prepare("UPDATE ${db_member} SET name=?, ic_no=?, email=?, phone_no=?, faculty=?, course_code=? WHERE student_id=?");
-    $query -> bind_param("sssssss", $name, $icNo, $email, $phoneNumber, $faculty, $courseCode, $originalID);
+    $query -> bind_param("sssssss", $name, $icNo, $email, $phoneNumber, $faculty, $courseCode, $studentID);
     $query -> execute();
+    
+    if ($query) {
+        //Success
+        $_SESSION['name'] =  $name; 
+        $_SESSION['ic_no'] = $icNo; 
+        $_SESSION['email'] = $email;
+        $_SESSION['phone_no'] = $phoneNumber;
+        $_SESSION['faculty'] = $faculty;
+        $_SESSION['course_code'] = $courseCode;
+    }
+} else if (isset($_POST['delete'])) {
+    //Delete button is pressed
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +80,7 @@ if (isset($_POST['submit'])) {
                             </tr>
                             <tr>
                                 <td class="value">
-                                    <input type="text" class="user_info" name="studentID" value="<?php echo $_SESSION['student_id'];?>" disabled>
+                                    <input type="text" class="user_info" name="studentID" value="<?php echo $_SESSION['student_id'];?>" readonly>
                                 </td>
                             </tr>
                         </table>
@@ -78,36 +97,36 @@ if (isset($_POST['submit'])) {
                 <table>
                     <tr>
                         <td class="data">Phone No :</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info" value="<?php echo $_SESSION['phone_no'];?>" disabled></td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" name="phoneNo" value="<?php echo $_SESSION['phone_no'];?>" disabled></td>
                     </tr>
                     <tr>
                         <td class="data">NRIC No :</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info" value="<?php echo $_SESSION['ic_no'];?>" disabled></td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" name="icNo" value="<?php echo $_SESSION['ic_no'];?>" disabled></td>
                     </tr>
                     <tr>
                         <td class="data">Email :</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info" value="<?php echo $_SESSION['email'];?>" disabled></td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" name="email" value="<?php echo $_SESSION['email'];?>" disabled></td>
                     </tr>
                     <tr>
                         <td class="data">Programme :</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info" value="<?php echo $_SESSION['course_code'];?>" disabled></td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" name="courseCode" value="<?php echo $_SESSION['course_code'];?>" disabled></td>
                     </tr>
                     <tr>
                         <td class="data">Faculty :</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info" value="<?php echo $_SESSION['faculty'];?>" disabled></td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" name="faculty" value="<?php echo $_SESSION['faculty'];?>" disabled></td>
                     </tr>
                 </table>
             </div>
 
             <div class="button_info" id="button_info">
                 <div class="delete_button" id="delete_button">
-                    <input type="button" value="Delete">
+                    <input type="button" name="delete" value="Delete">
                 </div>
                 <div class="reset_button" id="reset_button">
                     <input type="reset" value="Reset">
                 </div>
                 <div class="submit_button" id="submit_button">
-                    <input type="submit" value="Submit">
+                    <input type="submit" name="submit" value="Submit">
                 </div>
             </div>
 
