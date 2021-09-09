@@ -144,7 +144,12 @@ function search(noOfPage, sortBy, sortDirection) {
                 }
 
                 //Page update
-                document.getElementById("page-count").innerHTML = `${(page-1)*noOfRowsPerPage+1}-${(page * noOfRowsPerPage)} of ${resultsArray.length}`;
+                if ((page * noOfRowsPerPage) > resultsArray.length) {
+                    document.getElementById("page-count").innerHTML = `${(page-1)*noOfRowsPerPage+1}-${(resultsArray.length)} of ${resultsArray.length}`;
+                } else {
+                    document.getElementById("page-count").innerHTML = `${(page-1)*noOfRowsPerPage+1}-${(page * noOfRowsPerPage)} of ${resultsArray.length}`;
+                }
+                
 
                 //Previous page button update
                 if (page > 1 && resultsArray.length < ((page*noOfRowsPerPage)+1)) {
