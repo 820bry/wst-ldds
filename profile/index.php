@@ -23,19 +23,6 @@ require_once('../banner.php');
 </head>
 <body class="hidden-scrollbar">
 
-    <div class="event_delete" id="event_delete">
-        <div class="event_delete_window" id="event_delete_window">
-            <div class="event_delete_text">
-                <p>Are you sure want to delete?</p>
-            </div>
-
-            <div class="event_delete_button">
-                <img class="cross" src="../style/images/cross.png" alt="logo" onclick="deleteEvent(false)">
-                <img class="tick" src="../style/images/tick.png" alt="logo" onclick="deleteEvent(true)">
-            </div>
-        </div>
-    </div>
-
     <div class="content">
         <h1>Your Profile</h1>
 
@@ -48,22 +35,27 @@ require_once('../banner.php');
         </span>
         
         <div class="heading">
-                <img src="/wst-ldds/style/images/committee/CZ.JPG">
-                
+            <img class="photo_" src="/wst-ldds/style/images/committee/CZ.JPG">
+
+                <div class="heading-info">
+
+                        <table>
+                            <tr>
+                                <td class="value">
+                                    <input type="text" class="user_info" id="user_info" value="Yeow Chen Zheng" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="value">
+                                    <input type="text" class="user_info" id=“user_info value="20PMD02740" disabled>
+                                </td>
+                            </tr>
+                        </table>
+
+
                 <form class="choose_photo" action="#">
                     <input type="file" id="pfp" >
                 </form>
-
-                <div class="heading-info">
-                    <table>
-
-                        <tr>
-                            <td class="value"><input type="text" class="user_info" id="user_info"></td>
-                        </tr>
-                        <tr>
-                            <td class="value"><input type="text" class="user_info" id=“user_info></td>
-                        </tr>
-                    </table>
                     <!-- <h3>YEOW CHEN ZHENG</h3>
                     <h5>20PMD01234</h5> -->
                 </div>
@@ -71,24 +63,24 @@ require_once('../banner.php');
             <div class="information">
                 <table>
                     <tr>
-                        <td class="data">Gender</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
+                        <td class="data">Gender :</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" value="Male" disabled></td>
                     </tr>
                     <tr>
-                        <td class="data">NRIC No.</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
+                        <td class="data">NRIC No :</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" disabled></td>
                     </tr>
                     <tr>
-                        <td class="data">Email</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
+                        <td class="data">Email :</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" disabled></td>
                     </tr>
                     <tr>
-                        <td class="data">Programme</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
+                        <td class="data">Programme :</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" disabled></td>
                     </tr>
                     <tr>
-                        <td class="data">Faculty</td>
-                        <td class="value"><input type="text" class="user_info" id="user_info"></td>
+                        <td class="data">Faculty :</td>
+                        <td class="value"><input type="text" class="user_info" id="user_info" disabled></td>
                     </tr>
                 </table>
             </div>

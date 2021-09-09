@@ -41,10 +41,6 @@
     padding: 0 50px;
 }
 
-.value{
-    visibility: hidden;
-}
-
 span .edit_profile{
     display: inline-block;
     position: absolute;
@@ -72,7 +68,8 @@ span .edit_profile:hover{
 
 .choose_photo{
     padding: 20px 10px;
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
 }
 
 .delete_button input{
@@ -128,3 +125,23 @@ span .edit_profile:hover{
 .button_info{
     visibility: hidden;
 }
+
+table tr td input{
+    border: none;
+    background: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* table tr td input[type="text" i]:disabled {
+    border: none !important;
+}
+
+table tr td input[type="text" i] {
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    text-align: center;
+    border-radius: 10px;
+} */
