@@ -41,6 +41,12 @@
     padding: 0 50px;
 }
 
+.value {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 span .edit_profile{
     display: inline-block;
     position: absolute;
@@ -123,7 +129,7 @@ span .edit_profile:hover{
 }
 
 .button_info{
-    visibility: hidden;
+    display: none;
 }
 
 table tr td input{
@@ -145,3 +151,7 @@ table tr td input[type="text" i] {
     text-align: center;
     border-radius: 10px;
 } */
+
+#pfp {
+    display: none;
+}
