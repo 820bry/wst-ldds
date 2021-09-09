@@ -44,7 +44,7 @@ function deleteRowRequest(studentIDs) {
         headers: {
             "Content-type":"application/json",
         },
-        body: deleteJSON,
+        body: deleteJSON
     })
     .then(response => response.json())
     .then((varResponse) => {

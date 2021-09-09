@@ -34,8 +34,7 @@ if (isset($_SESSION['permission_level'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/wst-ldds/style/main.css"/>
 
-    <link rel="stylesheet" href="/wst-ldds/style/member_list.css">
-    <script src="/wst-ldds/scripts/events.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/wst-ldds/style/list.css">
     <script src="/wst-ldds/scripts/member_list.js" type="text/javascript" defer></script>
     <title>Member List | LDDS</title>
 </head>
@@ -45,13 +44,7 @@ if (isset($_SESSION['permission_level'])) {
     <div class = "member-container" id = "member-container">
         <div class="head_of_table">
             <h3 class="head_one">Members</h3>
-                <input type="text" class="searchbar" id="searchbar" placeholder="Search" oninput="search(1, sortBy, sortDirection)">
-            
-
-
-            <!-- <div class = "close-button">
-                <button class = "mdl-button mdl-js-button mdl-button--mini-fab mdl-js-ripple-effect"></button>
-            </div> -->
+            <input type="text" class="searchbar" id="searchbar" placeholder="Search" oninput="search(1, sortBy, sortDirection)">
         </div>
         <div class = "page-controls" id = "page-controls">
             <span class="select-custom">
@@ -64,7 +57,7 @@ if (isset($_SESSION['permission_level'])) {
                     <option value="email">Email</option>
                     <option value="phone_no">Phone Number</option>
                 </select>
-                    <span class="arrow_down"></span>
+                <span class="arrow_down"></span>
             </span>
             <span><b>Page</b></span>
             <span class ="page-count" id = "page-count">1 of 1</span>
@@ -80,7 +73,7 @@ if (isset($_SESSION['permission_level'])) {
             <div class="mdl-tooltip" for="next" id="next-tooltip">Next Page</div>
            </div>
         <div class="table_list">
-            <table class="member_list" id = "member_list">
+            <table class="list" id = "member_list">
                 <thead>
                     <th class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-checkbox--accent" for="checkbox-0"><input type="checkbox" id="checkbox-0" class="mdl-checkbox__input" onclick="checkAllBox(this)"></label></th>
                     <th onclick="sortByElement(this)">Name <span class="material-icons">keyboard_arrow_down</span> </th>
