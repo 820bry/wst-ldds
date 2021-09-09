@@ -2,7 +2,7 @@
 require_once('../banner.php');
 
 require_once('./../config/session.php');
-/*
+
 if(isset($_SESSION['permission_level']))
 {
     if($_SESSION['permission_level'] != 1)
@@ -16,7 +16,7 @@ if(isset($_SESSION['permission_level']))
     header("Location: http://".$_SERVER['HTTP_HOST']."/wst-ldds/error");
     exit;
 }
-*/
+
 ?>
 
 <!DOCTYPE html>

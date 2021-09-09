@@ -38,7 +38,7 @@ require_once(__DIR__."/config/session.php");
                                         <a href="#" onclick="signout()">Sign Out</a>
                                     </div>
                                     <div id="admin">
-                                        <a href="/wst-ldds/member_list/member_list.php">View Member List</a>
+                                        <a href="/wst-ldds/member_list/">View Member List</a>
                                         <a href="/wst-ldds/event_list/">View Event List</a>
                                     </div>';
                             } else {
