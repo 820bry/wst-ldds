@@ -1,7 +1,7 @@
 <?php
 require_once('../banner.php');
 
-require_once('./../config/session.php');
+@require('./../config/session.php');
 
 if(isset($_SESSION['permission_level']))
 {
@@ -44,7 +44,7 @@ if(isset($_SESSION['permission_level']))
     <div class = "member-container" id = "member-container">
         <div class="head_of_table">
             <h3 class="head_one">Events</h3>
-            <input type="text" class="searchbar" id="searchbar" placeholder="Search">
+            <input type="text" class="searchbar" id="searchbar" placeholder="Search Events...">
         </div>
 
         <div class = "page-controls" id = "page-controls">

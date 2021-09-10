@@ -1,7 +1,7 @@
 <?php
 require_once('../banner.php');
 
-require("./../config/session.php");
+@require("./../config/session.php");
 
 if (isset($_SESSION['permission_level'])) {
     //logged in, check if user is admin or not
@@ -44,7 +44,7 @@ if (isset($_SESSION['permission_level'])) {
     <div class = "member-container" id = "member-container">
         <div class="head_of_table">
             <h3 class="head_one">Members</h3>
-            <input type="text" class="searchbar" id="searchbar" placeholder="Search" oninput="search(1, sortBy, sortDirection)">
+            <input type="text" class="searchbar" id="searchbar" placeholder="Search Members..." oninput="search(1, sortBy, sortDirection)">
         </div>
         <div class = "page-controls" id = "page-controls">
             <span class="select-custom">

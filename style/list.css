@@ -57,6 +57,10 @@ body {
     padding-left: 20px;
     display: inline-block;
     border-radius: 7px;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .head_of_table .searchbar:focus
