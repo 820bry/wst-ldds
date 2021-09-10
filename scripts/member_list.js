@@ -152,7 +152,7 @@ function search(noOfPage, sortBy, sortDirection) {
                 
 
                 //Previous page button update
-                if (page > 1 && resultsArray.length < ((page*noOfRowsPerPage)+1)) {
+                if (page > 1) {
                     document.getElementById("prev").disabled = false;
                 } else {
                     document.getElementById("prev").disabled = true;

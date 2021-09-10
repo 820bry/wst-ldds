@@ -13,15 +13,30 @@ if (isset($_POST['submit'])) {
     $courseCode = $_POST['courseCode'];
 
     //File upload
-    $imagePath = $_FILES['file']['name'];
-    $ext = pathinfo($imagePath, PATHINFO_EXTENSION);
-    $filepath = "images/${studentID}.${ext}";
-    $imageName = $studentID.".".$ext;
+    if (file_exists($_FILES['file']['tmp_name'])) {
+        $imagePath = $_FILES['file']['name'];
+        $ext = strtolower(pathinfo($imagePath, PATHINFO_EXTENSION)); //Not sure the file type get from file name or what, so make it lowercase just in case
+        $validType = array("jpg", "jpeg", "jpg", "gif");
 
-    if (move_uploaded_file($_FILES["file"]["tmp_name"], $filepath)) {
-        //Do nothing if success
+        if (in_array($ext, $validType)) {
+            // File type matches
+            $filepath = "images/${studentID}.${ext}";
+            $imageName = $studentID.".".$ext;
+        
+            if (move_uploaded_file($_FILES["file"]["tmp_name"], $filepath)) {
+                //Do nothing if success
+            } else {
+                echo "<script>alert('Error uploading file. Please try again.')</script>";
+                $imageName = $_SESSION['img_path'];
+            }
+        } else {
+            //File type not match
+            echo "<script>alert('File type not supported.')</script>";
+            $imageName = $_SESSION['img_path'];
+        }
     } else {
-        echo "test";
+        //No new file uploaded, use old one
+        $imageName = $_SESSION['img_path'];
     }
 
     $query = $conn->prepare("UPDATE ${db_member} SET name=?, img_path=?, ic_no=?, email=?, phone_no=?, faculty=?, course_code=? WHERE student_id=?");
