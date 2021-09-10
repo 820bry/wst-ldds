@@ -1,5 +1,4 @@
 <?php
-require_once('../banner.php');
 @require("./../config/session.php");
 require("./../config/conn.php");
 
@@ -13,13 +12,26 @@ if (isset($_POST['submit'])) {
     $faculty = $_POST['faculty'];
     $courseCode = $_POST['courseCode'];
 
-    $query = $conn->prepare("UPDATE ${db_member} SET name=?, ic_no=?, email=?, phone_no=?, faculty=?, course_code=? WHERE student_id=?");
-    $query -> bind_param("sssssss", $name, $icNo, $email, $phoneNumber, $faculty, $courseCode, $studentID);
+    //File upload
+    $imagePath = $_FILES['file']['name'];
+    $ext = pathinfo($imagePath, PATHINFO_EXTENSION);
+    $filepath = "images/${studentID}.${ext}";
+    $imageName = $studentID.".".$ext;
+
+    if (move_uploaded_file($_FILES["file"]["tmp_name"], $filepath)) {
+        //Do nothing if success
+    } else {
+        echo "test";
+    }
+
+    $query = $conn->prepare("UPDATE ${db_member} SET name=?, img_path=?, ic_no=?, email=?, phone_no=?, faculty=?, course_code=? WHERE student_id=?");
+    $query -> bind_param("ssssssss", $name, $imageName, $icNo, $email, $phoneNumber, $faculty, $courseCode, $studentID);
     $query -> execute();
     
     if ($query) {
         //Success
         $_SESSION['name'] =  $name; 
+        $_SESSION['img_path'] = $imageName;
         $_SESSION['ic_no'] = $icNo; 
         $_SESSION['email'] = $email;
         $_SESSION['phone_no'] = $phoneNumber;
@@ -30,6 +42,8 @@ if (isset($_POST['submit'])) {
     //Delete button is pressed
 }
 
+//Put at last so that banner profile icon is updated when upload new profile pic
+require_once('../banner.php');
 ?>
 
 <!DOCTYPE html>
@@ -66,9 +80,9 @@ if (isset($_POST['submit'])) {
         
         </span>
         
-        <form action="#" method="post">
+        <form action="#" method="post" enctype="multipart/form-data">
         <div class="heading">
-            <img class="photo_" src="/wst-ldds/style/images/committee/CZ.JPG">
+            <img class="photo_" src="/wst-ldds/profile/images/<?php echo isset($_SESSION['img_path']) ? $_SESSION['img_path'] : 'default.png';?>">
 
                 <div class="heading-info">
 
@@ -87,7 +101,7 @@ if (isset($_POST['submit'])) {
 
 
                 
-                    <input type="file" id="pfp" >
+                    <input type="file" id="pfp" name="file">
                 
                     <!-- <h3>YEOW CHEN ZHENG</h3>
                     <h5>20PMD01234</h5> -->

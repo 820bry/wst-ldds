@@ -16,7 +16,7 @@ require_once(__DIR__."/config/session.php");
             <a class="navbar" href="/wst-ldds/about-us/">About Us</a>
 
             <div class="dropdown">
-                <img class="user-icon" src="/wst-ldds/style/images/user-icon.png" alt="user" />
+                <img class="user-icon" src="/wst-ldds/profile/images/<?php echo isset($_SESSION['img_path']) ? $_SESSION['img_path'] : 'default.png';?>" alt="user" />
 
                 <div class="dropdown-content">
                     <?php

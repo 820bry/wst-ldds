@@ -32,6 +32,7 @@
     vertical-align: middle;
     height: 80px;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .dropdown-content {
