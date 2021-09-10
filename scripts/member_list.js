@@ -1,6 +1,6 @@
 //Global variables
 page = 1;
-noOfRowsPerPage = 1;
+noOfRowsPerPage = 3;
 sortBy = "name";
 sortDirection = "asc";
 rowItems = [];
@@ -44,7 +44,7 @@ function deleteRowRequest(studentIDs) {
         headers: {
             "Content-type":"application/json",
         },
-        body: deleteJSON,
+        body: deleteJSON
     })
     .then(response => response.json())
     .then((varResponse) => {

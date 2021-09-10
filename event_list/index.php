@@ -1,5 +1,22 @@
 <?php
 require_once('../banner.php');
+
+@require('./../config/session.php');
+
+if(isset($_SESSION['permission_level']))
+{
+    if($_SESSION['permission_level'] != 1)
+    {
+        http_response_code(302);
+        header("Location: http://".$_SERVER['HTTP_HOST']."/wst-ldds/error");
+        exit;
+    }
+} else {
+    http_response_code(302);
+    header("Location: http://".$_SERVER['HTTP_HOST']."/wst-ldds/error");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +34,8 @@ require_once('../banner.php');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/wst-ldds/style/main.css"/>
 
-    <link rel="stylesheet" href="/wst-ldds/style/member_list.css">
-    <script src="/wst-ldds/scripts/events.js" type="text/javascript"></script>
-    <script src="/wst-ldds/scripts/member_list.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="/wst-ldds/style/list.css">
+    <script src="/wst-ldds/scripts/event_list.js" type="text/javascript" defer></script>
     <title>Event List | LDDS</title>
 </head>
 
@@ -28,27 +44,23 @@ require_once('../banner.php');
     <div class = "member-container" id = "member-container">
         <div class="head_of_table">
             <h3 class="head_one">Events</h3>
-                <input type="text" class="searchbar" id="searchbar" placeholder="Search">
-            
+            <input type="text" class="searchbar" id="searchbar" placeholder="Search Events...">
+        </div>
+
+        <div class = "page-controls" id = "page-controls">
             <span class="select-custom">
-                <select id="choose_item" name="chooseitem" form="item">
+                <select class="sort-by-select" id="choose_item" name="chooseitem" form="item">
                     <option value="name">Event Name</option>
-                    <option value="pic">Person In-Charge</option>
+                    <option value="person_in_charge">Person In-Charge</option>
                     <option value="date">Date</option>
                     <option value="start_time">Start Time</option>
                     <option value="end_time">End Time</option>
                     <option value="venue">Venue</option>
                     <option value="capacity">Capacity</option>
-                    <option value="date">Date</option>
+                    <option value="deadline">Register Deadline</option>
                 </select>
-                    <span class="arrow_down"></span>
+                <span class="arrow_down"></span>
             </span>
-
-            <div class = "close-button">
-                <button class = "mdl-button mdl-js-button mdl-button--mini-fab mdl-js-ripple-effect"></button>
-            </div>
-        </div>
-        <div class = "page-controls" id = "page-controls">
             <span><b>Page</b></span>
             <span class ="page-count" id = "page-count">1 - 1 of 1</span>
             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="add"><i class="material-icons">add</i></button>
@@ -63,7 +75,7 @@ require_once('../banner.php');
             <div class="mdl-tooltip" for="next">Next Page</div>
         </div>
         <div class="table_list">
-            <table class="member_list" id = "member_list">
+            <table class="list" id = "event_list">
                 <thead>
                     <th class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-checkbox--accent" for="checkbox-0"><input type="checkbox" id="checkbox-0" class="mdl-checkbox__input" onclick="checkAllBox(this)"></label></th>
                     <th>Event Name <span class="material-icons">keyboard_arrow_down</span> </th>
@@ -73,100 +85,81 @@ require_once('../banner.php');
                     <th>End Time <span class="material-icons">keyboard_arrow_down</span> </th>
                     <th>Venue <span class="material-icons">keyboard_arrow_down</span> </th>
                     <th>Capacity <span class="material-icons">keyboard_arrow_down</span> </th>
-                    <th>Deadline <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th>Register Deadline <span class="material-icons">keyboard_arrow_down</span> </th>
+                    <th>Show Participants</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </thead>
 
             <tbody>
-                <tr>
-                    <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1"><input type="checkbox" id="checkbox-1" class="mdl-checkbox__input"></label></td>
-                    <td>Event A</td>
-                    <td>Loke Kin Tan</td>
-                    <td>01/01/2022</td>
-                    <td>20:00</td>
-                    <td>22:00</td>
-                    <td>DK G</td>
-                    <td>11/80</td>
-                    <td>31/12/2021</td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit1"><i class="material-icons">edit</i></button>
-                        <div class="mdl-tooltip" for="edit1">Edit</div>
-                    </td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete1" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
-                        <div class="mdl-tooltip" for="delete1">Delete</div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1"><input type="checkbox" id="checkbox-1" class="mdl-checkbox__input"></label></td>
-                    <td>Event B</td>
-                    <td>Loke Kin Tan</td>
-                    <td>01/01/2022</td>
-                    <td>20:00</td>
-                    <td>22:00</td>
-                    <td>DK G</td>
-                    <td>11/80</td>
-                    <td>31/12/2021</td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit1"><i class="material-icons">edit</i></button>
-                        <div class="mdl-tooltip" for="edit1">Edit</div>
-                    </td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete1" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
-                        <div class="mdl-tooltip" for="delete1">Delete</div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1"><input type="checkbox" id="checkbox-1" class="mdl-checkbox__input"></label></td>
-                    <td>Event C</td>
-                    <td>Loke Kin Tan</td>
-                    <td>01/01/2022</td>
-                    <td>20:00</td>
-                    <td>22:00</td>
-                    <td>DK G</td>
-                    <td>11/80</td>
-                    <td>31/12/2021</td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit2"><i class="material-icons">edit</i></button>
-                        <div class="mdl-tooltip" for="edit2">Edit</div>
-                    </td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete3" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
-                        <div class="mdl-tooltip" for="delete3">Delete</div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1"><input type="checkbox" id="checkbox-1" class="mdl-checkbox__input"></label></td>
-                    <td>Event D</td>
-                    <td>Loke Kin Tan</td>
-                    <td>01/01/2022</td>
-                    <td>20:00</td>
-                    <td>22:00</td>
-                    <td>DK G</td>
-                    <td>11/80</td>
-                    <td>31/12/2021</td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit4"><i class="material-icons">edit</i></button>
-                        <div class="mdl-tooltip" for="edit4">Edit</div>
-                    </td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete4" onclick="deleteRow(this)"><i class="material-icons">delete</i></button>
-                        <div class="mdl-tooltip" for="delete4">Delete</div>
-                    </td>
-                </tr>
+                
                 
             </tbody>
             </table>
 
         </div>
     </div>
+    <dialog class="mdl-dialog new-event-dialog new-event-dialog">
+        <h4 class="mdl-dialog__title">New Event</h4>
+        <div class="mdl-dialog__content">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" name="new_name" id="new_name">
+                <label class="mdl-textfield__label" for="new_name">Event Name</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" name="new_venue" id="new_venue">
+                <label class="mdl-textfield__label" for="new_venue">Venue</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <textarea class="mdl-textfield__input" type="text" rows= "3" name="new_desc" id="new_desc" ></textarea>
+                <label class="mdl-textfield__label" for="new_desc">Event Description</label>
+            </div>
 
+            <div class="capacity-slider">
+                <label for="new_capacity">Capacity</label>
+                <input class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="0" tabindex="0" name="new_capacity" id="new_capacity">
+                <p id="curr-capacity">0</p>
+            </div>
 
+            <label for="new_date">Date of Event</label>
+            <input type="date" name="new_date" id="new_date" />
+            <label for="new_start_time">Start Time</label>
+            <input type="time" name="new_start_time" id="new_start_time" />
+            <label for="new_end_time">End Time</label>
+            <input type="time" name="new_end_time" id="new_end_time" />
+            <label for="new_deadline">Registration Deadline</label>
+            <input type="date" name="new_deadline" id="new_deadline" />
 
+            <select class="select-pic" name="new_pic" id="new_pic">
+                <option disabled selected>Person-in-charge</option>
+                <option value="test">Name</option>
+            </select>
+            
+        </div>
+        <div class="mdl-dialog__actions">
+            <button type="button" class="mdl-button close">Discard</button>
+            <button type="button" class="mdl-button">Add</button>
+        </div>
+    </dialog>
+    <script>
+        var dialog = document.querySelector('dialog');
+        var showDialogButton = document.querySelector('#add');
+        if(!dialog.showModal) {
+            dialogPolyfill.registerDialog(dialog);
+        }
+        showDialogButton.addEventListener('click', function() {
+            dialog.showModal();
+        });
+        dialog.querySelector('.close').addEventListener('click', function() {
+            dialog.close();
+        });
+
+        var slider = document.getElementById('new_capacity');
+        var label = document.getElementById('curr-capacity');
+        slider.oninput = function() {
+            label.innerHTML = slider.value;
+        }
+    </script>
 </body>
 
 </html>

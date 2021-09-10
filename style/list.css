@@ -57,6 +57,10 @@ body {
     padding-left: 20px;
     display: inline-block;
     border-radius: 7px;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .head_of_table .searchbar:focus
@@ -132,7 +136,7 @@ body {
     margin: auto;
 }
 
-.member_list
+.list
 {
     box-sizing: border-box;
     color: black;
@@ -142,12 +146,12 @@ body {
     table-layout: fixed;
 }
 
-.member_list tr:hover 
+.list tr:hover 
 {
    background-color: #eee;
 }
 
-.member_list tr:hover .invi_edit{
+.list tr:hover .invi_edit{
     background-color: #eee;
 }
 
@@ -156,7 +160,7 @@ body {
     text-align: center;
 }
 
-.member_list td{
+.list td{
 
     padding: 10px 12px 10px 0;
     font-size: 15px;
@@ -164,35 +168,35 @@ body {
 }
 
 
-.member_list .chckbox
+.list .chckbox
 {
     width: 1%;
     padding-left: 12px;
 }
 
 
-.member_list th{
+.list th{
     color: black; 
     font-weight: bold;
     background-color: #fff;
 }
 
-.member_list th:hover
+.list th:hover
 {
     cursor: pointer;
 }
 
-.member_list th:active
+.list th:active
 {
     transform: translateY(2px);
 }
 
-.member_list tr selected
+.list tr selected
 {
     background-color: #e0e0e0;
 }
 
-.member_list .material-icons
+.list .material-icons
 {
     font-size: 18px;
 }
@@ -201,7 +205,7 @@ td:last-child label{
     margin-left: 20px;
 }
 
-select{
+.sort-by-select{
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -219,7 +223,7 @@ select{
     font-size: 1em;
 }
 
-select::-ms-expand{
+.sort-by-select::-ms-expand{
     display: none;
 }
 
@@ -281,11 +285,11 @@ option:hover{
     display: inline-block;
 }
 
-.member_list td input[type="text" i]:disabled {
+.list td input[type="text" i]:disabled {
     border: none !important;
 }
 
-.member_list td input[type="text" i] {
+.list td input[type="text" i] {
     border-style: solid;
     border-width: thin;
     border-color: black;
@@ -321,18 +325,43 @@ tr td:nth-child(5){
 
 
 /*
-.member_list tbody tr:nth-child(even){
+.list tbody tr:nth-child(even){
     background-color: #3D3D3D;
 }
 
-.member_list tbody tr:nth-child(even):hover{
+.list tbody tr:nth-child(even):hover{
     background-color: #4D4D4D;
 }
 
-.member_list tbody tr:nth-child(odd){
+.list tbody tr:nth-child(odd){
     background-color: #919191;
 }
 
-.member_list tbody tr:nth-child(odd):hover{
+.list tbody tr:nth-child(odd):hover{
     background-color: #BABABA;
 }*/
+
+.new-event-dialog input {
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+}
+
+.new-event-dialog input[type=date], .new-event-dialog input[type=time] {
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+    margin: 10px 0;
+}
+
+.capacity-slider #curr-capacity {
+    text-align: center;
+    font-size: 15px;
+}
+
+.select-pic {
+    width: 100%;
+    height: 30px;
+    margin: 30px 0 0 0;
+}

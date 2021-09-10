@@ -103,8 +103,6 @@ require_once('../banner.php');
                 
                     <input type="file" id="pfp" name="file">
                 
-                    <!-- <h3>YEOW CHEN ZHENG</h3>
-                    <h5>20PMD01234</h5> -->
                 </div>
             </div>
             <div class="information">

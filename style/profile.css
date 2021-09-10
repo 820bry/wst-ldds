@@ -152,6 +152,11 @@ table tr td input{
     border-radius: 10px;
 }
 
+.content td input[type="text" i]:read-only {
+    border: 0 !important;
+    cursor: context-menu;
+}
+
 /* table tr td input[type="text" i]:disabled {
     border: none !important;
 }
@@ -167,3 +172,4 @@ table tr td input[type="text" i] {
 #pfp {
     display: none;
 }
+
