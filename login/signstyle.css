@@ -10,26 +10,6 @@
     overflow: hidden;
 }
 
-.hidden-scrollbar::-webkit-scrollbar {
-    width: 0 !important;
- }
-
-*::-webkit-scrollbar
-{
-    width: 4px;
-}
-
-*::-webkit-scrollbar-track
-{
-    border-radius: 100px;
-}
-
-*::-webkit-scrollbar-thumb
-{
-    background-color: #303030;
-    border-radius: 100px;
-}
-
 .logbody
 {
     background-color: #171717;

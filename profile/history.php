@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php
+    require_once('../banner.php');
+?>
 <html lang="en">
 
 <head>
@@ -24,9 +22,59 @@ and open the template in the editor.
 
     <title>My History| LDDS</title>
 </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
+    <body class = "view-history">
+        <body class="hidden-scrollbar">
+
+    <div class="content">
+        <h1>Your Event History</h1>
+            <input type="text" class="event-searchbar" id="event-searchbar" placeholder="Search Event">
+        <div class="user-history">
+            <table class = "view-event">
+            <thead>
+             <tr>
+                 <th class="tabindex"> </th>
+                 <th class="view-eventname">
+                     Event Name
+                 </th>
+                 <th class ="view-eventdesc">
+                     Description
+                 </th>
+                 <th class = "view-eventdate">
+                     Date
+                 </th>
+                 <th class="view-eventtime">
+                     Time
+                 </th>
+                 <th class ="view-eventvenue">
+                     Venue
+                 </th>
+             </tr>
+             </thead>
+             <tbody>
+             <tr>
+                 <td class="tabindex">
+                     1.
+                 </td>
+                 <td class = "view-eventname" >
+                     Event A
+                 </td>
+                 <td class = "view-eventdesc" >
+                     A Description
+                 </td>
+                 <td class ="view-eventdate" >
+                     1.1.2021
+                 </td>
+                 <td class ="view-eventtime" >
+                     10:00am - 5:00pm
+                 </td>
+                 <td class ="view-eventvenue" >
+                     Main Foyer
+                 </td>
+             </tr>
+             </tbody>
+            </table>
+        </div>
+    </div>     
+        
     </body>
 </html>
