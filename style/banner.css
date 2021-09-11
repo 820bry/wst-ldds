@@ -30,7 +30,9 @@
 
 .dropdown .user-icon {
     vertical-align: middle;
-    height: 80px;
+    height: 5.5rem;
+    width: 5.5rem;
+    object-fit: cover;
     cursor: pointer;
     border-radius: 50%;
 }
