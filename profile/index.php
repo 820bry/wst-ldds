@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
     if (file_exists($_FILES['file']['tmp_name'])) {
         $imagePath = $_FILES['file']['name'];
         $ext = strtolower(pathinfo($imagePath, PATHINFO_EXTENSION)); //Not sure the file type get from file name or what, so make it lowercase just in case
-        $validType = array("jpg", "jpeg", "jpg", "gif");
+        $validType = array("jpg", "jpeg", "jpg", "gif", "png");
 
         if (in_array($ext, $validType)) {
             // File type matches

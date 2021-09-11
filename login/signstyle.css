@@ -10,6 +10,26 @@
     overflow: hidden;
 }
 
+.hidden-scrollbar::-webkit-scrollbar {
+    width: 0 !important;
+ }
+
+*::-webkit-scrollbar
+{
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track
+{
+    border-radius: 100px;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background-color: #303030;
+    border-radius: 100px;
+}
+
 .logbody
 {
     background-color: #171717;
@@ -265,7 +285,6 @@ text-decoration: none;
     align-items: center;
     width: 50rem;
     position: relative;
-    margin-top: 2rem;
     border-radius: 40px;
 }
 
@@ -376,8 +395,8 @@ text-decoration: none;
 {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .signcontainer .signupAccount .button button
