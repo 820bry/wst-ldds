@@ -27,7 +27,34 @@ require_once('../banner.php');
         <div class="content">
             <h1>Events</h1>
             <div class="events-list">
-                <a class="event-box" href="/wst-ldds/events/event_info/">
+            <?php
+                require_once("./../config/conn.php");
+
+                $query = $conn->prepare("SELECT * FROM event;");
+                $query->execute();
+                $result = $query -> get_result();
+
+                if ($result->num_rows > 0) {
+                    //At least 1 row returned
+                    while ($row = $result->fetch_assoc()) {
+                        $query2 = $conn->prepare("SELECT COUNT(*) AS slots_taken FROM event_registration WHERE event_id=?");
+                        $query2->bind_param("s", $row['id']);
+                        $query2->execute();
+                        $registrationResult = $query2->get_result();
+                        $slotsTaken = $registrationResult->fetch_assoc()['slots_taken'];
+
+                        echo '<a class="event-box" href="/wst-ldds/events/event_info/">
+                                <h3>'.$row['name'].'</h3>
+                                <div class="desc">'.$row['description'].'</div>
+                                <div class="deadline">Deadline: '.date("d F Y", strtotime($row['deadline'])).'</div>
+                                <div class="slots-left">Slots Left: '.$row['capacity'] - $slotsTaken.'</div>
+                            </a>';
+                    }
+                } else {
+                   
+                }
+             ?>
+                <!-- <a class="event-box" href="/wst-ldds/events/event_info/">
                     <h3>Event A</h3>
                     <div class="desc">A Short Description for Event A.</div>
                     <div class="deadline">Deadline: 31/12/2021</div>
@@ -50,7 +77,7 @@ require_once('../banner.php');
                     <div class="desc">A Short Description for Event D.</div>
                     <div class="deadline">Deadline: 31/12/2021</div>
                     <div class="slots-left">Slots Left: 69</div>
-                </a>
+                </a> -->
             </div>
         </div>  
     </body>

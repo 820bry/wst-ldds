@@ -93,8 +93,6 @@
                 } else {
                     echo '<tr><td style="text-align: center;" colspan="6"> No event joined </td></tr>';
                 }
-
-
              ?>
              <!-- <tr>
                  <td class="tabindex">1.</td>
