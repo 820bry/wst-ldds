@@ -15,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="/wst-ldds/scripts/scrollbar.js" type="text/javascript"></script>
+    <script src="/wst-ldds/scripts/history.js" type="text/javascript"></script>
     <script src="/wst-ldds/scripts/profile.js" type="text/javascript"></script>
     <link  rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/wst-ldds/style/main.css">
@@ -27,9 +28,9 @@
 
     <div class="content">
         <h1>Your Event History</h1>
-            <input type="text" class="event-searchbar" id="event-searchbar" placeholder="Search Event">
+            <input type="text" class="event-searchbar" id="event-searchbar" placeholder="Search Event" oninput="search(this)">
         <div class="user-history">
-            <table class = "view-event">
+            <table class = "view-event" id="event-table">
             <thead>
              <tr>
                  <th class="tabindex"> </th>
@@ -52,24 +53,12 @@
              </thead>
              <tbody>
              <tr>
-                 <td class="tabindex">
-                     1.
-                 </td>
-                 <td class = "view-eventname" >
-                     Event A
-                 </td>
-                 <td class = "view-eventdesc" >
-                     A Description
-                 </td>
-                 <td class ="view-eventdate" >
-                     1.1.2021
-                 </td>
-                 <td class ="view-eventtime" >
-                     10:00am - 5:00pm
-                 </td>
-                 <td class ="view-eventvenue" >
-                     Main Foyer
-                 </td>
+                 <td class="tabindex">1.</td>
+                 <td class = "view-eventname" >Event A</td>
+                 <td class = "view-eventdesc" >A Description</td>
+                 <td class ="view-eventdate" >1.1.2021</td>
+                 <td class ="view-eventtime" >10:00am - 5:00pm</td>
+                 <td class ="view-eventvenue" >Main Foyer</td>
              </tr>
              </tbody>
             </table>
