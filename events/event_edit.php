@@ -21,7 +21,7 @@
 
 <body class="hidden-scrollbar">
 
-    <div class="event_delete" id="event_delete">
+<div class="event_delete" id="event_delete">
         <div class="event_delete_window" id="event_delete_window">
             <div class="event_delete_text">
                 <p>Are you sure want to delete?</p>

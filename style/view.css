@@ -1,0 +1,128 @@
+.view-box{
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    margin: auto;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.view_inside{
+    width: 300px;
+    height: auto;
+    background-color: white;
+    margin: auto;
+    visibility: hidden;
+    z-index: 50;
+}
+.parti{
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+
+    position: absolute;
+    top: calc((100% - 25%) /2); 
+    left: calc((100% - 35%) /2);
+    background-color: darkgray;
+    width: 35%;
+    height: 25%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 51;
+}
+
+.search_bar{
+    margin-top: 15px;
+    width: 500px;
+    height: 40px;
+    background-color: rgba(201,201,201,0.2);
+    border: none;
+    padding-left: 20px;
+    display: inline-block;
+    border-radius: 7px;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.search_bar
+{
+    outline: none;
+}
+
+.move_search{
+    text-align: center;
+}
+
+.view_event{
+    text-align: center;
+}
+
+.table_list{
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.list
+{
+    box-sizing: border-box;
+    color: black;
+    border-collapse: collapse;
+
+    text-align: center;
+    table-layout: fixed;
+    cursor: context-menu;
+    text-align: center;
+}
+
+.view_event_name{
+    padding: 10px 20px;
+    margin-left: 100px;
+}
+
+.view_event_name:hover{
+    background-color: white;
+}
+
+.view_event_button:hover{
+    background-color: white;
+}
+
+.view_event_name{
+    background-color: white;
+}
+
+.view_event_button{
+    background-color: white;
+}
+
+.list tr:hover 
+{
+   background-color: #eee;
+}
+
+span{
+    cursor: pointer;
+}
+
+.arrow_back{
+    padding-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+table, th, td{
+    padding: 15px 160px;
+    margin-top: 10px;
+}
+
+table{
+    border-spacing: 20px;
+}

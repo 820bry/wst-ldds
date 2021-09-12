@@ -84,6 +84,20 @@ require_once('../banner.php');
 </head>
 <body class="hidden-scrollbar">
 
+<div class="event_delete" id="event_delete">
+        <div class="event_delete_window" id="event_delete_window">
+            <div class="event_delete_text">
+                <p>Are you sure want to delete?</p>
+            </div>
+            <div class="event_delete_button">
+                <img class="cross" src="../style/images/cross.png" alt="logo" onclick="deleteEvent(false)">
+                <img class="tick" src="../style/images/tick.png" alt="logo" onclick="deleteEvent(true)">
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="content">
         <h1>Your Profile</h1>
 
@@ -108,8 +122,8 @@ require_once('../banner.php');
                                 </td>
                             </tr>
                             <tr>
-                                <td class="value">
-                                    <input type="text" class="user_info" name="studentID" value="<?php echo $_SESSION['student_id'];?>" readonly>
+                                <td class="value" >
+                                    <input type="text" class="no-border" name="studentID" value="<?php echo $_SESSION['student_id'];?>" readonly>
                                 </td>
                             </tr>
                         </table>
@@ -159,6 +173,10 @@ require_once('../banner.php');
 
         </div>
         </form>
+    </div>
+
+    <div >
+
     </div>
 
 </body>
