@@ -17,7 +17,7 @@ require_once('../banner.php');
     <script src="/wst-ldds/scripts/scrollbar.js" type="text/javascript"></script>
     <link  rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/wst-ldds/style/main.css">
-    <link rel="stylesheet" href="/wst-ldds/style/view.css">
+    <link rel="stylesheet" href="/wst-ldds/style/edit_comm.css">
 
     <title>Edit Committee | LDDS</title>
     </head>
