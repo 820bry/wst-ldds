@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <?php
     require_once('../banner.php');
+
+    if (!isset($_SESSION['permission_level'])) {
+        //permission_level not set, assume didn't log in at all
+        header("Location: http://".$_SERVER['HTTP_HOST']."/wst-ldds/home");
+        exit;
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] == "GET") {
+        if (isset($_GET['studentID']) && $_SESSION['permission_level'] == 1) {
+            //studentID is set and person is admin, allow to see other's event history
+            $searchValue = $_GET['studentID'];
+        } else {
+            //id not set or permission level not enough, display own event history
+            $searchValue = $_SESSION['student_id'];
+        }
+    }
 ?>
 <html lang="en">
 
@@ -27,7 +43,7 @@
         <body class="hidden-scrollbar">
 
     <div class="content">
-        <h1>Your Event History</h1>
+        <h1><?php echo ($searchValue == $_SESSION['student_id']) ? "Your" : $searchValue."'s"; ?> Event History</h1>
             <input type="text" class="event-searchbar" id="event-searchbar" placeholder="Search Event" oninput="search(this)">
         <div class="user-history">
             <table class = "view-event" id="event-table">
@@ -52,14 +68,42 @@
              </tr>
              </thead>
              <tbody>
-             <tr>
+             <?php
+                require_once("./../config/conn.php");
+
+                $query = $conn->prepare("SELECT * FROM event_registration INNER JOIN event ON event_registration.event_id=event.id WHERE student_id=?");
+                $query->bind_param("s", $searchValue);
+                $query->execute();
+                $result = $query -> get_result();
+
+                if ($result->num_rows > 0) {
+                    //At least 1 row returned
+                    $count = 1;
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<tr>
+                                <td class="tabindex">'.$count.'</td>
+                                <td class = "view-eventname" >'.$row['name'].'</td>
+                                <td class = "view-eventdesc" >'.$row['description'].'</td>
+                                <td class ="view-eventdate" >'.date('d F Y', strtotime($row['date'])).'</td>
+                                <td class ="view-eventtime" >'.date('h:ia', strtotime($row['start_time'])).' - '.date('h:ia', strtotime($row['end_time'])).'</td>
+                                <td class ="view-eventvenue" >'.$row['venue'].'</td>
+                            </tr>';
+                        $count++;
+                    }
+                } else {
+                    echo '<tr><td style="text-align: center;" colspan="6"> No event joined </td></tr>';
+                }
+
+
+             ?>
+             <!-- <tr>
                  <td class="tabindex">1.</td>
                  <td class = "view-eventname" >Event A</td>
                  <td class = "view-eventdesc" >A Description</td>
                  <td class ="view-eventdate" >1.1.2021</td>
                  <td class ="view-eventtime" >10:00am - 5:00pm</td>
                  <td class ="view-eventvenue" >Main Foyer</td>
-             </tr>
+             </tr> -->
              </tbody>
             </table>
         </div>
