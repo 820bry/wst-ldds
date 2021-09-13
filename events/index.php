@@ -26,6 +26,7 @@ require_once('../banner.php');
     <body>
         <div class="content">
             <h1>Events</h1>
+            <input type="text" class ="event-searchbox" id="event-searchbox" placeholder="Search Event" > 
             <div class="events-list">
             <?php
                 require_once("./../config/conn.php");
