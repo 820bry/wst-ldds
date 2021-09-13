@@ -1,4 +1,16 @@
 /* Event List Page */
+.event-searchbox, .event-searchbox input:focus
+{
+    margin: -4.5rem 12.8rem;
+    width: 25rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    /* border: #000000; */
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+
 .events-list {
     display: flex;
     flex-wrap: wrap;

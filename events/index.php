@@ -26,6 +26,7 @@ require_once('../banner.php');
     <body>
         <div class="content">
             <h1>Events</h1>
+            <input type="text" class ="event-searchbox" id="event-searchbox" placeholder="Search Event" > 
             <div class="events-list">
             <?php
                 require_once("./../config/conn.php");
@@ -43,7 +44,7 @@ require_once('../banner.php');
                         $registrationResult = $query2->get_result();
                         $slotsTaken = $registrationResult->fetch_assoc()['slots_taken'];
 
-                        echo '<a class="event-box" href="/wst-ldds/events/event_info/">
+                        echo '<a class="event-box" href="/wst-ldds/event/'.$row['id'].'">
                                 <h3>'.$row['name'].'</h3>
                                 <div class="desc">'.$row['description'].'</div>
                                 <div class="deadline">Deadline: '.date("d F Y", strtotime($row['deadline'])).'</div>
