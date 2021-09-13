@@ -43,7 +43,7 @@ if (isset($_SESSION['permission_level'])) {
             <button onclick="loginPerform()">Login to Your Account</button>
         </div>
     <div class = "signup">
-        Not a member yet ? <a href="signUp.html">Register Now</a>
+        Not a member yet ? <a href="/wst-ldds/signup">Register Now</a>
     </div>
     <div class = "logo">
         <img src = "/wst-ldds/login/assets/Ldds.png">

@@ -363,5 +363,11 @@ tr td:nth-child(5){
 .select-pic {
     width: 100%;
     height: 30px;
-    margin: 30px 0 0 0;
+    margin: 10px 0 0 0;
+}
+
+.error {
+    visibility: hidden;
+    color: red;
+    font-size: 12px;
 }

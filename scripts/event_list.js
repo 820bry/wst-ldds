@@ -8,11 +8,13 @@ rowItems = [];
 //Onload, not using window.onload to prevent conflict with other js file
 search(1, sortBy, sortDirection);
 
-function notificationMsg(msg) {
-    var notification = document.querySelection('.mdl-js-snackbar');
-    notification.MaterialSnackBar.showSnackbar({
+function notificationMsg(message) {
+    var notification = document.querySelector('.mdl-js-snackbar');
+    notification.MaterialSnackbar.showSnackbar(
+    {
         "message": message
-    });
+    }
+    );
 }
 
 function checkAllBox(element) {
@@ -93,12 +95,12 @@ function deleteRow(element) {
 
     for (i = 1; i < tableRows.length; i++) {
         if (tableRows[i].contains(element)) {
-            eventID.push(tableRows[i].children[2].firstElementChild.value);
-            tableRows[i].remove();
+            eventID.push(tableRows[i].children[1].innerText);
+            tableRows[i].remove();  
         }
     }
 
-    deleteRowRequest(studentID);
+    deleteRowRequest(eventID);
 }
 
 function clearTable() {
@@ -146,7 +148,7 @@ function search(noOfPage, sortBy, sortDirection) {
                 
 
                 //Previous page button update
-                if (page > 1 && resultsArray.length < ((page*noOfRowsPerPage)+1)) {
+                if (page > 1) {
                     document.getElementById("prev").disabled = false;
                 } else {
                     document.getElementById("prev").disabled = true;
@@ -165,7 +167,8 @@ function search(noOfPage, sortBy, sortDirection) {
                     var checked = (resultsArray[i].permission_level === 0) ? "" : "checked";
                     var rowHTML = `
                     <tr>
-                        <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1"><input type="checkbox" id="checkbox-1" class="mdl-checkbox__input"></label></td>
+                        <td class = "chckbox"><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-${no}"><input type="checkbox" id="checkbox-${no}" class="mdl-checkbox__input"></label></td>
+                        <td>${resultsArray[i].id}</td>
                         <td>${resultsArray[i].name}</td>
                         <td>${resultsArray[i].person_in_charge}</td>
                         <td>${resultsArray[i].date}</td>
@@ -200,16 +203,17 @@ function search(noOfPage, sortBy, sortDirection) {
         //Only runs after adding all the rows, due to async problem :p
 
         //MDL upgrade element to make it works
-        var noOfRows = document.getElementById("member_list").rows.length;
+        var noOfRows = document.getElementById("event_list").rows.length;
 
         for (i = 1; i < noOfRows; i++) {
-            var row = document.getElementById("member_list").rows[i];
+            var row = document.getElementById("event_list").rows[i];
             componentHandler.upgradeElement(row.children[0].children[0]);
-            componentHandler.upgradeElement(row.children[8].children[0]);
-            componentHandler.upgradeElement(row.children[8].children[1]);
-            componentHandler.upgradeElement(row.children[9].children[0]);
-            componentHandler.upgradeElement(row.children[9].children[1]);
             componentHandler.upgradeElement(row.children[10].children[0]);
+            componentHandler.upgradeElement(row.children[10].children[1]);
+            componentHandler.upgradeElement(row.children[11].children[0]);
+            componentHandler.upgradeElement(row.children[11].children[1]);
+            componentHandler.upgradeElement(row.children[12].children[0]);
+            componentHandler.upgradeElement(row.children[12].children[1]);
         }
         
     })
@@ -240,11 +244,86 @@ function sortByElement(element) {
         }
     }
 
-    if (sortByValue === "Student ID") sortByValue = "student_id";
-    else if (sortByValue === "Course") sortByValue = "course_code";
-    else if (sortByValue === "NRIC") sortByValue = "ic_no";
-    else if (sortByValue === "Phone Number") sortByValue = "phone_no";
-    else if (sortByValue === "Admin") sortByValue = "permission_level";
+    if (sortByValue === "Event ID") sortByValue = "id";
+    else if (sortByValue === "Event Name") sortByValue = "name";
+    else if (sortByValue === "Person In-Charge") sortByValue = "person_in_charge";
+    else if (sortByValue === "Start Time") sortByValue = "start_time";
+    else if (sortByValue === "End Time") sortByValue = "end_time";
+    else if (sortByValue === "Venue") sortByValue = "venue";
+    else if (sortByValue === "Capacity") sortByValue = "capacity";
+    else if (sortByValue === "Register Deadline") sortByValue = "deadline";
 
     search(1, sortByValue, sortDirection);
+}
+
+function addEventRequest(name, venue, desc, capacity, date, start_time, end_time, deadline, pic) {
+    var dialog = document.querySelector('dialog');
+    var eventDetails = {
+        "new_name" : name,
+        "new_venue" : venue,
+        "new_desc" : desc,
+        "new_capacity" : capacity,
+        "new_date" : date,
+        "new_start_time" : start_time,
+        "new_end_time" : end_time,
+        "new_deadline" : deadline,
+        "new_pic" : pic
+    };
+
+    var addJSON = JSON.stringify(eventDetails);
+
+    fetch("/wst-ldds/event_list/add.php", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json",
+        },
+        body: addJSON
+    })
+    .then(response => response.json())
+    .then((varResponse) => {
+        if(varResponse.status === "success") {
+            search(page, sortBy, sortDirection);
+            dialog.close();
+            notificationMsg("Event added.");
+        } else {
+            dialog.close();
+            notificationMsg("Error occured.");
+        }
+    })
+    .catch((error) => {
+        console.error("Error: ", error);
+    })
+}
+
+// function to be called when button is pressed
+function addEvent() {
+
+    resetErrorMsgs();
+
+    var name = document.getElementById("new_name").value;
+    var venue = document.getElementById("new_venue").value;
+    var desc = document.getElementById("new_desc").value;
+    var capacity = document.getElementById("new_capacity").value;
+    var date = document.getElementById("new_date").value;
+    var start_time = document.getElementById("new_start_time").value;
+    var end_time = document.getElementById("new_end_time").value;
+    var deadline = document.getElementById("new_deadline").value;
+    var pic = document.getElementById("new_pic").value;
+
+    if(name == "") document.getElementById("name-error").style.visibility = "visible";
+    else if(venue == "") document.getElementById("venue-error").style.visibility = "visible";
+    else if(date == "") document.getElementById("date-error").style.visibility = "visible";
+    else if(start_time == "") document.getElementById("start-time-error").style.visibility = "visible";
+    else if(end_time == "") document.getElementById("end-time-error").style.visibility = "visible";
+    else if(deadline == "") document.getElementById("deadline-error").style.visibility = "visible";
+    else if(pic == "") document.getElementById("pic-error").style.visibility = "visible";
+    else addEventRequest(name, venue, desc, capacity, date, start_time, end_time, deadline, pic);
+}
+
+function resetErrorMsgs() {
+    // reset error messages
+    var errorMsgs = document.getElementsByClassName("error");
+    for(i = 0; i < errorMsgs.length; i++) {
+        errorMsgs[i].style.visibility = "hidden";
+    }
 }

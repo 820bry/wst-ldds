@@ -121,7 +121,7 @@ if (isset($_SESSION['permission_level'])) {
         </div>
     </div>
 
-    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+    <div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
         <div class="mdl-snackbar__text"></div>
         <button class="mdl-snackbar__action" type="button"></button>
     </div>
