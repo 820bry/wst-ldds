@@ -84,7 +84,7 @@
                     while ($row = $result->fetch_assoc()) {
                         echo '<tr>
                                 <td class="tabindex">'.$count.'</td>
-                                <td class = "view-eventname" >'.$row['name'].'</td>
+                                <td class = "view-eventname" ><a href="/wst-ldds/event/'.$row['event_id'].'">'.$row['name'].'</a></td>
                                 <td class = "view-eventdesc" >'.$row['description'].'</td>
                                 <td class ="view-eventdate" >'.date('d F Y', strtotime($row['date'])).'</td>
                                 <td class ="view-eventtime" >'.date('h:ia', strtotime($row['start_time'])).' - '.date('h:ia', strtotime($row['end_time'])).'</td>
