@@ -17,8 +17,6 @@ require_once('../banner.php');
         <link rel="stylesheet" href="/wst-ldds/style/main.css">
         <link rel="stylesheet" href="/wst-ldds/style/events.css">
 
-        
-        <script src="/wst-ldds/scripts/events.js" type="text/javascript"></script>
         <title>Events | LDDS</title>
     </head>
 
@@ -48,7 +46,7 @@ require_once('../banner.php');
                                 <h3>'.$row['name'].'</h3>
                                 <div class="desc">'.$row['description'].'</div>
                                 <div class="deadline">Deadline: '.date("d F Y", strtotime($row['deadline'])).'</div>
-                                <div class="slots-left">Slots Left: '.$row['capacity'] - $slotsTaken.'</div>
+                                <div class="slots-left">Slots Left: '.($row['capacity'] - $slotsTaken).'</div>
                             </a>';
                     }
                 } else {

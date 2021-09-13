@@ -46,8 +46,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         echo json_encode($vals);
     }
 } else {
-    //http_response_code(302);
-    //header("Location: /wst-ldds/error");
+    http_response_code(302);
+    header("Location: /wst-ldds/error");
 }
 
 
