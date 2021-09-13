@@ -14,6 +14,7 @@ require_once('../banner.php');
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css" />
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+        <script src="/wst-ldds/scripts/events.js" type="text/javascript"></script>
         <link rel="stylesheet" href="/wst-ldds/style/main.css">
         <link rel="stylesheet" href="/wst-ldds/style/events.css">
 
@@ -24,7 +25,7 @@ require_once('../banner.php');
     <body>
         <div class="content">
             <h1>Events</h1>
-            <input type="text" class ="event-searchbox" id="event-searchbox" placeholder="Search Event" > 
+            <input type="text" class ="event-searchbox" id="event-searchbox" placeholder="Search Event" oninput="search(this)"> 
             <div class="events-list">
             <?php
                 require_once("./../config/conn.php");
