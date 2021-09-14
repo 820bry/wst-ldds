@@ -26,6 +26,8 @@
 .dropdown {
     position: relative;
     float: right;
+
+    z-index: 2;
 }
 
 .dropdown .user-icon {

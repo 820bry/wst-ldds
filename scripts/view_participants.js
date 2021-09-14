@@ -22,7 +22,7 @@ function loadParticipants() {
                         <td>${results[i].student_id}</td>
                         <td>${results[i].register_date}</td>
                         <td>
-                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete${i}" onclick=";"><i class="material-icons">delete</i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="delete${i}" onclick="deleteParticipant(this, ${results[i].registration_id})"><i class="material-icons">delete</i></button>
                             <div class="mdl-tooltip" for="delete${i}">Delete</div>
                         </td>
                     </tr>
@@ -45,6 +45,41 @@ function loadParticipants() {
     })
     .catch((error) => {
         console.log("Error: ", error);
+    })
+
+}
+
+function deleteParticipant(element, registrationID) {
+    var tableRows = document.getElementById('participant-list').rows;
+    
+    for(i = 1; i < tableRows.length; i++) {
+        if(tableRows[i].contains(element)) {
+            tableRows[i].remove();
+        }
+    }
+
+    var deleteDetails = {
+        "registrationID" : registrationID
+    };
+    var deleteJSON = JSON.stringify(deleteDetails);
+
+    fetch("/wst-ldds/event_list/delete_participant.php", {
+        method: "POST",
+        headers: {
+            "Content-type" : "application/json",
+        },
+        body : deleteJSON
+    })
+    .then(response => response.json())
+    .then((varResponse) => {
+        if(varResponse.status === "success") {
+            loadParticipants();
+        } else {
+            alert("Failed to delete participant.");
+        }
+    })
+    .catch((error) => {
+        console.error("Error: ", error);
     })
 
 }
