@@ -44,9 +44,9 @@
 
     <div class="content">
         <h1><?php echo ($searchValue == $_SESSION['student_id']) ? "Your" : $searchValue."'s"; ?> Event History</h1>
-            <span class="event-label">Find</span>
+            <span class="event-label">Find User</span>
             <input type="text" class="event-findmember" id="event-findmember" placeholder="Enter Student ID">
-            <span class="event-label">Search</span>
+            <span class="event-label">Search Events</span>
             <input type="text" class="event-searchbar" id="event-searchbar" placeholder="Search Event" oninput="search(this)">
         <div class="user-history">
             <table class = "view-event" id="event-table">
