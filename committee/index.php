@@ -24,7 +24,33 @@ require_once('../banner.php');
     <div class="content">
         <h1>Committee</h1>
         <div class="committee">
-            <div class="committee-box">
+        <?php
+             require_once("../config/conn.php");
+
+             $query = $conn->prepare("SELECT * FROM committee;");
+             $query->execute();
+             $result = $query->get_result();
+
+             while($row = $result->fetch_assoc()) {
+                $memberQuery = $conn->prepare("SELECT * FROM member WHERE student_id=?");
+                $studentID = $row['student_id'];
+                $memberQuery->bind_param("s", $studentID);
+                $memberQuery->execute();
+                $memberResult = $memberQuery->get_result();
+                $memberInfo = $memberResult->fetch_assoc();
+
+                 echo '
+                 <div class="committee-box">
+                    <img src="/wst-ldds/profile/images/'.$memberInfo['img_path'].'" />
+                    <div class="committee-info">
+                        <h3>'.$row['position'].'</h3>
+                        <span>'.$memberInfo['name'].'</span>
+                    </div>
+                </div>
+                 ';
+             }
+        ?>
+            <!-- <div class="committee-box">
                 <img src="/wst-ldds/style/images/committee/Bryan.JPG" />
                 <div class="committee-info">
                     <h3>President</h3>
@@ -58,7 +84,7 @@ require_once('../banner.php');
                     <h3>Committee Member</h3>
                     <span>YEOW CHEN ZHENG</span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
