@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2021 at 05:57 PM
+-- Generation Time: Sep 14, 2021 at 09:09 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -31,9 +31,9 @@ USE `ldds`;
 
 DROP TABLE IF EXISTS `committee`;
 CREATE TABLE `committee` (
+  `id` int(11) NOT NULL,
   `student_id` varchar(10) NOT NULL,
-  `position` varchar(20) NOT NULL,
-  `image_path` varchar(100) NOT NULL
+  `position` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -47,6 +47,17 @@ CREATE TABLE `committee` (
 --
 
 TRUNCATE TABLE `committee`;
+--
+-- Dumping data for table `committee`
+--
+
+INSERT INTO `committee` (`id`, `student_id`, `position`) VALUES
+(3, '20PMD00679', 'President'),
+(4, '20PMD02338', 'Vice President'),
+(5, '20PMD11111', 'Secretary'),
+(6, '20PMD02755', 'Treasurer'),
+(7, '20PMD00001', 'Committee member');
+
 -- --------------------------------------------------------
 
 --
@@ -162,7 +173,8 @@ INSERT INTO `member` (`name`, `img_path`, `student_id`, `password`, `ic_no`, `em
 -- Indexes for table `committee`
 --
 ALTER TABLE `committee`
-  ADD PRIMARY KEY (`student_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `student_id` (`student_id`);
 
 --
 -- Indexes for table `event`
@@ -188,6 +200,12 @@ ALTER TABLE `member`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `committee`
+--
+ALTER TABLE `committee`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `event`
