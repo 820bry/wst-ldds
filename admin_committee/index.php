@@ -39,7 +39,6 @@ require_once('../banner.php');
                     <th>Committee name  </th>
                     <th>Position </th>
                 </thead>
-
             <tbody>
                 <?php
                     require_once("../config/conn.php");
