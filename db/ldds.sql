@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2021 at 04:14 PM
+-- Generation Time: Sep 14, 2021 at 05:57 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -83,7 +83,8 @@ TRUNCATE TABLE `event`;
 --
 
 INSERT INTO `event` (`id`, `name`, `description`, `date`, `start_time`, `end_time`, `venue`, `capacity`, `deadline`, `person_in_charge`) VALUES
-(4, 'Annual Meeting', 'This is just a normal annual meeting', '2021-12-31', '12:00:00', '14:00:00', 'Main Foyer', 100, '2021-11-11', '20PMD00679');
+(4, 'Annual Meeting', 'This is just a normal annual meeting', '2021-12-31', '12:00:00', '14:00:00', 'Main Foyer', 100, '2021-11-11', '20PMD00679'),
+(5, 'LDDS Camp', 'Interesting camp by LDDS', '2021-08-07', '08:00:00', '17:00:00', 'Campus', 100, '2021-07-07', '20PMD11111');
 
 -- --------------------------------------------------------
 
@@ -192,13 +193,13 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `event_registration`
 --
 ALTER TABLE `event_registration`
-  MODIFY `registration_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `registration_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
