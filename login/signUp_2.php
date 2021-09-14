@@ -10,7 +10,7 @@
 </head>
 <body class = "signbody" style = "background-image: url('/wst-ldds/login/assets/lddsbg.png'); background-size: cover;">
     <div class = "signcontainer">
-        <img src="/wst-ldds/style/images/back icon.png" class="back">
+        <img src="/wst-ldds/style/images/back icon.png" class="back" onclick="window.history.back();">
         <div class = "logo">
             <img src="/wst-ldds/login/assets/Ldds.png">
         </div>
