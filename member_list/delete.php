@@ -14,7 +14,7 @@
             require("./../config/conn.php");
 
             for ($i = 0; $i < count($studentID); $i++) {
-                $studentID[$i] = "'$studentID[$i]'";
+                $studentID[$i] = "'".$studentID[$i]."'";
             }
 
             //More than 1 ID, join them for SQL
