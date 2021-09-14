@@ -33,7 +33,7 @@ function recoverPasswordPerform() {
         .then((varResponse) => {
             if (varResponse.status === "Success") {
                 document.getElementById("error1").style.visibility = "hidden";
-                window.location.href = "/wst-ldds/forgetpassword3";
+                window.location.href = "/wst-ldds/forgetpassword2";
             } else {
                 document.getElementById("error1").style.visibility = "visible";
             }
@@ -60,8 +60,7 @@ function recoverPasswordPerform() {
         .then ((varResponse) => {
             if (varResponse.status === "Success") {
                 document.getElementById("error2").style.visibility = "hidden";
-                //window.location.href = "/wst-ldds/forgetpassword3";
-                console.log("test");
+                window.location.href = "/wst-ldds/forgetpassword3";
             } else {
                 document.getElementById("error2").style.visibility = "visible";
             }
