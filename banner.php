@@ -40,6 +40,7 @@ require_once(__DIR__."/config/session.php");
                                     <div id="admin">
                                         <a href="/wst-ldds/member_list/">View Member List</a>
                                         <a href="/wst-ldds/event_list/">View Event List</a>
+                                        <a href="/wst-ldds/admin_committee/">View Committee member</a>
                                     </div>';
                             } else {
                                 //$_SESSION['permission_level'] defined but value invalid, assume anonymous user
