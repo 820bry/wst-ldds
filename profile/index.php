@@ -160,9 +160,6 @@ require_once('../banner.php');
             </div>
 
             <div class="button_info" id="button_info">
-                <div class="delete_button" id="delete_button">
-                    <input type="button" name="delete" value="Delete">
-                </div>
                 <div class="reset_button" id="reset_button">
                     <input type="reset" value="Reset">
                 </div>

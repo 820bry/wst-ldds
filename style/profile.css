@@ -181,7 +181,7 @@ span .edit_profile:hover{
     display: none;
 }
 
-.delete_button input{
+/* .delete_button input{
     display: inline-block;
     position: absolute;
     right: 350px;
@@ -196,7 +196,7 @@ span .edit_profile:hover{
     border: 0;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-}
+} */
 
 .reset_button input{
     display: inline-block;
@@ -258,6 +258,11 @@ table tr td input{
 .content td input[type="text" i]:read-only {
     border: 0 !important;
     cursor: context-menu;
+
+}
+
+.content td input[type="text" i]:focus{
+    outline: none;
 }
 
 /* table tr td input[type="text" i]:disabled {
