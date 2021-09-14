@@ -33,7 +33,7 @@ function recoverPasswordPerform() {
         .then((varResponse) => {
             if (varResponse.status === "Success") {
                 document.getElementById("error1").style.visibility = "hidden";
-                window.location.href = "/wst-ldds/forgetpassword2";
+                window.location.href = "/wst-ldds/forgetpassword3";
             } else {
                 document.getElementById("error1").style.visibility = "visible";
             }
