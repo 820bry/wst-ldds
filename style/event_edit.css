@@ -1,0 +1,18 @@
+.edit-table {
+    border: none;
+}
+
+.edit-table td {
+    padding: 10px 0;
+}
+
+.edit-table .label {
+    vertical-align: text-top;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.edit-table input[type="date"], .edit-table input[type="time"] {
+    margin-bottom: 10px;
+}

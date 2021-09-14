@@ -43,20 +43,10 @@ require_once('../banner.php');
                     <th>Edit</th>
                 </thead>
 
-            <tbody>
-                <tr class="color_edit">
-                    <td><input type="text" id="edit_invisible" class="edit_invisible" value="halo"  disabled></input></td>
-                    <td><input type="text" id="edit_invisible" class="edit_invisible"  disabled></input></td>
-                    <td class="edit_invisible"><input type="text" id="edit_invisible"  disabled></input></td>
-                    <td class="edit_invisible"><input type="text" id="edit_invisible"  disabled></input></td>
-                    <td><input type="text" id="edit_invisible" class="edit_invisible"  disabled></input></td>
-                    <td>
-                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}" onclick="editButton(this)"><i class="material-icons">edit</i></button>
-                        <div class="mdl-tooltip" for="edit${no}">Edit</div>
-                    </td>
-                </tr>
+                <tbody>
+                    
 
-            </tbody>
+                </tbody>
             </table>
 
             </div>
