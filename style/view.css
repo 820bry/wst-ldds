@@ -65,10 +65,6 @@
     text-align: center;
 }
 
-.table_list{
-    border-collapse: collapse;
-    margin: auto;
-}
 
 .list
 {
@@ -80,34 +76,15 @@
     table-layout: fixed;
     cursor: context-menu;
     text-align: center;
+
+    width: 100%;
 }
 
-.view_event_name{
-    padding: 10px 20px;
-    margin-left: 100px;
-}
 
-.view_event_name:hover{
-    background-color: white;
+.data-row:hover {
+    background-color: #eee;
 }
-
-.view_event_button:hover{
-    background-color: white;
-}
-
-.view_event_name{
-    background-color: white;
-}
-
-.view_event_button{
-    background-color: white;
-}
-
-.list tr:hover 
-{
-   background-color: #eee;
-}
-
+ 
 span{
     cursor: pointer;
 }
@@ -119,7 +96,7 @@ span{
 }
 
 table, th, td{
-    padding: 15px 160px;
+    padding: 15px 0;
     margin-top: 10px;
 }
 
