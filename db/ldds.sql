@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2021 at 05:41 AM
+-- Generation Time: Sep 14, 2021 at 06:00 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -133,11 +133,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`name`, `img_path`, `student_id`, `password`, `ic_no`, `email`, `phone_no`, `faculty`, `course_code`, `permission_level`) VALUES
-('Chiam Jin Qin', 'default.png', '20PMD00010', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '020202-02-0202', 'chiamjinqin@gmail.com', '017-8888888', 'FOCS', 'DFT', 0),
 ('Tan Kin Loke', '20PMD00679.png', '20PMD00679', 'cc51a5bf62531dc53de0553ca28e7ddfdf8e27e0b1c329a39715490d024a13a3', '010101-01-0101', 'kinloketan@gmail.com', '0166682798', 'FOCS', 'DFT', 1),
-('Tan Yan Hao', 'default.png', '20PMD11111', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '010101-01-0101', 'yanhao@gmail.com', '0122345689', 'FOCS', 'DFT', 0),
-('Tan Kin Loke', 'default.png', '20PMD33333', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '030303-03-0303', 'kinloke@gmail.com', '011-1123564', 'FOCS', 'DFT', 0),
-('Neoh Yi Zhen', 'default.png', '20PMD55555', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '060606-06-0606', 'yizhen@gmail.com', '012-34567897', 'FOCS', 'DFT', 0);
+('Tan Yan Hao', 'default.png', '20PMD11111', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '010101-01-0101', 'yanhao@gmail.com', '0122345689', 'FOCS', 'DFT', 0);
 
 --
 -- Indexes for dumped tables
@@ -154,7 +151,7 @@ ALTER TABLE `committee`
 --
 ALTER TABLE `event`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `person_in_charge` (`person_in_charge`);
+  ADD KEY `person_in_charge` (`person_in_charge`) USING BTREE;
 
 --
 -- Indexes for table `event_registration`
@@ -200,7 +197,7 @@ ALTER TABLE `committee`
 -- Constraints for table `event`
 --
 ALTER TABLE `event`
-  ADD CONSTRAINT `event_ibfk_1` FOREIGN KEY (`person_in_charge`) REFERENCES `member` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `event_ibfk_1` FOREIGN KEY (`person_in_charge`) REFERENCES `member` (`student_id`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Constraints for table `event_registration`
