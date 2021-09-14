@@ -1,6 +1,6 @@
 <?php
 
-    $host       = "127.0.0.1";    // our database exists locally with the website, thus are connecting local"y
+    $host       = "127.0.0.1";    // our database exists locally with the website, thus are connecting locally
     $db         = "ldds";
     $username   = "root";
     $password   = "";
@@ -12,7 +12,6 @@
         // connection unccessful!
         // set response code to 500 Internal Server Error, and force program exit
         http_response_code(500);
-        include("/wst-ldds/error/index.php");
         exit();
     }else{
         // lets define some variables

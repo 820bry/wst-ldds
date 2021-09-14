@@ -28,6 +28,14 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
             $studentRegistrationResult = $query3->get_result();
             $eventJoined = ($studentRegistrationResult->fetch_assoc()['registration_no'] == 1) ? true: false;
 
+            //If event not joined, check if deadline has passed or not
+            if (!$eventJoined) {
+                if (date("Y-m-d",time()) > $eventInfo['deadline']) {
+                    //Already passed deadline, disable button
+                    $eventJoined = true;
+                }
+            }
+
             //Get PIC info
             $query4 = $conn->prepare("SELECT * FROM member WHERE student_id=?");
             $query4->bind_param("s", $eventInfo['person_in_charge']);
@@ -65,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         <h1><?php echo $eventInfo['name'];?></h1>
         <div class="event-info">
             <div class="person-in-charge">
-                <img src="/wst-ldds/profile/images/<?php echo isset($PIC_Info['img_path']) ? $PIC_Info['img_path'] : "default.png"; ?>">
+                <img src="/wst-ldds/profile/images/<?php echo $PIC_Info['img_path'] ?? "default.png"; ?>">
                 <span> <?php echo $PIC_Info['name']; ?> </span>
             </div>
             <div class="event-img">
@@ -85,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
                 </div>
                 <div class="join-btn">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="join-btn" <?php echo ($eventJoined) ? "disabled": "";?>>
-                        <?php echo ($eventJoined) ? "Joined": " Join Event";?>
+                        <?php echo ($eventJoined) ? ((date("Y-m-d",time()) > $eventInfo['deadline']) ? "Closed": "Joined"): " Join Event";?>
                     </button>
                 </div>
             </div>
