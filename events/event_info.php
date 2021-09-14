@@ -101,8 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     </div>
 
     <div id="join-success-msg" class="mdl-js-snackbar mdl-snackbar">
-        <div class="mdl-snackbar__text"></div>
-        <button class="mdl-snackbar__action" type="button"></button>
+        <div class="mdl-snackbar__text "></div>
+        <button class="mdl-snackbar__action " type="button"></button>
     </div>
 
     <!-- MDL Snackbar -->
