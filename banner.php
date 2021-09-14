@@ -26,7 +26,7 @@ require_once(__DIR__."/config/session.php");
                                 $dropDown = '
                                     <div id="member">
                                         <a href="/wst-ldds/profile">Profile</a>
-                                        <!-- <a href="#">My Events</a> -->
+                                        <a href="/wst-ldds/profile/history">My Events</a>
                                         <a href="#" onclick="signout()">Sign Out</a>
                                     </div>';
                             } else if ($_SESSION['permission_level'] == 1) {
@@ -34,7 +34,7 @@ require_once(__DIR__."/config/session.php");
                                 $dropDown = '
                                     <div id="member">
                                         <a href="/wst-ldds/profile">Profile</a>
-                                        <!-- <a href="#">My Events</a> -->
+                                        <a href="/wst-ldds/profile/history">My Events</a>
                                         <a href="#" onclick="signout()">Sign Out</a>
                                     </div>
                                     <div id="admin">

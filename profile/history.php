@@ -44,8 +44,12 @@
 
     <div class="content">
         <h1><?php echo ($searchValue == $_SESSION['student_id']) ? "Your" : $searchValue."'s"; ?> Event History</h1>
-            <span class="event-label">Find User</span>
-            <input type="text" class="event-findmember" id="event-findmember" placeholder="Enter Student ID">
+            <?php 
+                if ($_SESSION['permission_level'] == 1) {
+                    echo '<span class="event-label">Find User</span>
+                    <input type="text" class="event-findmember" id="event-findmember" placeholder="Enter Student ID">';
+                }
+            ?>
             <span class="event-label">Search Events</span>
             <input type="text" class="event-searchbar" id="event-searchbar" placeholder="Search Event" oninput="search(this)">
         <div class="user-history">
@@ -94,7 +98,16 @@
                         $count++;
                     }
                 } else {
-                    echo '<tr><td style="text-align: center;" colspan="6"> No event joined </td></tr>';
+                    //Check if user exists
+                    $query2 = $conn->prepare("SELECT * FROM ${db_member} WHERE student_id=?");
+                    $query2->bind_param("s", $searchValue);
+                    $query2->execute();
+                    $result2 = $query2 -> get_result();
+                    if ($result2->num_rows == 0) {
+                        echo '<tr><td style="text-align: center;" colspan="6"> User does not exists </td></tr>';
+                    } else {
+                        echo '<tr><td style="text-align: center;" colspan="6"> No event joined </td></tr>';
+                    }
                 }
              ?>
              <!-- <tr>

@@ -17,3 +17,15 @@ function search(element) {
 
     }
 }
+
+window.onload = () => {
+    var input = document.getElementById("event-findmember");
+
+    input.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            var inputValue = input.value;
+
+            window.location.href = "/wst-ldds/profile/history/"+inputValue;
+        }
+    });
+}
