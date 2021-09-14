@@ -83,3 +83,51 @@ function deleteParticipant(element, registrationID) {
     })
 
 }
+
+function editEvent() {
+    
+    var name = document.getElementById("new_name").value;
+    var venue = document.getElementById("new_venue").value;
+    var desc = document.getElementById("new_desc").value;
+    var capacity = document.getElementById("new_capacity").value;
+    var date = document.getElementById("new_date").value;
+    var start_time = document.getElementById("new_start_time").value;
+    var end_time = document.getElementById("new_end_time").value;
+    var deadline = document.getElementById("new_deadline").value;
+    var pic = document.getElementById("new_pic").value;
+
+    var eventDetails = {
+        "id" : eventID,
+        "name" : name,
+        "venue" : venue,
+        "desc" : desc,
+        "capacity" : capacity,
+        "date" : date,
+        "start_time" : start_time,
+        "end_time" : end_time,
+        "deadline" : deadline,
+        "pic" : pic
+    };
+
+    var editJSON = JSON.stringify(eventDetails);
+
+    fetch("/wst-ldds/event_list/edit-backend.php", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json",
+        },
+        body: editJSON
+    })
+    .then(response => response.json())
+    .then((varResponse) => {
+        if(varResponse.status === "Success") {
+            location.href = "/wst-ldds/event_list";
+        } else {
+            alert("Error when editing event");
+        }
+    })
+    .catch((error) => {
+        console.error("Error: ", error);
+    })
+
+}

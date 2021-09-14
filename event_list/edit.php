@@ -1,6 +1,8 @@
 <?php
 require_once('../banner.php');
 
+$eventID = $_GET['eventID'];
+
 if($_SERVER['REQUEST_METHOD'] == "GET") {
     if(isset($_GET['eventID'])) {
         require_once("./../config/conn.php");
@@ -33,7 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET") {
         <link rel="stylesheet" href="/wst-ldds/style/main.css">
         <link rel="stylesheet" href="/wst-ldds/style/events.css">
         <link rel="stylesheet" href="/wst-ldds/style/event_edit.css">
-        <script src="/wst-ldds/scripts/events.js" type="text/javascript"></script>
+        <script src="/wst-ldds/scripts/event-data.js" type="text/javascript" defer></script>
         <title>Edit Event | LDDS</title>
     </head>
 
@@ -53,7 +55,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET") {
                     </td>
                 </tr>
                 <tr>
-                    <td class="label"> Venue</td>
+                    <td class="label">Venue</td>
                     <td>
                         <input type="text" name="new_venue" id="new_venue" placeholder="test" value="<?php echo $eventInfo['venue']; ?>">
                     </td>
@@ -61,14 +63,27 @@ if($_SERVER['REQUEST_METHOD'] == "GET") {
                 <tr>
                     <td class="label">Capacity</td>
                     <td>
-                        <input type="number" name="new_pic" id="new_pic "min="1" max="200" value="<?php echo $eventInfo['capacity']; ?>">
+                        <input type="number" name="new_capacity" id="new_capacity" min="1" max="200" value="<?php echo $eventInfo['capacity']; ?>">
                     </td>
                 </tr>
                 <tr>
                     <td class="label">Person-in-Charge</td>
                     <td>
                         <select name="new_pic" id="new_pic">
-                            <option value="default">Default</option>
+                            <?php
+                                $q2 = $conn->prepare("SELECT name, student_id FROM member");
+                                $q2->execute();
+                                $r2 = $q2->get_result();
+                                $rows = $r2->fetch_all(MYSQLI_ASSOC);
+
+                                for($i = 0; $i < count($rows); $i++) {
+                                    if($rows[$i]['student_id'] == $eventInfo['person_in_charge']) {
+                                        echo "<option value=\"".$rows[$i]['student_id']."\" selected>".$rows[$i]['name']."</option>";
+                                    } else {
+                                        echo "<option value=\"".$rows[$i]['student_id']."\">".$rows[$i]['name']."</option>";
+                                    }
+                                }
+                            ?>
                         </select>
                     </td>
                 </tr>
@@ -86,7 +101,11 @@ if($_SERVER['REQUEST_METHOD'] == "GET") {
                     </td>
                 </tr>
             </table>
-            <input type="button" value="Submit">
+            <button onclick="editEvent()">Edit Event</button>
         </div>
     </div>
+
+    <script>
+        var eventID = <?php echo $eventID ?>;
+    </script>
 </html>

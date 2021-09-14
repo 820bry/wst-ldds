@@ -20,7 +20,7 @@ $eventID = $_GET['eventID'];
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/wst-ldds/style/main.css">
     <link rel="stylesheet" href="/wst-ldds/style/view.css">
-    <script src="/wst-ldds/scripts/view_participants.js" type="text/javascript" defer></script>
+    <script src="/wst-ldds/scripts/event-data.js" type="text/javascript" defer></script>
 
     <title>Participant's List | LDDS</title>
     </head>
