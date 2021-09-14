@@ -118,7 +118,7 @@ img.lock {
     outline: none;
 }
 
-.nextBtn1 {
+.nextBtn1, .nextBtn1:focus {
     background: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
     border-radius: 45px;
     width: 45%;
@@ -131,9 +131,11 @@ img.lock {
     font-weight: 600;
     background-size: 200% auto;
     transition: 0.5s;
+    outline:none;
 }
 
-.nextBtn2 {
+.nextBtn2, .nextBtn2:focus
+{
     background: linear-gradient(to right, #43F66A 0%, #2A96FA  100%);
     border-radius: 45px;
     width: 45%;
@@ -146,11 +148,13 @@ img.lock {
     font-weight: 600;
     background-size: 200% auto;
     transition: 0.5s;
+    outline:none;
 }
 
-.nextBtn3 {
+.nextBtn3, .nextBtn3:focus {
     background: linear-gradient(to right, #35E2B9 0%, #BE6EFD  100%);
     border-radius: 45px;
+    outline:none;
     width: 45%;
     height: 7%;
     position: relative;
@@ -163,7 +167,7 @@ img.lock {
     transition: 0.5s;
 }
 
-.nextBtn4 {
+.nextBtn4, .nextBtn4:focus {
 
 background: linear-gradient(115deg, #616aef94 0%, #ff0000 89.58%);
 
@@ -190,6 +194,8 @@ width: 14rem;
 height: 4rem;
 
 transition: 0.5s;
+
+outline:none;
 }
 
 button:hover {
