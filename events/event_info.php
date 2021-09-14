@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
                 </div>
                 <div class="join-btn">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="join-btn" <?php echo ($eventJoined) ? "disabled": "";?>>
-                        <?php echo ($eventJoined) ? ((date("Y-m-d",time()) > $eventInfo['deadline']) ? "Closed": "Joined"): " Join Event";?>
+                        <?php echo ($eventJoined) ? ((date("Y-m-d",time()) > $eventInfo['deadline']) ? "Closed": "Joined"): " Join";?>
                     </button>
                 </div>
             </div>

@@ -303,7 +303,7 @@ function signupPerform() {
         })
         .then(response => response.json())
         .then((varResponse) => {
-            alert("Signup" + varResponse.status);
+            alert("Signup " + varResponse.status);
             window.location.href = "/wst-ldds/login";
         })
         .catch((error) => {
