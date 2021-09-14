@@ -96,12 +96,18 @@
 
 .event-img > img {
     width: 100%;
+    border-radius: 20px;
 }
 
 .event-details {
     float: right;
     width: 40%;
 }
+
+div .slots-left{
+    font-size: small
+}
+
 
 .event-details > .desc {
     font-size: 18px;

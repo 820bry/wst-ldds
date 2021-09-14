@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2021 at 06:00 AM
+-- Generation Time: Sep 14, 2021 at 05:57 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -42,6 +42,11 @@ CREATE TABLE `committee` (
 --       `member` -> `student_id`
 --
 
+--
+-- Truncate table before insert `committee`
+--
+
+TRUNCATE TABLE `committee`;
 -- --------------------------------------------------------
 
 --
@@ -69,11 +74,17 @@ CREATE TABLE `event` (
 --
 
 --
+-- Truncate table before insert `event`
+--
+
+TRUNCATE TABLE `event`;
+--
 -- Dumping data for table `event`
 --
 
 INSERT INTO `event` (`id`, `name`, `description`, `date`, `start_time`, `end_time`, `venue`, `capacity`, `deadline`, `person_in_charge`) VALUES
-(1, 'Annual General Meeting', 'The Annual General Meeting for the Literature, Dance and Drama Society.', '2021-09-13', '20:00:00', '21:00:00', 'DK A', 200, '2021-12-31', '20PMD00679');
+(4, 'Annual Meeting', 'This is just a normal annual meeting', '2021-12-31', '12:00:00', '14:00:00', 'Main Foyer', 100, '2021-11-11', '20PMD00679'),
+(5, 'LDDS Camp', 'Interesting camp by LDDS', '2021-08-07', '08:00:00', '17:00:00', 'Campus', 100, '2021-07-07', '20PMD11111');
 
 -- --------------------------------------------------------
 
@@ -98,12 +109,10 @@ CREATE TABLE `event_registration` (
 --
 
 --
--- Dumping data for table `event_registration`
+-- Truncate table before insert `event_registration`
 --
 
-INSERT INTO `event_registration` (`registration_id`, `event_id`, `student_id`, `register_date`) VALUES
-(1, 1, '20PMD00679', '2021-09-12 10:56:55');
-
+TRUNCATE TABLE `event_registration`;
 -- --------------------------------------------------------
 
 --
@@ -129,12 +138,21 @@ CREATE TABLE `member` (
 --
 
 --
+-- Truncate table before insert `member`
+--
+
+TRUNCATE TABLE `member`;
+--
 -- Dumping data for table `member`
 --
 
 INSERT INTO `member` (`name`, `img_path`, `student_id`, `password`, `ic_no`, `email`, `phone_no`, `faculty`, `course_code`, `permission_level`) VALUES
+('Neoh Yi Zhen', 'default.png', '20PMD00001', '718d328c3a90caf7fe508a6a679e8aa74f2ebf80d30a5b227ef457d92c88af44', '010101-01-0101', 'neohyz@gmail.com', '0176666777', 'FOCS', 'DFT', 0),
+('Tan Kai Deng', 'default.png', '20PMD00002', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '020710-01-0101', 'kaideng@gmail.com', '0199797997', 'FOCS', 'DFT', 0),
 ('Tan Kin Loke', '20PMD00679.png', '20PMD00679', 'cc51a5bf62531dc53de0553ca28e7ddfdf8e27e0b1c329a39715490d024a13a3', '010101-01-0101', 'kinloketan@gmail.com', '0166682798', 'FOCS', 'DFT', 1),
-('Tan Yan Hao', 'default.png', '20PMD11111', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '010101-01-0101', 'yanhao@gmail.com', '0122345689', 'FOCS', 'DFT', 0);
+('Bryan Lai Wei Ming', 'default.png', '20PMD02338', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '020820-07-0101', 'bryanlai@gmail.com', '0167777666', 'FOCS', 'DFT', 0),
+('Chiam Jin Qin', 'default.png', '20PMD02755', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '020228-03-0101', 'chiamjq-pm20@student.tarc.edu.my', '013-3131322', 'FOCS', 'DFT', 1),
+('Tan Yan Hao', 'default.png', '20PMD11111', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '010101-01-0101', 'yanhao@gmail.com', '0122345689', 'FOCS', 'DFT', 1);
 
 --
 -- Indexes for dumped tables
@@ -175,13 +193,13 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `event_registration`
 --
 ALTER TABLE `event_registration`
-  MODIFY `registration_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `registration_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

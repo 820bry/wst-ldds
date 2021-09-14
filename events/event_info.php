@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
                 </div>
                 <div class="join-btn">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="join-btn" <?php echo ($eventJoined) ? "disabled": "";?>>
-                        <?php echo ($eventJoined) ? ((date("Y-m-d",time()) > $eventInfo['deadline']) ? "Closed": "Joined"): " Join Event";?>
+                        <?php echo ($eventJoined) ? ((date("Y-m-d",time()) > $eventInfo['deadline']) ? "Closed": "Joined"): " Join";?>
                     </button>
                 </div>
             </div>
@@ -101,8 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     </div>
 
     <div id="join-success-msg" class="mdl-js-snackbar mdl-snackbar">
-        <div class="mdl-snackbar__text"></div>
-        <button class="mdl-snackbar__action" type="button"></button>
+        <div class="mdl-snackbar__text "></div>
+        <button class="mdl-snackbar__action " type="button"></button>
     </div>
 
     <!-- MDL Snackbar -->
