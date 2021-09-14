@@ -13,6 +13,17 @@
     font-weight: bold;
 }
 
+.edit-table textarea {
+    width: 400px;
+    height: 100px;
+    resize: none;
+}
+
+.edit-table input[type="text"], .edit-table select {
+    width: 200px;
+    height: 30px;
+}
+
 .edit-table input[type="date"], .edit-table input[type="time"] {
     margin-bottom: 10px;
 }

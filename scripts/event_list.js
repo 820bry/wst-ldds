@@ -182,7 +182,7 @@ function search(noOfPage, sortBy, sortDirection) {
                             <div class="mdl-tooltip" for="show${no}">Show Participants List</div>
                         </td>
                         <td>
-                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}"><i class="material-icons">edit</i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="edit${no}" onclick=location.href="/wst-ldds/event-data/edit/${resultsArray[i].id}"><i class="material-icons">edit</i></button>
                             <div class="mdl-tooltip" for="edit${no}">Edit</div>
                         </td>
                         <td>
