@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2021 at 09:09 PM
+-- Generation Time: Sep 14, 2021 at 09:32 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `ldds`
 --
-CREATE DATABASE IF NOT EXISTS `ldds` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `ldds`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `ldds`;
 -- Table structure for table `committee`
 --
 
-DROP TABLE IF EXISTS `committee`;
 CREATE TABLE `committee` (
   `id` int(11) NOT NULL,
   `student_id` varchar(10) NOT NULL,
@@ -42,11 +39,6 @@ CREATE TABLE `committee` (
 --       `member` -> `student_id`
 --
 
---
--- Truncate table before insert `committee`
---
-
-TRUNCATE TABLE `committee`;
 --
 -- Dumping data for table `committee`
 --
@@ -64,7 +56,6 @@ INSERT INTO `committee` (`id`, `student_id`, `position`) VALUES
 -- Table structure for table `event`
 --
 
-DROP TABLE IF EXISTS `event`;
 CREATE TABLE `event` (
   `id` int(11) NOT NULL,
   `name` varchar(45) NOT NULL,
@@ -85,11 +76,6 @@ CREATE TABLE `event` (
 --
 
 --
--- Truncate table before insert `event`
---
-
-TRUNCATE TABLE `event`;
---
 -- Dumping data for table `event`
 --
 
@@ -103,7 +89,6 @@ INSERT INTO `event` (`id`, `name`, `description`, `date`, `start_time`, `end_tim
 -- Table structure for table `event_registration`
 --
 
-DROP TABLE IF EXISTS `event_registration`;
 CREATE TABLE `event_registration` (
   `registration_id` int(11) NOT NULL,
   `event_id` int(11) NOT NULL,
@@ -119,18 +104,12 @@ CREATE TABLE `event_registration` (
 --       `event` -> `id`
 --
 
---
--- Truncate table before insert `event_registration`
---
-
-TRUNCATE TABLE `event_registration`;
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `member`
 --
 
-DROP TABLE IF EXISTS `member`;
 CREATE TABLE `member` (
   `name` varchar(30) NOT NULL,
   `img_path` varchar(30) DEFAULT 'default.png',
@@ -149,21 +128,16 @@ CREATE TABLE `member` (
 --
 
 --
--- Truncate table before insert `member`
---
-
-TRUNCATE TABLE `member`;
---
 -- Dumping data for table `member`
 --
 
 INSERT INTO `member` (`name`, `img_path`, `student_id`, `password`, `ic_no`, `email`, `phone_no`, `faculty`, `course_code`, `permission_level`) VALUES
-('Neoh Yi Zhen', 'default.png', '20PMD00001', '718d328c3a90caf7fe508a6a679e8aa74f2ebf80d30a5b227ef457d92c88af44', '010101-01-0101', 'neohyz@gmail.com', '0176666777', 'FOCS', 'DFT', 0),
+('Neoh Yi Zhen', '20PMD00001.png', '20PMD00001', '718d328c3a90caf7fe508a6a679e8aa74f2ebf80d30a5b227ef457d92c88af44', '010101-01-0101', 'neohyz@gmail.com', '0176666777', 'FOCS', 'DFT', 0),
 ('Tan Kai Deng', 'default.png', '20PMD00002', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '020710-01-0101', 'kaideng@gmail.com', '0199797997', 'FOCS', 'DFT', 0),
 ('Tan Kin Loke', '20PMD00679.png', '20PMD00679', 'cc51a5bf62531dc53de0553ca28e7ddfdf8e27e0b1c329a39715490d024a13a3', '010101-01-0101', 'kinloketan@gmail.com', '0166682798', 'FOCS', 'DFT', 1),
-('Bryan Lai Wei Ming', 'default.png', '20PMD02338', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '020820-07-0101', 'bryanlai@gmail.com', '0167777666', 'FOCS', 'DFT', 0),
-('Chiam Jin Qin', 'default.png', '20PMD02755', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '020228-03-0101', 'chiamjq-pm20@student.tarc.edu.my', '013-3131322', 'FOCS', 'DFT', 1),
-('Tan Yan Hao', 'default.png', '20PMD11111', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '010101-01-0101', 'yanhao@gmail.com', '0122345689', 'FOCS', 'DFT', 1);
+('Bryan Lai Wei Ming', '20PMD02338.jpg', '20PMD02338', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '020820-07-0101', 'bryanlai@gmail.com', '0167777666', 'FOCS', 'DFT', 0),
+('Chiam Jin Qin', '20PMD02755.png', '20PMD02755', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '020228-03-0101', 'chiamjq-pm20@student.tarc.edu.my', '013-3131322', 'FOCS', 'DFT', 1),
+('Tan Yan Hao', '20PMD11111.png', '20PMD11111', 'ac8ce7b28dfb17800988a8ff9d14ed269dcc74bc9c7bda2b006037c8da6122b1', '010101-01-0101', 'yanhao@gmail.com', '0122345689', 'FOCS', 'DFT', 1);
 
 --
 -- Indexes for dumped tables
